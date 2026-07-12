@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help & Support — HHI</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="js/icons.js"></script>
+  <script src="js/shell.js"></script>
+  <script>
+    const shell = renderShell('help');
+    document.getElementById('app').innerHTML = `
+      ${shell.sidebar}
+      <div class="main">
+        ${shell.topbar}
+        <div class="content">
+          <div class="page-head">
+            <div>
+              <div class="crumbs">Dashboard &gt; <span>Help & Support</span></div>
+              <h1>Help & Support</h1>
+              <p class="sub">Mumbai Board data is live on the main Dashboard. This module will expand next.</p>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="dashboard.html">Open Dashboard</a>
+            </div>
+          </div>
+          <div class="card placeholder-page">
+            <div>
+              <h2>Help & Support</h2>
+              <p>UI shell matches the HHI Dashboard design. Connect this page to working-sheet workflows when ready.</p>
+              <p style="margin-top:12px"><a class="btn btn-outline" href="dashboard.html">← Back to Analytics</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HHI — Housing Happiness Index</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <!-- shell injected -->
+  </div>
+  <script src="js/icons.js"></script>
+  <script src="js/shell.js"></script>
+  <script>
+    (async function () {
+      const shell = renderShell('home');
+      const data = await fetch('data/mumbai.json').then((r) => r.json());
+      const o = data.overall;
+      const topDiv = [...data.divisions].sort((a, b) => b.hhi - a.hhi)[0];
+      const lowDiv = [...data.divisions].sort((a, b) => a.hhi - b.hhi)[0];
+
+      document.getElementById('app').innerHTML = `
+        ${shell.sidebar}
+        <div class="main">
+          ${shell.topbar}
+          <div class="content">
+            <div class="home-layout">
+              <div>
+                <section class="hero">
+                  <div>
+                    <h1>Housing Happiness Index</h1>
+                    <p>Building Safer, Healthier &amp; Happier Communities across MHADA layouts.</p>
+                    <div class="hero-actions">
+                      <a class="btn btn-primary" href="dashboard.html">Explore Dashboard</a>
+                      <a class="btn btn-ghost" href="impact.html">Impact Assessment</a>
+                    </div>
+                  </div>
+                  <div class="impact-card">
+                    <h4>Mumbai Board Snapshot</h4>
+                    <ul>
+                      <li><span>Surveys</span><strong>${fmtInt(o.surveys)}</strong></li>
+                      <li><span>Layouts</span><strong>${fmtInt(o.layouts)}</strong></li>
+                      <li><span>Buildings</span><strong>${fmtInt(o.buildings)}</strong></li>
+                      <li><span>Avg HHI</span><strong>${fmt(o.hhi)}</strong></li>
+                    </ul>
+                  </div>
+                </section>
+
+                <section class="section">
+                  <h2>What is HHI?</h2>
+                  <p class="lead">A multi-dimensional index that scores residential well-being across five Key Focus Areas, combining household surveys with Rapid Visual Assessment (RVA).</p>
+                  <div class="steps">
+                    <div class="step"><div class="num">01</div><h3>Survey</h3><p>Household respondents share satisfaction across living conditions.</p></div>
+                    <div class="step"><div class="num">02</div><h3>Score</h3><p>Responses map to Key Focus Area scores on a 0–100 scale.</p></div>
+                    <div class="step"><div class="num">03</div><h3>Assess</h3><p>RVA validates on-ground building and layout conditions.</p></div>
+                    <div class="step"><div class="num">04</div><h3>Prioritise</h3><p>Composite scores highlight layouts needing intervention.</p></div>
+                    <div class="step"><div class="num">05</div><h3>Act</h3><p>Targeted interventions improve HHI and resident outcomes.</p></div>
+                  </div>
+                </section>
+
+                <section class="section">
+                  <h2>HHI Framework — Key Focus Areas</h2>
+                  <p class="lead">Five pillars that together define housing happiness for MHADA communities.</p>
+                  <div class="kfa-grid">
+                    <div class="kfa-card purple"><h3>Housing Infrastructure</h3><p>Unit quality, utilities, lifts, parking &amp; common amenities.</p><a class="link" href="dashboard.html">Explore →</a></div>
+                    <div class="kfa-card blue"><h3>Social Well-being</h3><p>Community spaces, safety, neighbour relations &amp; inclusion.</p><a class="link" href="dashboard.html">Explore →</a></div>
+                    <div class="kfa-card green"><h3>Environment</h3><p>Cleanliness, greenery, waste, drainage &amp; air quality.</p><a class="link" href="dashboard.html">Explore →</a></div>
+                    <div class="kfa-card orange"><h3>Economic Security</h3><p>Affordability, livelihood access &amp; cost of living pressures.</p><a class="link" href="dashboard.html">Explore →</a></div>
+                    <div class="kfa-card red"><h3>Governance</h3><p>Society management, grievance redressal &amp; participation.</p><a class="link" href="dashboard.html">Explore →</a></div>
+                  </div>
+                </section>
+
+                <section class="section">
+                  <h2>Our Reach &amp; Impact — Mumbai Board</h2>
+                  <div class="reach" style="margin-top:14px">
+                    <div class="reach-item purple"><div class="n">${fmtInt(o.surveys)}+</div><div class="l">Household Surveys</div></div>
+                    <div class="reach-item blue"><div class="n">${o.divisions}</div><div class="l">Divisions Covered</div></div>
+                    <div class="reach-item green"><div class="n">${fmtInt(o.layouts)}</div><div class="l">Layouts Assessed</div></div>
+                    <div class="reach-item orange"><div class="n">${fmtInt(o.buildings)}</div><div class="l">Buildings Scored</div></div>
+                    <div class="reach-item red"><div class="n">${fmt(o.hhi)}</div><div class="l">Avg HHI Score</div></div>
+                  </div>
+                </section>
+              </div>
+
+              <aside class="side-stack">
+                <div class="card">
+                  <div class="card-title">Live Statistics</div>
+                  <div class="stat-mini-grid">
+                    <div class="stat-mini"><div class="l">Respondents</div><div class="v">${fmtInt(o.surveys)}</div></div>
+                    <div class="stat-mini"><div class="l">Avg. HHI Score</div><div class="v">${fmt(o.hhi)}</div></div>
+                    <div class="stat-mini"><div class="l">Layouts</div><div class="v">${fmtInt(o.layouts)}</div></div>
+                    <div class="stat-mini"><div class="l">Buildings</div><div class="v">${fmtInt(o.buildings)}</div></div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-title">HHI by Division</div>
+                  <div class="zone-map" id="divMap"></div>
+                  <div class="legend-bar"><span>Low</span><div class="grad"></div><span>High</span></div>
+                </div>
+
+                <div class="card">
+                  <div class="card-title">Top Insights <a class="hint" href="dashboard.html">View All</a></div>
+                  <ul class="insight-list">
+                    <li><span class="dot" style="background:var(--green)"></span><div><strong>Highest Division</strong><br>${topDiv.division} · ${fmt(topDiv.hhi)}</div></li>
+                    <li><span class="dot" style="background:var(--red)"></span><div><strong>Lowest Division</strong><br>${lowDiv.division} · ${fmt(lowDiv.hhi)}</div></li>
+                    <li><span class="dot" style="background:var(--orange)"></span><div><strong>Weakest KFA</strong><br>Economic Security · ${fmt(o.economic)}</div></li>
+                    <li><span class="dot" style="background:var(--blue)"></span><div><strong>Strongest KFA</strong><br>Social Well-being · ${fmt(o.social)}</div></li>
+                  </ul>
+                </div>
+
+                <div class="card">
+                  <div class="card-title">Recent Activity</div>
+                  <ul class="activity">
+                    <li><span class="pipe" style="background:var(--green)"></span><div>Mumbai Board scores refreshed from working sheet</div><span class="t">Today</span></li>
+                    <li><span class="pipe" style="background:var(--purple)"></span><div>${fmtInt(o.surveys)} household surveys loaded</div><span class="t">Synced</span></li>
+                    <li><span class="pipe" style="background:var(--orange)"></span><div>${fmtInt(o.buildings)} building composites available</div><span class="t">Ready</span></li>
+                    <li><span class="pipe" style="background:var(--blue)"></span><div>Top layout: ${data.topLayouts[0].layout}</div><span class="t">Insight</span></li>
+                  </ul>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      `;
+
+      const map = document.getElementById('divMap');
+      data.divisions.forEach((d) => {
+        const el = document.createElement('div');
+        el.className = 'zone-tile';
+        el.style.background = scoreColor(d.hhi);
+        el.innerHTML = `<span>${d.division}</span><strong>${fmt(d.hhi, 1)}</strong>`;
+        map.appendChild(el);
+      });
+    })();
+  </script>
+</body>
+</html>
