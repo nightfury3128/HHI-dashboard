@@ -1,10 +1,8 @@
 # HHI Mumbai Board — Dashboard Website
 
-Plain HTML + vanilla JS site styled to match the `Dashboard/` mockups, powered by data from `analysis/working-sheets/MumbaiBoard_WorkingSheet.xlsx`.
+Plain HTML + vanilla JS site styled to match the Dashboard mockups, powered by Mumbai Board working-sheet data.
 
 ## Run locally
-
-Serve the folder over HTTP (fetch needs a server):
 
 ```bash
 cd website
@@ -19,10 +17,10 @@ Open http://localhost:8080
 |------|------|
 | Home | `index.html` |
 | Analytics Dashboard | `dashboard.html` |
-| Other nav items | shell stubs (same chrome) |
+| Survey Portal | `survey.html` |
+| Impact Assessment | `impact.html` |
+| Help | `help.html` |
 
 ## Data
 
-`data/mumbai.json` is extracted from the Mumbai Board working sheet (`RVA-HHI`, `HHIscoring`, `Issues Reported`, `FrequencyQS`).
-
-Re-extract after Excel updates with the export snippet used during build (or ask to regenerate).
+`data/mumbai.json` is extracted from `MumbaiBoard_WorkingSheet.xlsx`.
