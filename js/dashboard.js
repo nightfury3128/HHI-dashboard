@@ -58,12 +58,11 @@
               <label>Age Category</label>
               <select id="fAge">
                 <option value="">All Ages</option>
-                <option value="0-20">0-20</option>
-                <option value="20-30">20-30</option>
-                <option value="30-40">30-40</option>
-                <option value="40-50">40-50</option>
-                <option value="50-60">50-60</option>
-                <option value="60+">60+</option>
+                <option value="New">0–15 New</option>
+                <option value="Mid-Age">15–32 Mid-Age</option>
+                <option value="Ageing">32–45 Ageing</option>
+                <option value="Old">45–57 Old</option>
+                <option value="Cess">57+ Cess</option>
               </select>
             </div>
             <div class="field">
@@ -102,8 +101,8 @@
                 <div class="chart-box"><canvas id="radarChart"></canvas></div>
               </div>
               <div class="card">
-                <div class="card-title"><span id="barTitle">HHI Score by Division</span> <span class="hint" id="barHint">vs Mumbai Avg</span></div>
-                <div class="chart-box"><canvas id="barChart"></canvas></div>
+                <div class="card-title">KFA Scores <span class="hint">board level</span></div>
+                <div class="chart-box tall"><canvas id="divCountChart"></canvas></div>
               </div>
               <div class="card">
                 <div class="card-title">HHI by Geographic Zone</div>
@@ -114,8 +113,8 @@
 
             <div class="grid-3b">
               <div class="card">
-                <div class="card-title">HHI Trend by Building Age</div>
-                <div class="chart-box"><canvas id="trendChart"></canvas></div>
+                <div class="card-title">Building Age-Wise Composition <span class="hint" id="agePieHint">board</span></div>
+                <div class="chart-box"><canvas id="agePieChart"></canvas></div>
               </div>
               <div class="card">
                 <div class="card-title">HHI Heatmap (Divisions × KFA)</div>
@@ -225,6 +224,18 @@
     return el ? el.value : 'division';
   }
 
+  function resolveAgeBandFilter(b) {
+    if (b.ageBand) return b.ageBand;
+    const age = b.buildingAge != null ? Number(b.buildingAge)
+      : (b.year ? 2026 - Number(b.year) : null);
+    if (age == null || Number.isNaN(age)) return null;
+    if (age < 15) return 'New';
+    if (age < 32) return 'Mid-Age';
+    if (age < 45) return 'Ageing';
+    if (age < 57) return 'Old';
+    return 'Cess';
+  }
+
   function filteredBuildings() {
     const div = fDivision.value;
     const layout = fLayout.value;
@@ -234,7 +245,7 @@
       (!div || b.division === div) &&
       (!layout || b.layout === layout) &&
       (!building || b.name === building) &&
-      (!age || b.age === age)
+      (!age || b.ageBand === age || resolveAgeBandFilter(b) === age)
     );
   }
 
@@ -312,8 +323,8 @@
       document.getElementById('kpiRow').innerHTML =
         `<div class="card" style="grid-column:1/-1;text-align:center;padding:28px;color:var(--muted)">No buildings match these filters. Try resetting.</div>`;
       destroyChart('radar');
-      destroyChart('bar');
-      destroyChart('trend');
+      destroyChart('agePie');
+      destroyChart('divCount');
       document.getElementById('zoneMap').innerHTML = '';
       document.getElementById('heatmap').innerHTML = '';
       document.getElementById('topList').innerHTML = '<li><span class="name">No data</span></li>';
@@ -342,10 +353,10 @@
         <div class="foot">out of 100</div>
       </div>
       <div class="kpi green">
-        <div class="kpi-icon">${HHIIcons.target}</div>
-        <div class="label">Composite Score</div>
-        <div class="value">${fmt(o.composite)}</div>
-        <div class="foot up">HHI + RVA blend</div>
+        <div class="kpi-icon">${HHIIcons.house}</div>
+        <div class="label">Number of Buildings</div>
+        <div class="value">${fmtInt(o.buildings)}</div>
+        <div class="foot">in selection</div>
       </div>
       <div class="kpi teal">
         <div class="kpi-icon">${HHIIcons.map}</div>
@@ -354,10 +365,10 @@
         <div class="foot">in selection</div>
       </div>
       <div class="kpi orange">
-        <div class="kpi-icon">${HHIIcons.house}</div>
-        <div class="label">Total Buildings</div>
-        <div class="value">${fmtInt(o.buildings)}</div>
-        <div class="foot">scored</div>
+        <div class="kpi-icon">${HHIIcons.target}</div>
+        <div class="label">Avg Index</div>
+        <div class="value">${fmt(o.composite)}</div>
+        <div class="foot">board composite</div>
       </div>
       <div class="kpi blue">
         <div class="kpi-icon">${HHIIcons.clipboard}</div>
@@ -412,65 +423,121 @@
       },
     });
 
-    // Comparison bar chart
-    const entities = groupEntities(buildings, mode);
-    const maxBars = mode === 'building' ? 12 : mode === 'layout' ? 10 : 20;
-    const shown = entities.slice(0, maxBars);
-    const colors = ['#635bff', '#3b82f6', '#27c281', '#f59e0b', '#ff4d4f', '#14b8a6'];
-    const refAvg = data.overall[sk] != null ? data.overall[sk] : data.overall.hhi;
-
-    const modeTitle = mode === 'division' ? 'Division' : mode === 'layout' ? 'Layout' : 'Building';
-    document.getElementById('barTitle').textContent = `${scoreLabel()} by ${modeTitle}`;
-    document.getElementById('barHint').textContent = `vs Mumbai Avg (${fmt(refAvg, 1)})`;
+    // Age composition pie — respects layout/division filters
+    const ageBands = [
+      { key: 'New', label: 'New', range: '0–15', color: '#a60f2d' },
+      { key: 'Mid-Age', label: 'Mid-Age', range: '15–32', color: '#85698e' },
+      { key: 'Ageing', label: 'Ageing', range: '32–45', color: '#5b8def' },
+      { key: 'Old', label: 'Old', range: '45–57', color: '#1eb5cc' },
+      { key: 'Cess', label: 'Legacy/Cess', range: '57+', color: '#e07a1e' },
+    ];
+    function resolveAgeBand(b) {
+      if (b.ageBand) return b.ageBand;
+      const age = b.buildingAge != null ? Number(b.buildingAge)
+        : (b.year ? 2026 - Number(b.year) : null);
+      if (age == null || Number.isNaN(age)) return null;
+      if (age < 15) return 'New';
+      if (age < 32) return 'Mid-Age';
+      if (age < 45) return 'Ageing';
+      if (age < 57) return 'Old';
+      return 'Cess';
+    }
+    const ageCounts = Object.fromEntries(ageBands.map((a) => [a.key, 0]));
+    let ageKnown = 0;
+    buildings.forEach((b) => {
+      const band = resolveAgeBand(b);
+      if (!band || ageCounts[band] == null) return;
+      ageCounts[band] += 1;
+      ageKnown += 1;
+    });
+    const ageLabels = ageBands.map((a) => a.label);
+    const ageData = ageBands.map((a) => ageCounts[a.key]);
+    const ageColors = ageBands.map((a) => a.color);
+    const scopeHint = fBuilding.value || fLayout.value || fDivision.value || 'board';
+    document.getElementById('agePieHint').textContent = scopeHint;
     document.getElementById('rankScope').textContent = mode === 'building' ? 'Buildings' : 'Layouts';
 
-    destroyChart('bar');
-    charts.bar = new Chart(document.getElementById('barChart'), {
-      type: 'bar',
+    destroyChart('agePie');
+    charts.agePie = new Chart(document.getElementById('agePieChart'), {
+      type: 'pie',
       data: {
-        labels: shown.map((e) => truncate(e.label, mode === 'division' ? 16 : 18)),
+        labels: ageLabels,
         datasets: [{
-          label: scoreLabel(),
-          data: shown.map((e) => e.score),
-          backgroundColor: shown.map((_, i) => colors[i % colors.length]),
-          borderRadius: 6,
-          barThickness: mode === 'building' ? 14 : 20,
+          data: ageData,
+          backgroundColor: ageColors,
+          borderColor: '#fff',
+          borderWidth: 2,
         }],
       },
       options: {
-        indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { display: false },
+          legend: {
+            position: 'bottom',
+            labels: {
+              boxWidth: 12,
+              font: { size: 11, weight: '600' },
+              padding: 12,
+              generateLabels: (chart) => {
+                const ds = chart.data.datasets[0];
+                const total = ds.data.reduce((s, v) => s + (v || 0), 0) || 1;
+                return chart.data.labels.map((label, i) => {
+                  const n = ds.data[i] || 0;
+                  const pct = (n / total) * 100;
+                  return {
+                    text: `${label}  ${pct.toFixed(1)}%`,
+                    fillStyle: ds.backgroundColor[i],
+                    strokeStyle: '#fff',
+                    lineWidth: 1,
+                    hidden: false,
+                    index: i,
+                  };
+                });
+              },
+            },
+          },
           tooltip: {
             callbacks: {
-              title: (items) => shown[items[0].dataIndex]?.label || '',
-              label: (item) => `${scoreLabel()}: ${fmt(item.raw)}`,
+              label: (item) => {
+                const total = item.dataset.data.reduce((s, v) => s + (v || 0), 0) || 1;
+                const pct = (item.raw / total) * 100;
+                const band = ageBands[item.dataIndex];
+                return ` ${band.label} (${band.range}): ${fmtInt(item.raw)} buildings (${pct.toFixed(1)}%)`;
+              },
             },
           },
         },
-        scales: {
-          x: { min: 0, max: 100, grid: { color: '#eef1f8' }, ticks: { font: { size: 10 } } },
-          y: { grid: { display: false }, ticks: { font: { size: 11, weight: '600' } } },
-        },
       },
       plugins: [{
-        id: 'avgLine',
-        afterDraw(chart) {
-          const { ctx, chartArea, scales } = chart;
-          if (!scales.x || refAvg == null) return;
-          const x = scales.x.getPixelForValue(refAvg);
+        id: 'agePiePercentLabels',
+        afterDatasetsDraw(chart) {
+          const { ctx } = chart;
+          const meta = chart.getDatasetMeta(0);
+          const total = chart.data.datasets[0].data.reduce((s, v) => s + (v || 0), 0);
+          if (!total) {
+            ctx.save();
+            ctx.fillStyle = '#8c94a5';
+            ctx.font = '600 13px DM Sans, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            const { left, right, top, bottom } = chart.chartArea;
+            ctx.fillText('No age data for this filter', (left + right) / 2, (top + bottom) / 2);
+            ctx.restore();
+            return;
+          }
           ctx.save();
-          ctx.beginPath();
-          ctx.setLineDash([4, 4]);
-          ctx.strokeStyle = '#8c94a5';
-          ctx.moveTo(x, chartArea.top);
-          ctx.lineTo(x, chartArea.bottom);
-          ctx.stroke();
-          ctx.fillStyle = '#8c94a5';
-          ctx.font = '10px DM Sans';
-          ctx.fillText('Avg ' + Number(refAvg).toFixed(1), x + 4, chartArea.top + 10);
+          ctx.font = '700 12px DM Sans, sans-serif';
+          ctx.fillStyle = '#fff';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          meta.data.forEach((arc, i) => {
+            const val = chart.data.datasets[0].data[i] || 0;
+            const pct = (val / total) * 100;
+            if (pct < 4) return; // skip tiny slices
+            const pos = arc.tooltipPosition();
+            ctx.fillText(`${pct.toFixed(1)}%`, pos.x, pos.y);
+          });
           ctx.restore();
         },
       }],
@@ -494,45 +561,75 @@
       zoneMap.appendChild(el);
     });
 
-    // Age trend — average score by age within filtered set
-    const ageOrder = ['0-20', '20-30', '30-40', '40-50', '50-60', '60+'];
-    const ageScores = ageOrder.map((a) => {
-      const subset = buildings.filter((b) => b.age === a);
-      return avg(subset, sk);
+    // KFA scores at board level — one bar per KFA
+    const kfaBarKeys = [
+      { key: 'housing', label: 'Housing', color: '#635bff' },
+      { key: 'social', label: 'Social', color: '#3b82f6' },
+      { key: 'environment', label: 'Environment', color: '#27c281' },
+      { key: 'economic', label: 'Economic', color: '#f59e0b' },
+      { key: 'governance', label: 'Governance', color: '#ff4d4f' },
+    ];
+    const kfaBoardScores = kfaBarKeys.map((k) => {
+      const v = avg(buildings, k.key);
+      return v == null ? null : Math.round(v * 10) / 10;
     });
-    destroyChart('trend');
-    charts.trend = new Chart(document.getElementById('trendChart'), {
-      type: 'line',
+    destroyChart('divCount');
+    charts.divCount = new Chart(document.getElementById('divCountChart'), {
+      type: 'bar',
       data: {
-        labels: ageOrder.map((a) => a + ' yrs'),
+        labels: kfaBarKeys.map((k) => k.label),
         datasets: [{
-          label: scoreLabel(),
-          data: ageScores,
-          borderColor: '#635bff',
-          backgroundColor: 'rgba(99,91,255,0.12)',
-          fill: true,
-          tension: 0.35,
-          pointRadius: 4,
-          pointBackgroundColor: '#635bff',
-          spanGaps: true,
+          label: 'KFA Score',
+          data: kfaBoardScores,
+          backgroundColor: kfaBarKeys.map((k) => k.color),
+          borderRadius: 8,
+          barPercentage: 0.65,
         }],
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: { padding: { top: 22 } },
         plugins: {
           legend: { display: false },
           tooltip: {
             callbacks: {
-              label: (item) => item.raw == null ? 'No data' : `${scoreLabel()}: ${fmt(item.raw)}`,
+              label: (item) => ` ${fmt(item.raw, 1)} / 100`,
             },
           },
         },
         scales: {
-          y: { min: 0, max: 100, grid: { color: '#eef1f8' }, ticks: { font: { size: 10 } } },
-          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: {
+            min: 0,
+            max: 100,
+            ticks: { font: { size: 10 } },
+            grid: { color: '#eef1f8' },
+            title: { display: true, text: 'KFA score', font: { size: 11 } },
+          },
+          x: {
+            grid: { display: false },
+            ticks: { font: { size: 11, weight: '600' } },
+          },
         },
       },
+      plugins: [{
+        id: 'kfaBarValueLabels',
+        afterDatasetsDraw(chart) {
+          const { ctx } = chart;
+          const meta = chart.getDatasetMeta(0);
+          ctx.save();
+          ctx.font = '700 12px DM Sans, sans-serif';
+          ctx.fillStyle = '#1a1c2c';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'bottom';
+          meta.data.forEach((bar, i) => {
+            const val = chart.data.datasets[0].data[i];
+            if (val == null) return;
+            ctx.fillText(fmt(val, 1), bar.x, bar.y - 6);
+          });
+          ctx.restore();
+        },
+      }],
     });
 
     // Heatmap
