@@ -17,7 +17,6 @@ Open http://localhost:8080
 |------|------|
 | Home | `index.html` |
 | Analytics Dashboard | `dashboard.html` |
-| Survey Portal | `survey.html` |
 | Impact Assessment | `impact.html` |
 | Help | `help.html` |
 

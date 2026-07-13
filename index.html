@@ -20,6 +20,27 @@
       const topDiv = [...data.divisions].sort((a, b) => b.hhi - a.hhi)[0];
       const lowDiv = [...data.divisions].sort((a, b) => a.hhi - b.hhi)[0];
 
+      function qrSvg() {
+        const cells = [];
+        const n = 21;
+        let seed = 42;
+        const rand = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+        for (let y = 0; y < n; y++) {
+          for (let x = 0; x < n; x++) {
+            const finder =
+              (x < 7 && y < 7) || (x > n - 8 && y < 7) || (x < 7 && y > n - 8);
+            const border = x === 0 || y === 0 || x === n - 1 || y === n - 1;
+            const on = finder
+              ? (x % 6 === 0 || y % 6 === 0 || (x > 1 && x < 5 && y > 1 && y < 5))
+              : rand() > 0.55;
+            if (on || border) {
+              cells.push(`<rect x="${x}" y="${y}" width="1" height="1" fill="#0a1128"/>`);
+            }
+          }
+        }
+        return `<svg viewBox="0 0 ${n} ${n}" shape-rendering="crispEdges">${cells.join('')}</svg>`;
+      }
+
       document.getElementById('app').innerHTML = `
         ${shell.sidebar}
         <div class="main">
@@ -85,6 +106,24 @@
 
               <aside class="side-stack">
                 <div class="card">
+                  <div class="card-title">Survey QR Code</div>
+                  <div class="qr-box">${qrSvg()}</div>
+                  <div class="survey-meta">
+                    <strong>HHI – Mumbai Board Household Survey</strong><br/>
+                    ID: HHI-MUM-2026 · Status: <span class="status-pill">Active</span><br/>
+                    Responses: ${fmtInt(o.surveys)}
+                  </div>
+                  <div class="actions" style="justify-content:center;margin-top:8px">
+                    <button type="button" class="btn btn-primary" id="btnDownloadQr">Download QR</button>
+                    <button type="button" class="btn btn-outline" id="btnPrintQr">Print QR</button>
+                  </div>
+                  <div class="link-row" style="margin-top:12px">
+                    <input id="surveyLink" readonly value="https://hhi.mhada.gov.in/survey/mumbai-board" />
+                    <button type="button" class="btn btn-primary" id="btnCopy">Copy</button>
+                  </div>
+                </div>
+
+                <div class="card">
                   <div class="card-title">Live Statistics</div>
                   <div class="stat-mini-grid">
                     <div class="stat-mini"><div class="l">Respondents</div><div class="v">${fmtInt(o.surveys)}</div></div>
@@ -132,6 +171,35 @@
         el.style.background = scoreColor(d.hhi);
         el.innerHTML = `<span>${d.division}</span><strong>${fmt(d.hhi, 1)}</strong>`;
         map.appendChild(el);
+      });
+
+      document.getElementById('btnCopy').addEventListener('click', async () => {
+        const input = document.getElementById('surveyLink');
+        try {
+          await navigator.clipboard.writeText(input.value);
+          document.getElementById('btnCopy').textContent = 'Copied';
+          setTimeout(() => { document.getElementById('btnCopy').textContent = 'Copy'; }, 1500);
+        } catch {
+          input.select();
+        }
+      });
+
+      document.getElementById('btnPrintQr').addEventListener('click', () => {
+        const w = window.open('', '_blank');
+        w.document.write(`<html><body style="display:grid;place-items:center;min-height:100vh;font-family:sans-serif">${document.querySelector('.qr-box').innerHTML}<p>HHI – Mumbai Board Household Survey</p></body></html>`);
+        w.document.close();
+        w.focus();
+        w.print();
+      });
+
+      document.getElementById('btnDownloadQr').addEventListener('click', () => {
+        const svg = document.querySelector('.qr-box svg');
+        const blob = new Blob([svg.outerHTML], { type: 'image/svg+xml' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'hhi-mumbai-survey-qr.svg';
+        a.click();
+        URL.revokeObjectURL(a.href);
       });
     })();
   </script>

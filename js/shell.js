@@ -2,7 +2,6 @@
   const NAV = [
     { href: 'index.html', label: 'Home', icon: 'home', id: 'home' },
     { href: 'dashboard.html', label: 'Dashboard', icon: 'chart', id: 'dashboard' },
-    { href: 'survey.html', label: 'Survey Portal', icon: 'clipboard', id: 'survey' },
     { href: 'impact.html', label: 'Impact Assessment', icon: 'target', id: 'impact' },
     { href: 'help.html', label: 'Help & Support', icon: 'help', id: 'help' },
   ];
