@@ -29,7 +29,7 @@
 
     return {
       sidebar: `
-        <aside class="sidebar">
+        <aside class="sidebar" id="appSidebar">
           <div class="brand">
             <div class="brand-mark">${icons.house || ''}</div>
             <div class="brand-text">
@@ -53,6 +53,9 @@
         </aside>`,
       topbar: `
         <header class="topbar">
+          <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="appSidebar">
+            ${icons.menu || ''}
+          </button>
           <label class="loc-select" aria-label="Board">
             ${icons.pin || ''}
             <select id="boardSwitcher" class="board-switcher">${boardOptions}</select>
@@ -74,17 +77,85 @@
     };
   };
 
+  function ensureNavOverlay() {
+    let overlay = document.getElementById('navOverlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      overlay.id = 'navOverlay';
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(overlay);
+    }
+    return overlay;
+  }
+
+  function setNavOpen(open) {
+    const sidebar = document.getElementById('appSidebar');
+    const overlay = ensureNavOverlay();
+    const toggle = document.getElementById('navToggle');
+    if (!sidebar) return;
+    sidebar.classList.toggle('open', open);
+    if (overlay) {
+      overlay.classList.toggle('visible', open);
+      overlay.setAttribute('aria-hidden', open ? 'false' : 'true');
+    }
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      const icons = window.HHIIcons || {};
+      toggle.innerHTML = open ? (icons.close || '') : (icons.menu || '');
+    }
+    document.body.classList.toggle('nav-open', open);
+  }
+
   window.bindBoardSwitcher = function (currentId) {
     const sel = document.getElementById('boardSwitcher');
-    if (!sel || !window.HHIData) return;
-    sel.value = currentId;
-    sel.addEventListener('change', () => {
-      const id = sel.value;
-      window.HHIData.setBoardId(id);
-      const url = new URL(window.location.href);
-      url.searchParams.set('board', id);
-      window.location.href = url.toString();
+    if (sel && window.HHIData) {
+      sel.value = currentId;
+      sel.addEventListener('change', () => {
+        const id = sel.value;
+        window.HHIData.setBoardId(id);
+        const url = new URL(window.location.href);
+        url.searchParams.set('board', id);
+        window.location.href = url.toString();
+      });
+    }
+
+    const overlay = ensureNavOverlay();
+    const toggle = document.getElementById('navToggle');
+    const sidebar = document.getElementById('appSidebar');
+    if (toggle && !toggle.dataset.bound) {
+      toggle.dataset.bound = '1';
+      toggle.addEventListener('click', () => setNavOpen(!sidebar?.classList.contains('open')));
+    }
+    if (overlay && !overlay.dataset.bound) {
+      overlay.dataset.bound = '1';
+      overlay.addEventListener('click', () => setNavOpen(false));
+    }
+    sidebar?.querySelectorAll('.nav a').forEach((link) => {
+      link.addEventListener('click', () => setNavOpen(false));
     });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) setNavOpen(false);
+    });
+  };
+
+  // Best Practices palette — one color per board; grey for overflow
+  window.boardColor = function (boardId) {
+    const map = {
+      amravati: '#B00020',
+      csn: '#E67E22',
+      kokan: '#F1C40F',
+      mumbai: '#85688F',
+      nagpur: '#27AE60',
+      nashik: '#00b2df',
+      pune: '#8c94a5',
+    };
+    return map[boardId] || '#8c94a5';
+  };
+
+  window.boardTileText = function (boardId) {
+    return boardId === 'kokan' ? '#1a1c2c' : '#ffffff';
   };
 
   window.scoreColor = function (score) {

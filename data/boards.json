@@ -35,11 +35,11 @@
       "id": "mumbai",
       "label": "Mumbai Board",
       "file": "mumbai.json",
-      "buildings": 603,
-      "layouts": 90,
+      "buildings": 562,
+      "layouts": 117,
       "divisions": 5,
       "surveys": 4161,
-      "hhi": 67.3
+      "hhi": 65.33
     },
     {
       "id": "nagpur",

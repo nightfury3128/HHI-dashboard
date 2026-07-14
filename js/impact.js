@@ -351,4 +351,19 @@
   // and building-level filters (fBuilding, fAge).
   =============================================================================
   */
+
+  function resizeCharts() {
+    Object.values(charts).forEach((c) => {
+      if (c && typeof c.resize === 'function') c.resize();
+    });
+  }
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeCharts, 120);
+  });
+  if (typeof ResizeObserver !== 'undefined') {
+    const chartObserver = new ResizeObserver(() => resizeCharts());
+    document.querySelectorAll('.chart-box, .gauge-wrap canvas').forEach((el) => chartObserver.observe(el));
+  }
 })();

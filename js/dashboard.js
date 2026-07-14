@@ -139,7 +139,7 @@
             </div>
           </aside>
 
-          <div>
+          <div class="dash-main">
             <div class="kpi-row" id="kpiRow"></div>
 
             <div class="grid-charts-top">
@@ -295,6 +295,45 @@
     const vals = arr.map((x) => x[key]).filter((v) => v != null && !Number.isNaN(v));
     if (!vals.length) return null;
     return vals.reduce((a, b) => a + b, 0) / vals.length;
+  }
+
+
+  /** Tight Y-axis for RVA line chart — 5-point steps with padding (matches workbook pivot charts). */
+  function rvaChartScales(values) {
+    const nums = values.filter((v) => v != null && !Number.isNaN(Number(v))).map(Number);
+    const xScale = { grid: { display: false }, ticks: { font: { size: 10, weight: '600' } } };
+    if (!nums.length) {
+      return {
+        y: { min: 0, max: 100, grid: { color: '#eef1f8' }, ticks: { font: { size: 10 } } },
+        x: xScale,
+      };
+    }
+    const dataMin = Math.min(...nums);
+    const dataMax = Math.max(...nums);
+    const span = dataMax - dataMin || 10;
+    const padding = Math.max(span * 0.12, 2);
+    let yMin = Math.floor((dataMin - padding) / 5) * 5;
+    let yMax = Math.ceil((dataMax + padding) / 5) * 5;
+    if (yMax - yMin < 15) {
+      const mid = (dataMin + dataMax) / 2;
+      yMin = Math.floor((mid - 7.5) / 5) * 5;
+      yMax = Math.ceil((mid + 7.5) / 5) * 5;
+    }
+    yMin = Math.max(0, yMin);
+    yMax = Math.min(100, Math.max(yMax, yMin + 10));
+    return {
+      y: {
+        min: yMin,
+        max: yMax,
+        grid: { color: '#eef1f8' },
+        ticks: {
+          font: { size: 10 },
+          stepSize: 5,
+          callback: (v) => Number(v).toFixed(2),
+        },
+      },
+      x: xScale,
+    };
   }
 
   function destroyChart(key) {
@@ -615,18 +654,35 @@
       }],
     });
 
-    // RVA vs building age — line chart
-    const rvaByBand = Object.fromEntries(AGE_BANDS.map((a) => [a.key, []]));
-    buildings.forEach((b) => {
-      const band = resolveAgeBand(b);
-      if (!band || b.rva == null || Number.isNaN(Number(b.rva))) return;
-      rvaByBand[band].push(Number(b.rva));
-    });
-    const rvaAvgs = AGE_BANDS.map((a) => {
-      const vals = rvaByBand[a.key];
-      return vals.length ? Math.round((vals.reduce((s, v) => s + v, 0) / vals.length) * 10) / 10 : null;
-    });
-    const rvaCounts = AGE_BANDS.map((a) => rvaByBand[a.key].length);
+    // RVA vs building age — line chart (board-wide uses Overall Score pivot averages)
+    const scopeFiltered = !!(fDivision.value || fLayout.value || fBuilding.value || fAge.value);
+    const osPool = buildings.some((b) => b.inOverallScore)
+      ? buildings.filter((b) => b.inOverallScore)
+      : buildings;
+    let rvaAvgs;
+    let rvaCounts;
+    const boardRvaByAge = data.rvaByAgeBand && Object.values(data.rvaByAgeBand).some((r) => r && r.avg != null)
+      ? data.rvaByAgeBand
+      : null;
+    if (!scopeFiltered && boardRvaByAge) {
+      rvaAvgs = AGE_BANDS.map((a) => {
+        const row = boardRvaByAge[a.key];
+        return row && row.avg != null ? row.avg : null;
+      });
+      rvaCounts = AGE_BANDS.map((a) => (boardRvaByAge[a.key] && boardRvaByAge[a.key].count) || 0);
+    } else {
+      const rvaByBand = Object.fromEntries(AGE_BANDS.map((a) => [a.key, []]));
+      osPool.forEach((b) => {
+        const band = resolveAgeBand(b);
+        if (!band || b.rva == null || Number.isNaN(Number(b.rva))) return;
+        rvaByBand[band].push(Number(b.rva));
+      });
+      rvaAvgs = AGE_BANDS.map((a) => {
+        const vals = rvaByBand[a.key];
+        return vals.length ? Math.round((vals.reduce((s, v) => s + v, 0) / vals.length) * 100) / 100 : null;
+      });
+      rvaCounts = AGE_BANDS.map((a) => rvaByBand[a.key].length);
+    }
     const rvaTotal = rvaCounts.reduce((s, n) => s + n, 0);
     document.getElementById('rvaHint').textContent = rvaTotal
       ? `${rvaTotal} buildings with RVA`
@@ -666,7 +722,7 @@
             },
           },
         },
-        scales: chartScales,
+        scales: rvaChartScales(rvaAvgs),
       },
     });
 
@@ -804,4 +860,19 @@
     window.location.href = url.toString();
   });
   bindBoardSwitcher(boardId);
+
+  function resizeCharts() {
+    Object.values(charts).forEach((c) => {
+      if (c && typeof c.resize === 'function') c.resize();
+    });
+  }
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeCharts, 120);
+  });
+  if (typeof ResizeObserver !== 'undefined') {
+    const chartObserver = new ResizeObserver(() => resizeCharts());
+    document.querySelectorAll('.chart-box').forEach((el) => chartObserver.observe(el));
+  }
 })();

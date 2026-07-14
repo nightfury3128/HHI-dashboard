@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>HHI — Housing Happiness Index</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -25,8 +25,9 @@
         boards: HHIData.boardOptions(manifest),
       });
       const o = data.overall;
-      const topDiv = [...data.divisions].sort((a, b) => b.hhi - a.hhi)[0];
-      const lowDiv = [...data.divisions].sort((a, b) => a.hhi - b.hhi)[0];
+      const boards = manifest.boards || [];
+      const topBoard = [...boards].sort((a, b) => (b.hhi || 0) - (a.hhi || 0))[0];
+      const lowBoard = [...boards].sort((a, b) => (a.hhi || 0) - (b.hhi || 0))[0];
       const statewide = (manifest.boards || []).reduce(
         (acc, b) => {
           acc.buildings += b.buildings || 0;
@@ -165,16 +166,15 @@
                 </div>
 
                 <div class="card">
-                  <div class="card-title">HHI by Division</div>
-                  <div class="zone-map" id="divMap"></div>
-                  <div class="legend-bar"><span>Low</span><div class="grad"></div><span>High</span></div>
+                  <div class="card-title">HHI by Board</div>
+                  <div class="zone-map" id="boardMap"></div>
                 </div>
 
                 <div class="card">
                   <div class="card-title">Top Insights <a class="hint" href="dashboard.html">View All</a></div>
                   <ul class="insight-list">
-                    <li><span class="dot" style="background:var(--green)"></span><div><strong>Highest Division</strong><br>${topDiv.division} · ${fmt(topDiv.hhi)}</div></li>
-                    <li><span class="dot" style="background:var(--red)"></span><div><strong>Lowest Division</strong><br>${lowDiv.division} · ${fmt(lowDiv.hhi)}</div></li>
+                    <li><span class="dot" style="background:var(--green)"></span><div><strong>Highest Board</strong><br>${topBoard ? topBoard.label : '—'} · ${topBoard ? fmt(topBoard.hhi) : '—'}</div></li>
+                    <li><span class="dot" style="background:var(--red)"></span><div><strong>Lowest Board</strong><br>${lowBoard ? lowBoard.label : '—'} · ${lowBoard ? fmt(lowBoard.hhi) : '—'}</div></li>
                     <li><span class="dot" style="background:var(--orange)"></span><div><strong>Weakest KFA</strong><br>Economic Security · ${fmt(o.economic)}</div></li>
                     <li><span class="dot" style="background:var(--blue)"></span><div><strong>Strongest KFA</strong><br>Social Well-being · ${fmt(o.social)}</div></li>
                   </ul>
@@ -195,12 +195,13 @@
         </div>
       `;
 
-      const map = document.getElementById('divMap');
-      data.divisions.forEach((d) => {
+      const map = document.getElementById('boardMap');
+      [...boards].sort((a, b) => (b.hhi || 0) - (a.hhi || 0)).forEach((b) => {
         const el = document.createElement('div');
-        el.className = 'zone-tile';
-        el.style.background = scoreColor(d.hhi);
-        el.innerHTML = `<span>${d.division}</span><strong>${fmt(d.hhi, 1)}</strong>`;
+        el.className = 'zone-tile board-tile';
+        el.style.background = boardColor(b.id);
+        el.style.color = boardTileText(b.id);
+        el.innerHTML = `<span>${b.label.replace(/ Board$/, '')}</span><strong>${fmt(b.hhi, 1)}</strong>`;
         map.appendChild(el);
       });
 
