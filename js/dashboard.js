@@ -802,4 +802,23 @@
     }
   }
   syncSuggestionsCardHeight();
+  // Shrink top filter bar after scrolling starts
+  (function bindCompactTopFilters() {
+    const panel = document.querySelector('.filter-panel');
+    if (!panel) return;
+    const isTopFilterLayout = () => {
+      const style = getComputedStyle(panel);
+      return style.position === 'sticky' && style.display.includes('grid');
+    };
+    const sync = () => {
+      if (!isTopFilterLayout()) {
+        panel.classList.remove('filter-compact');
+        return;
+      }
+      panel.classList.toggle('filter-compact', window.scrollY > 24);
+    };
+    window.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  })();
 })();

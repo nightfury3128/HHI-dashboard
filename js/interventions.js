@@ -172,9 +172,7 @@
   }
   function applyStyle(kfa) {
     const bg = kfaColor(kfa);
-    // Economic amber needs dark text for contrast; others use white
-    const fg = (kfaMeta[kfa] && kfaMeta[kfa].id === 'economic') ? '#1a1c2c' : '#fff';
-    return { bg, fg };
+    return { bg, fg: '#fff' };
   }
 
   function matchesQuick(item) {
@@ -225,12 +223,10 @@
   }
 
   function renderKpis() {
-    const highImpact = interventions.filter((i) => i.priority === 'High' || i.hhiImpact >= 3.5).length;
     const lowCost = interventions.filter((i) => i.costLevel === 'Low Cost').length;
     document.getElementById('ixKpis').innerHTML = `
       <div class="kpi purple"><div class="kpi-icon">${icons.wrench || icons.chart || ''}</div><div class="label">Total Interventions</div><div class="value">${interventions.length}</div><div class="foot">in catalogue</div></div>
       <div class="kpi green"><div class="kpi-icon">${icons.target || ''}</div><div class="label">Key Focus Areas</div><div class="value">${(catalog.kfas || []).length}</div><div class="foot">HHI pillars</div></div>
-      <div class="kpi orange"><div class="kpi-icon">${icons.chart || ''}</div><div class="label">High Impact Options</div><div class="value">${highImpact}</div><div class="foot">priority / score</div></div>
       <div class="kpi blue"><div class="kpi-icon">${icons.house || ''}</div><div class="label">Low Cost Options</div><div class="value">${lowCost}</div><div class="foot">budget-friendly</div></div>
     `;
   }
@@ -267,7 +263,7 @@
           ? `<img src="${item.image}" alt="" loading="lazy" />`
           : `<div class="ix-thumb-fallback" style="background:${soft}"></div>`;
         return `
-          <article class="ix-row" data-id="${item.id}">
+          <article class="ix-row" data-id="${item.id}" style="background:${soft}">
             <div class="ix-row-main">
               <div class="ix-thumb">${img}</div>
               <div class="ix-info">

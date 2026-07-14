@@ -5,32 +5,32 @@
     {
       "id": "housing",
       "label": "Housing Infrastructure",
-      "color": "#635bff",
-      "soft": "#eeedff"
+      "color": "#ba0c2f",
+      "soft": "#f1c4cd"
     },
     {
       "id": "social",
       "label": "Social Well-being",
-      "color": "#3b82f6",
-      "soft": "#e8f1ff"
+      "color": "#05c3de",
+      "soft": "#c8f7fe"
     },
     {
       "id": "environment",
       "label": "Environment",
-      "color": "#27c281",
-      "soft": "#e6f9f1"
+      "color": "#64a70b",
+      "soft": "#e2fbc1"
     },
     {
       "id": "economic",
       "label": "Economic Security",
-      "color": "#f59e0b",
-      "soft": "#fff6e5"
+      "color": "#e57200",
+      "soft": "#ffe3c7"
     },
     {
       "id": "governance",
       "label": "Governance",
-      "color": "#ec4899",
-      "soft": "#fce7f3"
+      "color": "#8d6e97",
+      "soft": "#e8e2ea"
     }
   ],
   "interventions": [
