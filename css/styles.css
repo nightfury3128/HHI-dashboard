@@ -310,7 +310,7 @@ img { max-width: 100%; display: block; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap); margin-bottom: var(--grid-gap); }
 .grid-3b { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr) minmax(0, 0.9fr); gap: var(--grid-gap); align-items: stretch; }
 .grid-charts-top { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); margin-bottom: var(--grid-gap); align-items: stretch; }
-.grid-bottom { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); margin-top: var(--grid-gap); align-items: stretch; }
+.grid-bottom { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); margin-top: var(--grid-gap); align-items: start; }
 .grid-charts-top > .card,
 .grid-bottom > .card,
 .grid-3b > .card {
@@ -328,8 +328,29 @@ img { max-width: 100%; display: block; }
 .chart-card { display: flex; flex-direction: column; min-height: 0; flex: 0 0 auto; }
 .chart-box.stretch { flex: 0 0 auto; height: var(--chart-h-lg); min-height: var(--chart-h-lg); width: 100%; min-width: 0; }
 .chart-box.stretch-sm { flex: 0 0 auto; height: var(--chart-h); min-height: var(--chart-h); width: 100%; min-width: 0; }
-.fill-card { display: flex; flex-direction: column; min-height: var(--chart-h-lg); }
-.issue-intervention-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px; }
+.fill-card { display: flex; flex-direction: column; min-height: 0; }
+.issues-card { height: fit-content; }
+.issue-intervention-list {
+  flex: 0 0 auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 4px;
+  padding-bottom: 6px; /* end a little after last issue */
+}
+.offered-card {
+  overflow: hidden;
+  min-height: 0;
+}
+.offered-card .offered-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 4px;
+  scrollbar-gutter: stable;
+}
 .issue-intervention-row { padding: 10px 0; border-bottom: 1px solid var(--border); }
 .issue-intervention-row:last-child { border-bottom: none; }
 .issue-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 6px; }
@@ -627,6 +648,12 @@ img { max-width: 100%; display: block; }
   .grid-3b { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-3b > .card:last-child { grid-column: 1 / -1; }
   .kpi-row { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  /* Taller top charts when filters sit above (more horizontal room) */
+  .grid-charts-top .chart-box.stretch {
+    height: clamp(17rem, 34vh, 24rem);
+    min-height: clamp(17rem, 34vh, 24rem);
+  }
+
 }
 
 /* Wide but short viewports — horizontal filter (frees vertical space) */
@@ -667,6 +694,10 @@ img { max-width: 100%; display: block; }
 
   .grid-3b { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-3b > .card:last-child { grid-column: 1 / -1; }
+  .grid-charts-top .chart-box.stretch {
+    height: clamp(16rem, 32vh, 22rem);
+    min-height: clamp(16rem, 32vh, 22rem);
+  }
 }
 
 /* 2560px primary dev — vertical filter when wide AND tall */
@@ -735,6 +766,10 @@ img { max-width: 100%; display: block; }
   .filter-panel { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .grid-charts-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-bottom { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-charts-top .chart-box.stretch {
+    height: clamp(15rem, 30vh, 20rem);
+    min-height: clamp(15rem, 30vh, 20rem);
+  }
 }
 
 @media (max-width: 1600px) {

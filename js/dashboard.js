@@ -178,11 +178,11 @@
             </div>
 
             <div class="grid-bottom">
-              <div class="card fill-card">
+              <div class="card fill-card issues-card" id="issuesCard">
                 <div class="card-title">Reported Issues &amp; Suggested Interventions <span class="hint">col E problem → col B intervention</span></div>
                 <div id="issueInterventionList" class="issue-intervention-list"></div>
               </div>
-              <div class="card fill-card">
+              <div class="card fill-card offered-card" id="offeredCard">
                 <div class="card-title">Interventions Being Offered <span class="hint">catalog · apply to enroll</span></div>
                 <ul class="offered-list" id="offeredList"></ul>
               </div>
@@ -807,6 +807,8 @@
         btn.classList.add('applied');
       });
     });
+
+    requestAnimationFrame(() => syncOfferedCardHeight());
   }
 
   function onFilterChange(source) {
@@ -863,6 +865,16 @@
   });
   bindBoardSwitcher(boardId);
 
+
+  function syncOfferedCardHeight() {
+    const issues = document.getElementById('issuesCard');
+    const offered = document.getElementById('offeredCard');
+    if (!issues || !offered) return;
+    // Match Interventions height to Reported Issues (content-sized)
+    offered.style.height = '';
+    const h = issues.getBoundingClientRect().height;
+    if (h > 0) offered.style.height = Math.round(h) + 'px';
+  }
   function resizeCharts() {
     Object.values(charts).forEach((c) => {
       if (c && typeof c.resize === 'function') c.resize();
@@ -871,10 +883,18 @@
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(resizeCharts, 120);
+    resizeTimer = setTimeout(() => {
+      resizeCharts();
+      syncOfferedCardHeight();
+    }, 120);
   });
   if (typeof ResizeObserver !== 'undefined') {
     const chartObserver = new ResizeObserver(() => resizeCharts());
     document.querySelectorAll('.chart-box').forEach((el) => chartObserver.observe(el));
+    const issuesCard = document.getElementById('issuesCard');
+    if (issuesCard) {
+      new ResizeObserver(() => syncOfferedCardHeight()).observe(issuesCard);
+    }
   }
+  syncOfferedCardHeight();
 })();
