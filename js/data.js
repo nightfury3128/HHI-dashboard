@@ -82,7 +82,7 @@
           index: avg(items.map((x) => x.index)),
           rva: avg(items.map((x) => x.rva)),
         };
-      }).sort((a, b) => (b.hhi || 0) - (a.hhi || 0));
+      }).sort((a, b) => (b.index || b.hhi || 0) - (a.index || a.hhi || 0));
     }
 
     const divisions = group('division');
@@ -122,7 +122,7 @@
       layouts,
       buildings,
       topLayouts: layouts.slice(0, 5),
-      lowestLayouts: [...layouts].sort((a, b) => (a.hhi == null) - (b.hhi == null) || (a.hhi || 0) - (b.hhi || 0)).slice(0, 5),
+      lowestLayouts: [...layouts].sort((a, b) => (a.index == null && a.hhi == null) - (b.index == null && b.hhi == null) || ((a.index ?? a.hhi) || 0) - ((b.index ?? b.hhi) || 0)).slice(0, 5),
       buildingsByAge: byAge,
       buildingsByAgeBand: byBand,
       source: 'all boards � merged working sheets',

@@ -369,8 +369,10 @@
     return Object.values(map)
       .map((g) => ({
         ...g,
-        score: avg(g.items, scoreKey()),
+        // Rank Top/Lowest by Index (layout/building avg of building Index)
+        score: avg(g.items, 'index') ?? avg(g.items, 'composite'),
         hhi: avg(g.items, 'hhi'),
+        index: avg(g.items, 'index') ?? avg(g.items, 'composite'),
         housing: avg(g.items, 'housing'),
         social: avg(g.items, 'social'),
         environment: avg(g.items, 'environment'),
