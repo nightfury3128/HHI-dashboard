@@ -148,14 +148,9 @@
                 <div class="chart-box stretch"><canvas id="divCountChart"></canvas></div>
               </div>
               <div class="card chart-card">
-                <div class="card-title">KFA vs Building Age <span class="hint">avg by age band</span></div>
-                <div class="chart-box stretch"><canvas id="kfaAgeChart"></canvas></div>
+                <div class="card-title">RVA Score vs Building Age <span class="hint" id="rvaHint">line · avg by age band</span></div>
+                <div class="chart-box stretch"><canvas id="rvaAgeChart"></canvas></div>
               </div>
-            </div>
-
-            <div class="card chart-card" style="margin-bottom:14px">
-              <div class="card-title">RVA Score vs Building Age <span class="hint" id="rvaHint">line · avg by age band</span></div>
-              <div class="chart-box stretch-sm"><canvas id="rvaAgeChart"></canvas></div>
             </div>
 
             <div class="grid-3b">
@@ -371,7 +366,6 @@
         `<div class="card" style="grid-column:1/-1;text-align:center;padding:28px;color:var(--muted)">No buildings match these filters. Try resetting.</div>`;
       destroyChart('agePie');
       destroyChart('divCount');
-      destroyChart('kfaAge');
       destroyChart('rvaAge');
       document.getElementById('heatmap').innerHTML = '';
       document.getElementById('topList').innerHTML = '<li><span class="name">No data</span></li>';
@@ -619,35 +613,6 @@
           ctx.restore();
         },
       }],
-    });
-
-    // KFA vs building age — grouped bar chart
-    destroyChart('kfaAge');
-    charts.kfaAge = new Chart(document.getElementById('kfaAgeChart'), {
-      type: 'bar',
-      data: {
-        labels: bandLabels,
-        datasets: KFA_LINES.map((k) => ({
-          label: k.label,
-          data: AGE_BANDS.map((a) => {
-            const items = byAgeBand[a.key];
-            const v = avg(items, k.key);
-            return v == null ? null : Math.round(v * 10) / 10;
-          }),
-          backgroundColor: k.color,
-          borderRadius: 4,
-          barPercentage: 0.92,
-          categoryPercentage: 0.85,
-        })),
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } },
-        },
-        scales: chartScales,
-      },
     });
 
     // RVA vs building age — line chart
