@@ -153,38 +153,45 @@
               </div>
             </div>
 
-            <div class="grid-3b">
-              <div class="card">
-                <div class="card-title">Building Age-Wise Composition <span class="hint" id="agePieHint">board</span></div>
-                <div class="chart-box fill"><canvas id="agePieChart"></canvas></div>
-              </div>
-              <div class="card">
-                <div class="card-title">HHI Heatmap <span class="hint" id="heatmapHint">Divisions × KFA</span></div>
-                <div id="heatmap" class="heatmap"></div>
-              </div>
-              <div class="card">
-                <div class="card-title">Top / Lowest <span id="rankScope">Layouts</span></div>
-                <div class="section-split" style="grid-template-columns:1fr;gap:8px">
-                  <div>
-                    <div class="hint" style="font-size:0.75rem;font-weight:700;color:var(--green);margin-bottom:4px">Top 5</div>
-                    <ul class="rank-list" id="topList"></ul>
-                  </div>
-                  <div>
-                    <div class="hint" style="font-size:0.75rem;font-weight:700;color:var(--red);margin:8px 0 4px">Lowest 5</div>
-                    <ul class="rank-list" id="lowList"></ul>
+            <div class="grid-rank-heat">
+              <div class="rank-tables">
+                <div class="card">
+                  <div class="card-title">Top Performing <span class="hint" id="rankScopeTop">Layouts</span></div>
+                  <div class="table-wrap">
+                    <table class="rank-table" id="topTable">
+                      <thead>
+                        <tr><th>#</th><th id="topNameHead">Layout</th><th>Index</th></tr>
+                      </thead>
+                      <tbody id="topList"></tbody>
+                    </table>
                   </div>
                 </div>
+                <div class="card">
+                  <div class="card-title">Lowest Performing <span class="hint" id="rankScopeLow">Layouts</span></div>
+                  <div class="table-wrap">
+                    <table class="rank-table" id="lowTable">
+                      <thead>
+                        <tr><th>#</th><th id="lowNameHead">Layout</th><th>Index</th></tr>
+                      </thead>
+                      <tbody id="lowList"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card heatmap-card">
+                <div class="card-title">HHI Heatmap <span class="hint" id="heatmapHint">Divisions × KFA</span></div>
+                <div id="heatmap" class="heatmap"></div>
               </div>
             </div>
 
             <div class="grid-bottom">
               <div class="card fill-card issues-card" id="issuesCard">
-                <div class="card-title">Reported Issues &amp; Suggested Interventions <span class="hint">col E problem → col B intervention</span></div>
-                <div id="issueInterventionList" class="issue-intervention-list"></div>
+                <div class="card-title">Reported Issues <span class="hint">problems in selection</span></div>
+                <div id="reportedIssuesList" class="issue-intervention-list"></div>
               </div>
-              <div class="card fill-card offered-card" id="offeredCard">
-                <div class="card-title">Interventions Being Offered <span class="hint">catalog · apply to enroll</span></div>
-                <ul class="offered-list" id="offeredList"></ul>
+              <div class="card fill-card suggestions-card" id="suggestionsCard">
+                <div class="card-title">Suggested Improvements <span class="hint">mapped interventions</span></div>
+                <div id="suggestedImprovementsList" class="issue-intervention-list"></div>
               </div>
             </div>
           </div>
@@ -276,6 +283,9 @@
     if (age < 45) return 'Ageing';
     if (age < 57) return 'Old';
     return 'Cess';
+  }
+  function resolveAgeBand(b) {
+    return resolveAgeBandFilter(b);
   }
 
   function filteredBuildings() {
@@ -405,14 +415,13 @@
     if (!buildings.length) {
       document.getElementById('kpiRow').innerHTML =
         `<div class="card" style="grid-column:1/-1;text-align:center;padding:28px;color:var(--muted)">No buildings match these filters. Try resetting.</div>`;
-      destroyChart('agePie');
       destroyChart('divCount');
       destroyChart('rvaAge');
       document.getElementById('heatmap').innerHTML = '';
-      document.getElementById('topList').innerHTML = '<li><span class="name">No data</span></li>';
-      document.getElementById('lowList').innerHTML = '<li><span class="name">No data</span></li>';
-      document.getElementById('issueInterventionList').innerHTML = '<div class="empty-hint">No data</div>';
-      document.getElementById('offeredList').innerHTML = '';
+      document.getElementById('topList').innerHTML = '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
+      document.getElementById('lowList').innerHTML = '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
+      document.getElementById('reportedIssuesList').innerHTML = '<div class="empty-hint">No data</div>';
+      document.getElementById('suggestedImprovementsList').innerHTML = '<div class="empty-hint">No data</div>';
       return;
     }
 
@@ -462,128 +471,12 @@
       </div>
     `;
 
-    // Age composition pie — respects layout/division filters
-    const ageBands = [
-      { key: 'New', label: 'New', range: '0–15', color: '#a60f2d' },
-      { key: 'Mid-Age', label: 'Mid-Age', range: '15–32', color: '#85698e' },
-      { key: 'Ageing', label: 'Ageing', range: '32–45', color: '#5b8def' },
-      { key: 'Old', label: 'Old', range: '45–57', color: '#1eb5cc' },
-      { key: 'Cess', label: 'Legacy/Cess', range: '57+', color: '#e07a1e' },
-    ];
-    function resolveAgeBand(b) {
-      if (b.ageBand) return b.ageBand;
-      const age = b.buildingAge != null ? Number(b.buildingAge)
-        : (b.year ? 2026 - Number(b.year) : null);
-      if (age == null || Number.isNaN(age)) return null;
-      if (age < 15) return 'New';
-      if (age < 32) return 'Mid-Age';
-      if (age < 45) return 'Ageing';
-      if (age < 57) return 'Old';
-      return 'Cess';
-    }
-    const ageCounts = Object.fromEntries(ageBands.map((a) => [a.key, 0]));
-    let ageKnown = 0;
-    buildings.forEach((b) => {
-      const band = resolveAgeBand(b);
-      if (!band || ageCounts[band] == null) return;
-      ageCounts[band] += 1;
-      ageKnown += 1;
-    });
-    const ageLabels = ageBands.map((a) => a.label);
-    const ageData = ageBands.map((a) => ageCounts[a.key]);
-    const ageColors = ageBands.map((a) => a.color);
-    const scopeHint = fBuilding.value || fLayout.value || fDivision.value || 'board';
-    document.getElementById('agePieHint').textContent = scopeHint;
-    document.getElementById('rankScope').textContent = mode === 'building' ? 'Buildings' : 'Layouts';
-
-    destroyChart('agePie');
-    charts.agePie = new Chart(document.getElementById('agePieChart'), {
-      type: 'pie',
-      data: {
-        labels: ageLabels,
-        datasets: [{
-          data: ageData,
-          backgroundColor: ageColors,
-          borderColor: '#fff',
-          borderWidth: 2,
-        }],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        layout: { padding: 4 },
-        plugins: {
-          legend: {
-            position: 'right',
-            align: 'center',
-            labels: {
-              boxWidth: 12,
-              boxHeight: 12,
-              font: { size: 11, weight: '600' },
-              padding: 14,
-              generateLabels: (chart) => {
-                const ds = chart.data.datasets[0];
-                const total = ds.data.reduce((s, v) => s + (v || 0), 0) || 1;
-                return chart.data.labels.map((label, i) => {
-                  const n = ds.data[i] || 0;
-                  const pct = (n / total) * 100;
-                  return {
-                    text: `${label}  ${pct.toFixed(1)}%`,
-                    fillStyle: ds.backgroundColor[i],
-                    strokeStyle: '#fff',
-                    lineWidth: 1,
-                    hidden: false,
-                    index: i,
-                  };
-                });
-              },
-            },
-          },
-          tooltip: {
-            callbacks: {
-              label: (item) => {
-                const total = item.dataset.data.reduce((s, v) => s + (v || 0), 0) || 1;
-                const pct = (item.raw / total) * 100;
-                const band = ageBands[item.dataIndex];
-                return ` ${band.label} (${band.range}): ${fmtInt(item.raw)} buildings (${pct.toFixed(1)}%)`;
-              },
-            },
-          },
-        },
-      },
-      plugins: [{
-        id: 'agePiePercentLabels',
-        afterDatasetsDraw(chart) {
-          const { ctx } = chart;
-          const meta = chart.getDatasetMeta(0);
-          const total = chart.data.datasets[0].data.reduce((s, v) => s + (v || 0), 0);
-          if (!total) {
-            ctx.save();
-            ctx.fillStyle = '#8c94a5';
-            ctx.font = '600 13px DM Sans, sans-serif';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            const { left, right, top, bottom } = chart.chartArea;
-            ctx.fillText('No age data for this filter', (left + right) / 2, (top + bottom) / 2);
-            ctx.restore();
-            return;
-          }
-          ctx.save();
-          ctx.font = '700 12px DM Sans, sans-serif';
-          ctx.fillStyle = '#fff';
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'middle';
-          meta.data.forEach((arc, i) => {
-            const val = chart.data.datasets[0].data[i] || 0;
-            const pct = (val / total) * 100;
-            if (pct < 4) return; // skip tiny slices
-            const pos = arc.tooltipPosition();
-            ctx.fillText(`${pct.toFixed(1)}%`, pos.x, pos.y);
-          });
-          ctx.restore();
-        },
-      }],
-    });
+    const entityLabel = mode === 'building' ? 'Buildings' : 'Layouts';
+    const nameHead = mode === 'building' ? 'Building' : 'Layout';
+    document.getElementById('rankScopeTop').textContent = entityLabel;
+    document.getElementById('rankScopeLow').textContent = entityLabel;
+    document.getElementById('topNameHead').textContent = nameHead;
+    document.getElementById('lowNameHead').textContent = nameHead;
 
     // Heatmap grouping: boards when All Boards, else divisions
     const geoByBoard = boardId === 'all' || boardId === HHIData.ALL_ID;
@@ -753,62 +646,74 @@
       hm.appendChild(row);
     });
 
-    // Top / lowest — layouts unless comparison is building
+    // Top / lowest tables — layouts unless comparison is building
     const rankMode = mode === 'building' ? 'building' : 'layout';
     const ranked = groupEntities(buildings, rankMode);
     const topList = document.getElementById('topList');
     const lowList = document.getElementById('lowList');
-    topList.innerHTML = ranked.slice(0, 5).map((l) =>
-      `<li><span class="name" title="${l.label}">${l.label}</span><span class="score-pill high">${fmt(l.score, 1)}</span></li>`
-    ).join('') || '<li><span class="name">No data</span></li>';
-    lowList.innerHTML = [...ranked].reverse().slice(0, 5).map((l) =>
-      `<li><span class="name" title="${l.label}">${l.label}</span><span class="score-pill low">${fmt(l.score, 1)}</span></li>`
-    ).join('') || '<li><span class="name">No data</span></li>';
+    const topRows = ranked.slice(0, 5);
+    const lowRows = [...ranked].reverse().slice(0, 5);
+    topList.innerHTML = topRows.length
+      ? topRows.map((l, i) =>
+          `<tr><td class="rank-num-cell">${i + 1}</td><td class="name" title="${l.label}">${l.label}</td><td><span class="score-pill high">${fmt(l.score, 1)}</span></td></tr>`
+        ).join('')
+      : '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
+    lowList.innerHTML = lowRows.length
+      ? lowRows.map((l, i) =>
+          `<tr><td class="rank-num-cell">${i + 1}</td><td class="name" title="${l.label}">${l.label}</td><td><span class="score-pill low">${fmt(l.score, 1)}</span></td></tr>`
+        ).join('')
+      : '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
 
     const scopedRows = rowsInScope(buildings);
     const issueGroups = issueInterventionGroups(scopedRows, 10);
 
-    document.getElementById('issueInterventionList').innerHTML = issueGroups.length
+    function severityOf(g) {
+      const pct = g.pct;
+      const sevRaw = (g.severity || '').toLowerCase();
+      if (sevRaw === 'high' || (pct != null && pct >= 60)) return 'high';
+      if (sevRaw === 'medium' || (pct != null && pct >= 40)) return 'medium';
+      return 'low';
+    }
+
+    document.getElementById('reportedIssuesList').innerHTML = issueGroups.length
       ? issueGroups.map((g, idx) => {
-        const pct = g.pct;
-        const sevRaw = (g.severity || '').toLowerCase();
-        const sev = sevRaw === 'high' || (pct != null && pct >= 60) ? 'high'
-          : sevRaw === 'medium' || (pct != null && pct >= 40) ? 'medium' : 'low';
-        const sug = (g.suggestions || []).map((s) =>
-          `<span class="suggestion-tag" title="${s}">${truncate(s, 36)}</span>`
-        ).join('');
+        const sev = severityOf(g);
         return `<div class="issue-intervention-row">
           <div class="issue-head">
             <span class="issue-title">${idx + 1}. ${g.problem}</span>
             <span class="issue-meta"><span class="sev ${sev}">${sev === 'high' ? 'High' : sev === 'medium' ? 'Medium' : 'Low'}</span></span>
           </div>
-          ${sug ? `<div class="suggestion-tags">${sug}</div>` : '<div class="hint">No intervention mapped</div>'}
         </div>`;
       }).join('')
       : '<div class="empty-hint">No issues for this selection.</div>';
 
-    const catalog = interventions.catalog || [];
-    document.getElementById('offeredList').innerHTML = catalog.length
-      ? catalog.map((item) => `
-        <li class="offered-item">
-          <div class="offered-meta">
-            <span class="offered-id">#${item.id}</span>
-            <span class="name" title="${item.name}">${item.name}</span>
-            ${item.kfa ? `<span class="hint">${item.kfa}</span>` : ''}
-          </div>
-          <button type="button" class="btn btn-outline btn-apply" data-intervention="${item.name.replace(/"/g, '&quot;')}">Apply</button>
-        </li>`).join('')
-      : '<li class="empty-hint">No intervention catalog for this board.</li>';
-
-    document.querySelectorAll('.btn-apply').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        btn.textContent = 'Applied';
-        btn.disabled = true;
-        btn.classList.add('applied');
+    const suggestionItems = [];
+    issueGroups.forEach((g) => {
+      (g.suggestions || []).forEach((s) => {
+        suggestionItems.push({ suggestion: s, problem: g.problem, severity: severityOf(g) });
       });
     });
+    // Deduplicate suggestions keeping first problem link
+    const seen = new Set();
+    const uniqueSuggestions = [];
+    suggestionItems.forEach((item) => {
+      if (seen.has(item.suggestion)) return;
+      seen.add(item.suggestion);
+      uniqueSuggestions.push(item);
+    });
 
-    requestAnimationFrame(() => syncOfferedCardHeight());
+    document.getElementById('suggestedImprovementsList').innerHTML = uniqueSuggestions.length
+      ? uniqueSuggestions.map((item, idx) =>
+          `<div class="issue-intervention-row">
+            <div class="issue-head">
+              <span class="issue-title">${idx + 1}. ${item.suggestion}</span>
+            </div>
+            <div class="hint">For: ${item.problem}</div>
+          </div>`
+        ).join('')
+      : '<div class="empty-hint">No suggested improvements for this selection.</div>';
+
+    requestAnimationFrame(() => syncSuggestionsCardHeight());
   }
 
   function onFilterChange(source) {
@@ -866,14 +771,14 @@
   bindBoardSwitcher(boardId);
 
 
-  function syncOfferedCardHeight() {
+
+  function syncSuggestionsCardHeight() {
     const issues = document.getElementById('issuesCard');
-    const offered = document.getElementById('offeredCard');
-    if (!issues || !offered) return;
-    // Match Interventions height to Reported Issues (content-sized)
-    offered.style.height = '';
+    const suggestions = document.getElementById('suggestionsCard');
+    if (!issues || !suggestions) return;
+    suggestions.style.height = '';
     const h = issues.getBoundingClientRect().height;
-    if (h > 0) offered.style.height = Math.round(h) + 'px';
+    if (h > 0) suggestions.style.height = Math.round(h) + 'px';
   }
   function resizeCharts() {
     Object.values(charts).forEach((c) => {
@@ -885,7 +790,7 @@
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       resizeCharts();
-      syncOfferedCardHeight();
+      syncSuggestionsCardHeight();
     }, 120);
   });
   if (typeof ResizeObserver !== 'undefined') {
@@ -893,8 +798,8 @@
     document.querySelectorAll('.chart-box').forEach((el) => chartObserver.observe(el));
     const issuesCard = document.getElementById('issuesCard');
     if (issuesCard) {
-      new ResizeObserver(() => syncOfferedCardHeight()).observe(issuesCard);
+      new ResizeObserver(() => syncSuggestionsCardHeight()).observe(issuesCard);
     }
   }
-  syncOfferedCardHeight();
+  syncSuggestionsCardHeight();
 })();

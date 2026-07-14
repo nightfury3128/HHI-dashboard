@@ -1,0 +1,794 @@
+{
+  "source": "website/assets/HHI_Intervention_v4.pdf",
+  "count": 42,
+  "kfas": [
+    {
+      "id": "housing",
+      "label": "Housing Infrastructure",
+      "color": "#635bff",
+      "soft": "#eeedff"
+    },
+    {
+      "id": "social",
+      "label": "Social Well-being",
+      "color": "#3b82f6",
+      "soft": "#e8f1ff"
+    },
+    {
+      "id": "environment",
+      "label": "Environment",
+      "color": "#27c281",
+      "soft": "#e6f9f1"
+    },
+    {
+      "id": "economic",
+      "label": "Economic Security",
+      "color": "#f59e0b",
+      "soft": "#fff6e5"
+    },
+    {
+      "id": "governance",
+      "label": "Governance",
+      "color": "#ec4899",
+      "soft": "#fce7f3"
+    }
+  ],
+  "interventions": [
+    {
+      "id": 1,
+      "name": "Community Gazebo",
+      "kfa": "Housing Infrastructure",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Provision of comfortable outdoor seating arrangements for outdoor recreation and community gatherings",
+      "cost": "80 K\u20132.5 L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.3,
+      "image": "assets/interventions/photo-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Open Gym",
+      "kfa": "Housing Infrastructure",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Facility",
+      "description": "Installation of fitness equipment in outdoor spaces to promote active lifestyle",
+      "cost": "2L\u20135L",
+      "costLevel": "Medium Cost",
+      "impact": "~120-200 Housing Units",
+      "hhiImpact": 2.5,
+      "image": "assets/interventions/photo-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Building Wall Upgrade",
+      "kfa": "Housing Infrastructure",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Work",
+      "description": "Brick boundary wall for improved safety and defining clear society boundary",
+      "cost": "1.2 L\u20132.4 L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.8,
+      "image": "assets/interventions/photo-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Lift Enhancement / Installation",
+      "kfa": "Housing Infrastructure",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Work",
+      "description": "Retrofitting existing lifts by replacing machinery, control systems, safety equipment and accessibility features",
+      "cost": "1.5L\u20132.5L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.0,
+      "image": "assets/interventions/photo-4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Flood Discharge Pump",
+      "kfa": "Housing Infrastructure",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Infrastructure",
+      "description": "RCC sump/pump chamber and primary electric pump to reduce water logging and improve monsoon flood response",
+      "cost": "4.3L\u20139L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 4.7,
+      "image": "assets/interventions/photo-5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Electrical Safety",
+      "kfa": "Housing Infrastructure",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Infrastructure",
+      "description": "Retrofit electrical panels, wiring, earthing and protection systems for safe power distribution",
+      "cost": "1.5L\u20133.5L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 5.0,
+      "image": "assets/interventions/photo-6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Desludging Tank & Soak Pit Cleaning",
+      "kfa": "Housing Infrastructure",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Service",
+      "description": "Mechanised desludging of septic tanks and soak pits using vacuum suction tankers",
+      "cost": "35k\u201380k per year",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.5,
+      "image": "assets/interventions/photo-7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Water Kiosk",
+      "kfa": "Housing Infrastructure",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Community drinking water station with RO/UV filtration and storage unit",
+      "cost": "50 K\u20131.2 L",
+      "costLevel": "Low Cost",
+      "impact": "~120-200 Housing Units",
+      "hhiImpact": 2.3,
+      "image": "assets/interventions/photo-8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Aapla Dawakhana",
+      "kfa": "Social Well-being",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Modular health clinic with OPD, pharmacy and basic diagnostic facilities",
+      "cost": "4.5L\u20138.5L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.5,
+      "image": "assets/interventions/grad-1.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Mobile Health Clinic",
+      "kfa": "Social Well-being",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Service",
+      "description": "GPS-enabled mobile medical van with doctors, pharmacy and diagnostics",
+      "cost": "20L\u201330L",
+      "costLevel": "High Cost",
+      "impact": "~120-200 Housing Units",
+      "hhiImpact": 2.8,
+      "image": "assets/interventions/grad-2.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Club House",
+      "kfa": "Social Well-being",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Multi-purpose indoor community recreation and gathering space",
+      "cost": "4L\u201313L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.0,
+      "image": "assets/interventions/grad-3.jpg"
+    },
+    {
+      "id": 12,
+      "name": "LED Street Light",
+      "kfa": "Social Well-being",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Infrastructure",
+      "description": "Energy-efficient LED street lighting for safer common areas and pathways",
+      "cost": "12K\u20131.2L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.3,
+      "image": "assets/interventions/grad-4.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Beautification of Public Spaces",
+      "kfa": "Social Well-being",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Work",
+      "description": "Landscape and streetscape beautification to improve public realm quality",
+      "cost": "1.25L\u20135.5L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.5,
+      "image": "assets/interventions/grad-5.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Senior Citizen Activity Centre",
+      "kfa": "Social Well-being",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "Low",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Dedicated indoor activity space for senior residents",
+      "cost": "2.9L\u20134.1L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 0.9,
+      "image": "assets/interventions/grad-6.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Children Daycare & Creche",
+      "kfa": "Social Well-being",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Safe daycare and creche facilities for working parents",
+      "cost": "1.5L\u20135.3L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.3,
+      "image": "assets/interventions/thumb-1.png"
+    },
+    {
+      "id": 16,
+      "name": "After-School Learning Centre",
+      "kfa": "Social Well-being",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "Low",
+      "feasibility": "High",
+      "category": "Service",
+      "description": "After-school learning support and tutoring for children",
+      "cost": "60k\u20131.2L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 1.4,
+      "image": "assets/interventions/thumb-17.png"
+    },
+    {
+      "id": 17,
+      "name": "CCTV Surveillance",
+      "kfa": "Social Well-being",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Infrastructure",
+      "description": "CCTV installation to deter antisocial activity and improve campus safety",
+      "cost": "1L\u20135L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 4.2,
+      "image": "assets/interventions/thumb-18.png"
+    },
+    {
+      "id": 18,
+      "name": "Community Library",
+      "kfa": "Social Well-being",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Facility",
+      "description": "Neighbourhood library for reading, study and community learning",
+      "cost": "50k\u20131.2L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.0,
+      "image": "assets/interventions/thumb-19.png"
+    },
+    {
+      "id": 19,
+      "name": "Community Hall",
+      "kfa": "Social Well-being",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Facility",
+      "description": "Multipurpose community hall for meetings, events and gatherings",
+      "cost": "5.5L\u20138L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.3,
+      "image": "assets/interventions/thumb-20.png"
+    },
+    {
+      "id": 20,
+      "name": "Accessibility Upgrades",
+      "kfa": "Social Well-being",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Infrastructure",
+      "description": "Ramps, handrails and accessible pathways for barrier-free movement",
+      "cost": "15L\u201340L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 5.0,
+      "image": "assets/interventions/thumb-21.png"
+    },
+    {
+      "id": 21,
+      "name": "Senior Citizen Welfare Program",
+      "kfa": "Social Well-being",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Service",
+      "description": "Health check-ups, counseling and welfare activities for seniors",
+      "cost": "40k\u20131.2L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.0,
+      "image": "assets/interventions/thumb-22.png"
+    },
+    {
+      "id": 22,
+      "name": "Sports Tournament",
+      "kfa": "Social Well-being",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Event",
+      "description": "Organised sports events to build community cohesion and active living",
+      "cost": "50k\u20132.5L",
+      "costLevel": "Low Cost",
+      "impact": "~120-200 Housing Units",
+      "hhiImpact": 2.3,
+      "image": "assets/interventions/thumb-23.png"
+    },
+    {
+      "id": 23,
+      "name": "Walking/Jogging Track",
+      "kfa": "Social Well-being",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Infrastructure",
+      "description": "Dedicated walking and jogging path within or around the society",
+      "cost": "50k\u20132.5L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.5,
+      "image": "assets/interventions/thumb-24.png"
+    },
+    {
+      "id": 24,
+      "name": "EV Charging Points",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Infrastructure",
+      "description": "Electric vehicle charging points for residents",
+      "cost": "8L\u201320L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.8,
+      "image": "assets/interventions/photo-1.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Solar-Powered Street Lighting",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Infrastructure",
+      "description": "Solar street lighting to cut energy costs and improve night safety",
+      "cost": "30L\u201335L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.0,
+      "image": "assets/interventions/photo-2.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Waterfront Recreation",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Facility",
+      "description": "Water-edge recreation and seating improvements where applicable",
+      "cost": "5L\u201315L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.3,
+      "image": "assets/interventions/photo-3.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Society Vann / Mini Forest",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Work",
+      "description": "Dense native plantation pockets to increase green cover",
+      "cost": "2L\u20136L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.5,
+      "image": "assets/interventions/photo-4.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Terrace Garden",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Community terrace garden for greening and recreation",
+      "cost": "1.5L\u20134L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.0,
+      "image": "assets/interventions/photo-5.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Community Agro-Garden",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Shared agro-garden plots for residents to grow vegetables",
+      "cost": "1L\u20133L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.3,
+      "image": "assets/interventions/photo-6.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Rainwater Harvesting & Recharge",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Infrastructure",
+      "description": "Rainwater harvesting system with recharge structures",
+      "cost": "55k\u20131.75L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 4.0,
+      "image": "assets/interventions/photo-7.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Solar Installation",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Infrastructure",
+      "description": "Rooftop solar PV for common-area energy savings",
+      "cost": "8L\u201325L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.8,
+      "image": "assets/interventions/photo-8.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Waste Segregation Kits",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Household and society-level waste segregation kits and bins",
+      "cost": "40k\u20131.5L",
+      "costLevel": "Low Cost",
+      "impact": "~120-200 Housing Units",
+      "hhiImpact": 4.5,
+      "image": "assets/interventions/grad-1.jpg"
+    },
+    {
+      "id": 33,
+      "name": "Community Composting",
+      "kfa": "Environment",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "On-site composting unit for biodegradable waste",
+      "cost": "60k\u20132L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 4.7,
+      "image": "assets/interventions/grad-2.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Bioswale Drainage",
+      "kfa": "Environment",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Infrastructure",
+      "description": "Bioswale and drainage improvements for stormwater management",
+      "cost": "1.5L\u20133.5L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.5,
+      "image": "assets/interventions/grad-3.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Mini-Market",
+      "kfa": "Economic Security",
+      "space": "Outdoor",
+      "spaces": [
+        "Outdoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Facility",
+      "description": "Neighbourhood mini-market for daily essentials and local enterprise",
+      "cost": "2.5L\u20135.5L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.0,
+      "image": "assets/interventions/grad-4.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Skill Development Centre",
+      "kfa": "Economic Security",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Service",
+      "description": "Training for livelihoods, micro-enterprises and employability",
+      "cost": "40K\u201380K",
+      "costLevel": "Low Cost",
+      "impact": "~120-200 Housing Units",
+      "hhiImpact": 3.7,
+      "image": "assets/interventions/grad-5.jpg"
+    },
+    {
+      "id": 37,
+      "name": "Digital Learning Hub",
+      "kfa": "Economic Security",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "Medium",
+      "feasibility": "High",
+      "category": "Digital",
+      "description": "Digital learning space with devices and connectivity for residents",
+      "cost": "25L",
+      "costLevel": "High Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 2.5,
+      "image": "assets/interventions/grad-6.jpg"
+    },
+    {
+      "id": 38,
+      "name": "ATM Booths",
+      "kfa": "Economic Security",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "Medium",
+      "feasibility": "Medium",
+      "category": "Facility",
+      "description": "On-campus ATM booth for convenient banking access",
+      "cost": "4L\u20138L",
+      "costLevel": "High Cost",
+      "impact": "~120-200 Housing Units",
+      "hhiImpact": 2.8,
+      "image": "assets/interventions/thumb-1.png"
+    },
+    {
+      "id": 39,
+      "name": "Smart Notice Boards",
+      "kfa": "Governance",
+      "space": "Both",
+      "spaces": [
+        "Both"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Digital",
+      "description": "Digital notice boards for transparent society communication",
+      "cost": "80k\u20132.5L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 4.5,
+      "image": "assets/interventions/thumb-17.png"
+    },
+    {
+      "id": 40,
+      "name": "Automated Accounting",
+      "kfa": "Governance",
+      "space": "Digital",
+      "spaces": [
+        "Digital"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Digital",
+      "description": "Digitised society accounting and fee management system",
+      "cost": "1L\u20133L",
+      "costLevel": "Medium Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 4.7,
+      "image": "assets/interventions/thumb-18.png"
+    },
+    {
+      "id": 41,
+      "name": "Smart Facility Management",
+      "kfa": "Governance",
+      "space": "Digital",
+      "spaces": [
+        "Digital"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Digital",
+      "description": "Smart maintenance ticketing and facility management platform",
+      "cost": "50K\u20131.2L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 5.0,
+      "image": "assets/interventions/thumb-19.png"
+    },
+    {
+      "id": 42,
+      "name": "CHS Capacity Building",
+      "kfa": "Governance",
+      "space": "Indoor",
+      "spaces": [
+        "Indoor"
+      ],
+      "priority": "High",
+      "feasibility": "High",
+      "category": "Service",
+      "description": "Training for CHS committees on governance, finance and maintenance",
+      "cost": "50K\u20131.2L",
+      "costLevel": "Low Cost",
+      "impact": "~50-70 Housing Units",
+      "hhiImpact": 3.5,
+      "image": "assets/interventions/thumb-20.png"
+    }
+  ]
+}
