@@ -9,10 +9,23 @@
   window.renderShell = function (activeId, options = {}) {
     const icons = window.HHIIcons || {};
     const loc = options.location || 'Mumbai Board';
+    const boardId = options.boardId || '';
+    const boards = options.boards || [];
     const navHtml = NAV.map((n) => {
       const cls = n.id === activeId ? 'active' : '';
-      return `<a class="${cls}" href="${n.href}">${icons[n.icon] || ''}<span>${n.label}</span></a>`;
+      const href = boardId ? `${n.href}?board=${encodeURIComponent(boardId)}` : n.href;
+      return `<a class="${cls}" href="${href}">${icons[n.icon] || ''}<span>${n.label}</span></a>`;
     }).join('');
+
+    const boardList = options.boards && options.boards.length
+      ? options.boards
+      : [];
+    const boardOptions = boardList.length
+      ? boardList.map((b) => {
+          const sel = b.id === boardId ? ' selected' : '';
+          return `<option value="${b.id}"${sel}>${b.label}</option>`;
+        }).join('')
+      : `<option selected>${loc}</option>`;
 
     return {
       sidebar: `
@@ -40,10 +53,10 @@
         </aside>`,
       topbar: `
         <header class="topbar">
-          <button type="button" class="loc-select" aria-label="Location">
+          <label class="loc-select" aria-label="Board">
             ${icons.pin || ''}
-            <span>${loc}</span>
-          </button>
+            <select id="boardSwitcher" class="board-switcher">${boardOptions}</select>
+          </label>
           <div class="topbar-right">
             <button type="button" class="icon-btn" aria-label="Notifications">
               ${icons.bell || ''}
@@ -53,12 +66,25 @@
               <div class="avatar">UP</div>
               <div class="meta">
                 <strong>Welcome, Urban Planner</strong>
-                <span>MHADA · Mumbai Board</span>
+                <span>MHADA · <span id="userBoardLabel">${loc}</span></span>
               </div>
             </div>
           </div>
         </header>`,
     };
+  };
+
+  window.bindBoardSwitcher = function (currentId) {
+    const sel = document.getElementById('boardSwitcher');
+    if (!sel || !window.HHIData) return;
+    sel.value = currentId;
+    sel.addEventListener('change', () => {
+      const id = sel.value;
+      window.HHIData.setBoardId(id);
+      const url = new URL(window.location.href);
+      url.searchParams.set('board', id);
+      window.location.href = url.toString();
+    });
   };
 
   window.scoreColor = function (score) {

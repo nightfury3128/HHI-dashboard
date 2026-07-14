@@ -1,0 +1,2397 @@
+{
+  "boardId": "amravati",
+  "board": "Amravati Board",
+  "source": "output/board-interventions/AmravatiBoard_Interventions.xlsx",
+  "topIssues": [
+    {
+      "issue": "Community Town halls or event areas for festivals and gatherings",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Frequent water cuts without prior notice",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Only on-road parking",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Better ventilation and airflow in apartments",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Irregular water supply / inconsistent frequency",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "No access to libraries or computer labs",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Transparent process",
+      "pct": 92.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Poor water quality",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Regular updates",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Regular scheduled maintenance for amenities",
+      "pct": 95.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Better local job opportunities",
+      "pct": 78.6,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Offer legal guidance for dispute resolution",
+      "pct": 30.8,
+      "severity": "Medium",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Low water pressure despite availability",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 4,
+      "count": null
+    },
+    {
+      "issue": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "pct": 88.0,
+      "severity": "High",
+      "rank": 4,
+      "count": null
+    },
+    {
+      "issue": "Drain blockages",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 5,
+      "count": null
+    },
+    {
+      "issue": "Limited availability of pre-schools or early learning centers",
+      "pct": 90.0,
+      "severity": "High",
+      "rank": 5,
+      "count": null
+    },
+    {
+      "issue": "Occasional  powercuts",
+      "pct": 69.6,
+      "severity": "High",
+      "rank": 5,
+      "count": null
+    },
+    {
+      "issue": "Voltage fluctuations",
+      "pct": 55.6,
+      "severity": "High",
+      "rank": 5,
+      "count": null
+    },
+    {
+      "issue": "Community-run daily shops & local markets",
+      "pct": 31.2,
+      "severity": "Medium",
+      "rank": 5,
+      "count": null
+    },
+    {
+      "issue": "Senior-friendly amenities (seating areas, terrace gardens, walking zones)",
+      "pct": 23.1,
+      "severity": "Low",
+      "rank": 5,
+      "count": null
+    }
+  ],
+  "interventions": [
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 83.3,
+      "rank": 1
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 2
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 2
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 2
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 3
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 3
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 4
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 4
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "Waste Segregation Kits",
+      "problem": "Irregular waste collection & cleaning of premises",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 5
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "Waste Segregation Kits",
+      "problem": "Lack of waste segregation system",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 6
+    },
+    {
+      "layout": "48 T/S, Near Circuit House, Amravati",
+      "name": "Community Composting Units",
+      "problem": "Lack of  composting or processing",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 7
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 73.7,
+      "rank": 1
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 86.2,
+      "rank": 1
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 67.7,
+      "rank": 2
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 48.7,
+      "rank": 3
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 53.8,
+      "rank": 3
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 48.7,
+      "rank": 3
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 53.8,
+      "rank": 3
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 44.7,
+      "rank": 4
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 52.3,
+      "rank": 4
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 52.3,
+      "rank": 4
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 43.4,
+      "rank": 5
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 43.4,
+      "rank": 5
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 36.8,
+      "rank": 6
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 35.4,
+      "rank": 6
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 36.8,
+      "rank": 6
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 35.4,
+      "rank": 6
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 36.8,
+      "rank": 6
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 35.4,
+      "rank": 6
+    },
+    {
+      "layout": "Bajoriya Nagar Yavatmal KH No.74 Sheet No 51B",
+      "name": "Waste Segregation Kits",
+      "problem": "Irregular waste collection & cleaning of premises",
+      "severity": "Medium",
+      "pct": 29.2,
+      "rank": 7
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 87.9,
+      "rank": 1
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 54.5,
+      "rank": 2
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 54.5,
+      "rank": 2
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 51.5,
+      "rank": 3
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 51.5,
+      "rank": 3
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 48.5,
+      "rank": 4
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 36.4,
+      "rank": 6
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 36.4,
+      "rank": 6
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 36.4,
+      "rank": 6
+    },
+    {
+      "layout": "Godhani Road Yavatmal KH No.78/2",
+      "name": "Waste Segregation Kits",
+      "problem": "Irregular waste collection & cleaning of premises",
+      "severity": "Medium",
+      "pct": 30.3,
+      "rank": 7
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 53.3,
+      "rank": 1
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 53.3,
+      "rank": 1
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 45.8,
+      "rank": 2
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 45.8,
+      "rank": 2
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "Medium",
+      "pct": 45.8,
+      "rank": 4
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 4
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 4
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 5
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "Medium",
+      "pct": 37.5,
+      "rank": 5
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 37.5,
+      "rank": 6
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "Medium",
+      "pct": 28.9,
+      "rank": 6
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 37.5,
+      "rank": 7
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 28.9,
+      "rank": 7
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 28.9,
+      "rank": 7
+    },
+    {
+      "layout": "Gorakshan Road S No.24/2 (old) Sheet No 82, Plot No 7, Akola",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 37.5,
+      "rank": 7
+    },
+    {
+      "layout": "MIG HS, 20 T/S, LIG HS, 64 T/S, EWS HS, Behind Circuil House, Amravati",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "MIG HS, 20 T/S, LIG HS, 64 T/S, EWS HS, Behind Circuil House, Amravati",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 77.8,
+      "rank": 2
+    },
+    {
+      "layout": "MIG HS, 20 T/S, LIG HS, 64 T/S, EWS HS, Behind Circuil House, Amravati",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 77.8,
+      "rank": 2
+    },
+    {
+      "layout": "MIG HS, 20 T/S, LIG HS, 64 T/S, EWS HS, Behind Circuil House, Amravati",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 4
+    },
+    {
+      "layout": "MIG HS, 20 T/S, LIG HS, 64 T/S, EWS HS, Behind Circuil House, Amravati",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 5
+    },
+    {
+      "layout": "MIG HS, 20 T/S, LIG HS, 64 T/S, EWS HS, Behind Circuil House, Amravati",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 5
+    },
+    {
+      "layout": "MIG HS, 20 T/S, LIG HS, 64 T/S, EWS HS, Behind Circuil House, Amravati",
+      "name": "Waste Segregation Kits",
+      "problem": "Irregular waste collection & cleaning of premises",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 88.7,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 88.7,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 54.7,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 54.7,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 47.2,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 47.2,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 47.2,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 34.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 34.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Achalpur KH No.5/2 (Deomali)",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Low",
+      "pct": 20.8,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Akoli S No.6/1, 6/2, 11/1, 10/2, 56/1, 57/1 and Other Varies No",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 89.3,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Akoli S No.6/1, 6/2, 11/1, 10/2, 56/1, 57/1 and Other Varies No",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 89.3,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Akoli S No.6/1, 6/2, 11/1, 10/2, 56/1, 57/1 and Other Varies No",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 77.3,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Akoli S No.6/1, 6/2, 11/1, 10/2, 56/1, 57/1 and Other Varies No",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 62.7,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Akoli S No.6/1, 6/2, 11/1, 10/2, 56/1, 57/1 and Other Varies No",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 62.7,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Akoli S No.6/1, 6/2, 11/1, 10/2, 56/1, 57/1 and Other Varies No",
+      "name": "ATM Cluster",
+      "problem": "Better last-mile access to jobs/work via public transport",
+      "severity": "High",
+      "pct": 56.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Akoli S No.6/1, 6/2, 11/1, 10/2, 56/1, 57/1 and Other Varies No",
+      "name": "Community Composting Units",
+      "problem": "Lack of waste storage",
+      "severity": "High",
+      "pct": 53.3,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Akoli S No.6/1, 6/2, 11/1, 10/2, 56/1, 57/1 and Other Varies No",
+      "name": "Waste Segregation Kits",
+      "problem": "Lack of waste storage",
+      "severity": "High",
+      "pct": 53.3,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Badnera Plot No 4/1,4/2 sheet No 20 C,20 D",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 1
+    },
+    {
+      "layout": "Mauza Badnera Plot No 4/1,4/2 sheet No 20 C,20 D",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Badnera Plot No 4/1,4/2 sheet No 20 C,20 D",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Badnera Plot No 4/1,4/2 sheet No 20 C,20 D",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 43.3,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Badnera Plot No 4/1,4/2 sheet No 20 C,20 D",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 43.3,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Badnera Plot No 4/1,4/2 sheet No 20 C,20 D",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "Low",
+      "pct": 23.3,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Badnera Plot No 4/1,4/2 sheet No 20 C,20 D",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "Low",
+      "pct": 23.3,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Badnera Plot No 4/1,4/2 sheet No 20 C,20 D",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "Low",
+      "pct": 20.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Buldhana S No.23/2",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 92.0,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Buldhana S No.23/2",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 92.0,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Buldhana S No.23/2",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 88.0,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Buldhana S No.23/2",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 88.0,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Buldhana S No.23/2",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Buldhana S No.23/2",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Buldhana S No.23/2",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Low",
+      "pct": 20.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Buldhana S No.23/2",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Low",
+      "pct": 20.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Buldhana S No.23/2",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Low",
+      "pct": 12.0,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 93.8,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 93.8,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 71.9,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 71.9,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "Medium",
+      "pct": 28.1,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 25.0,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 25.0,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Chikhaldara Sheet No 8, 10, 11",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 25.0,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Kaulkhed S No.20",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 61.5,
+      "rank": 1
+    },
+    {
+      "layout": "Mauza Kaulkhed S No.20",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 61.5,
+      "rank": 1
+    },
+    {
+      "layout": "Mauza Kaulkhed S No.20",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "Medium",
+      "pct": 46.2,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Kaulkhed S No.20",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "Medium",
+      "pct": 42.3,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Kaulkhed S No.20",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 38.5,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Kaulkhed S No.20",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 38.5,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Kaulkhed S No.20",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 30.8,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Khadki S No.13 Akola",
+      "name": "Community Library",
+      "problem": "No access to libraries or computer labs",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Khadki S No.13 Akola",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 95.0,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Khadki S No.13 Akola",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 95.0,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Khadki S No.13 Akola",
+      "name": "After-School Learning",
+      "problem": "Limited availability of pre-schools or early learning centers",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Khadki S No.13 Akola",
+      "name": "Child Daycare Center",
+      "problem": "Limited availability of pre-schools or early learning centers",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Khadki S No.13 Akola",
+      "name": "ATM Cluster",
+      "problem": "Better last-mile access to jobs/work via public transport",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Khamgaon Sr.No.11/2 Buldhana",
+      "name": "Water Kiosk",
+      "problem": "Frequent water cuts without prior notice",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Mauza Khamgaon Sr.No.11/2 Buldhana",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Khamgaon Sr.No.11/2 Buldhana",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Khamgaon Sr.No.11/2 Buldhana",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Khamgaon Sr.No.11/2 Buldhana",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Khamgaon Sr.No.11/2 Buldhana",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Khamgaon Sr.No.11/2 Buldhana",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 1
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 68.8,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 62.5,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 62.5,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "Medium",
+      "pct": 37.5,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 37.5,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Malkapur Dist Buldhana S No.18/1, 19, 20",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 37.5,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Mangrulpir S No.204, 219, 244, 245",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 56.0,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Mangrulpir S No.204, 219, 244, 245",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 56.0,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Mangrulpir S No.204, 219, 244, 245",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 52.0,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Mangrulpir S No.204, 219, 244, 245",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 52.0,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Mangrulpir S No.204, 219, 244, 245",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 48.0,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Mangrulpir S No.204, 219, 244, 245",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 48.0,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Mangrulpir S No.204, 219, 244, 245",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 44.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Mangrulpir S No.204, 219, 244, 245",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 44.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Mangrulpir S No.204, 219, 244, 245",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "Medium",
+      "pct": 40.0,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 69.2,
+      "rank": 1
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 69.2,
+      "rank": 1
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 69.2,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "Medium",
+      "pct": 30.8,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "Medium",
+      "pct": 30.8,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Low",
+      "pct": 23.1,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Low",
+      "pct": 23.1,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Senior Citizen Activity Club",
+      "problem": "Senior-friendly amenities (seating areas, terrace gardens, walking zones)",
+      "severity": "Low",
+      "pct": 23.1,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Senior Citizen Welfare Centre",
+      "problem": "Senior-friendly amenities (seating areas, terrace gardens, walking zones)",
+      "severity": "Low",
+      "pct": 23.1,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Walking/Jogging Track",
+      "problem": "Senior-friendly amenities (seating areas, terrace gardens, walking zones)",
+      "severity": "Low",
+      "pct": 23.1,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "Low",
+      "pct": 15.4,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Mehkar S No.81 Dist Buldhana",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "Low",
+      "pct": 15.4,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Shivani Tq. Dist. Akola S No.93/3, 93/3B, 94/1,100P",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 60.8,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Shivani Tq. Dist. Akola S No.93/3, 93/3B, 94/1,100P",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 60.8,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Shivani Tq. Dist. Akola S No.93/3, 93/3B, 94/1,100P",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 58.8,
+      "rank": 4
+    },
+    {
+      "layout": "Mauza Shivani Tq. Dist. Akola S No.93/3, 93/3B, 94/1,100P",
+      "name": "Community Library",
+      "problem": "No access to libraries or computer labs",
+      "severity": "High",
+      "pct": 56.9,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Shivani Tq. Dist. Akola S No.93/3, 93/3B, 94/1,100P",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 54.9,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Shivani Tq. Dist. Akola S No.93/3, 93/3B, 94/1,100P",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 54.9,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Shivani Tq. Dist. Akola S No.93/3, 93/3B, 94/1,100P",
+      "name": "Aapla Dawakhana",
+      "problem": "Lack of nearby clinics/primary healthcare centers",
+      "severity": "High",
+      "pct": 54.9,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Shivani Tq. Dist. Akola S No.93/3, 93/3B, 94/1,100P",
+      "name": "Mobile Health Clinic",
+      "problem": "Lack of nearby clinics/primary healthcare centers",
+      "severity": "High",
+      "pct": 54.9,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Umarkhed Sheet No 65, Plot No 32/2 Akola (S No.15/1 Old)",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Umarkhed Sheet No 65, Plot No 32/2 Akola (S No.15/1 Old)",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Umarkhed Sheet No 65, Plot No 32/2 Akola (S No.15/1 Old)",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Umarkhed Sheet No 65, Plot No 32/2 Akola (S No.15/1 Old)",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Umarkhed Sheet No 65, Plot No 32/2 Akola (S No.15/1 Old)",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Umarkhed Sheet No 65, Plot No 32/2 Akola (S No.15/1 Old)",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Umarkhed Sheet No 65, Plot No 32/2 Akola (S No.15/1 Old)",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 52.4,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Umarkhed Sheet No 65, Plot No 32/2 Akola (S No.15/1 Old)",
+      "name": "Beautification of Public Spaces",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "Medium",
+      "pct": 38.1,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Umarkhed Sheet No 65, Plot No 32/2 Akola (S No.15/1 Old)",
+      "name": "Community Gazebo",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "Medium",
+      "pct": 38.1,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Washim Dist Washim S No.463",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Washim Dist Washim S No.463",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 2
+    },
+    {
+      "layout": "Mauza Washim Dist Washim S No.463",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Washim Dist Washim S No.463",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 3
+    },
+    {
+      "layout": "Mauza Washim Dist Washim S No.463",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 70.0,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Washim Dist Washim S No.463",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 70.0,
+      "rank": 5
+    },
+    {
+      "layout": "Mauza Washim Dist Washim S No.463",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 40.0,
+      "rank": 6
+    },
+    {
+      "layout": "Mauza Washim Dist Washim S No.463",
+      "name": "Aapla Dawakhana",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "Medium",
+      "pct": 30.0,
+      "rank": 7
+    },
+    {
+      "layout": "Mauza Washim Dist Washim S No.463",
+      "name": "Mobile Health Clinic",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "Medium",
+      "pct": 30.0,
+      "rank": 7
+    },
+    {
+      "layout": "Plot No 4/1, 4/2, Sheet No 7/14 at Chilam Shavali Amravati",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 2
+    },
+    {
+      "layout": "Plot No 4/1, 4/2, Sheet No 7/14 at Chilam Shavali Amravati",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 2
+    },
+    {
+      "layout": "Plot No 4/1, 4/2, Sheet No 7/14 at Chilam Shavali Amravati",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 78.6,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No 4/1, 4/2, Sheet No 7/14 at Chilam Shavali Amravati",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 78.6,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No 4/1, 4/2, Sheet No 7/14 at Chilam Shavali Amravati",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 78.6,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No 4/1, 4/2, Sheet No 7/14 at Chilam Shavali Amravati",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 5
+    },
+    {
+      "layout": "Plot No 4/1, 4/2, Sheet No 7/14 at Chilam Shavali Amravati",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "Medium",
+      "pct": 40.5,
+      "rank": 6
+    },
+    {
+      "layout": "Plot No 4/1, 4/2, Sheet No 7/14 at Chilam Shavali Amravati",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 38.1,
+      "rank": 7
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 93.8,
+      "rank": 4
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "Medium",
+      "pct": 31.2,
+      "rank": 5
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "Medium",
+      "pct": 31.2,
+      "rank": 5
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "Automated Accounting System",
+      "problem": "Transparent agreements and documentation",
+      "severity": "Low",
+      "pct": 18.8,
+      "rank": 6
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent agreements and documentation",
+      "severity": "Low",
+      "pct": 18.8,
+      "rank": 6
+    },
+    {
+      "layout": "Plot No 4/4, 4/2, Sheet No 36 Near Female Normal School, Amravati",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "Low",
+      "pct": 12.5,
+      "rank": 7
+    },
+    {
+      "layout": "Plot No 8/1 & 10/1, Sheet No 30, Tope Nagar",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 88.9,
+      "rank": 1
+    },
+    {
+      "layout": "Plot No 8/1 & 10/1, Sheet No 30, Tope Nagar",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 77.8,
+      "rank": 2
+    },
+    {
+      "layout": "Plot No 8/1 & 10/1, Sheet No 30, Tope Nagar",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 77.8,
+      "rank": 2
+    },
+    {
+      "layout": "Plot No 8/1 & 10/1, Sheet No 30, Tope Nagar",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No 8/1 & 10/1, Sheet No 30, Tope Nagar",
+      "name": "Electrical Safety",
+      "problem": "Occasional  powercuts",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 4
+    },
+    {
+      "layout": "Plot No 8/1 & 10/1, Sheet No 30, Tope Nagar",
+      "name": "Electrical Safety",
+      "problem": "Voltage fluctuations",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 5
+    },
+    {
+      "layout": "Plot No 8/1 & 10/1, Sheet No 30, Tope Nagar",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 6
+    },
+    {
+      "layout": "Ratanlal Plot Sheet No 66, Plot No 1/1 Akola (V H Board Colony)",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 94.7,
+      "rank": 1
+    },
+    {
+      "layout": "Ratanlal Plot Sheet No 66, Plot No 1/1 Akola (V H Board Colony)",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 73.7,
+      "rank": 2
+    },
+    {
+      "layout": "Ratanlal Plot Sheet No 66, Plot No 1/1 Akola (V H Board Colony)",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 63.2,
+      "rank": 3
+    },
+    {
+      "layout": "Ratanlal Plot Sheet No 66, Plot No 1/1 Akola (V H Board Colony)",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 63.2,
+      "rank": 3
+    },
+    {
+      "layout": "Ratanlal Plot Sheet No 66, Plot No 1/1 Akola (V H Board Colony)",
+      "name": "Waste Segregation Kits",
+      "problem": "Irregular waste collection & cleaning of premises",
+      "severity": "High",
+      "pct": 52.6,
+      "rank": 5
+    },
+    {
+      "layout": "Ratanlal Plot Sheet No 66, Plot No 1/1 Akola (V H Board Colony)",
+      "name": "Waste Segregation Kits",
+      "problem": "Lack of waste segregation system",
+      "severity": "High",
+      "pct": 52.6,
+      "rank": 6
+    },
+    {
+      "layout": "Ratanlal Plot Sheet No 66, Plot No 1/1 Akola (V H Board Colony)",
+      "name": "Community Composting Units",
+      "problem": "Lack of  composting or processing",
+      "severity": "High",
+      "pct": 52.6,
+      "rank": 7
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 85.2,
+      "rank": 1
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 81.5,
+      "rank": 2
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 81.5,
+      "rank": 2
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 40.7,
+      "rank": 3
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 40.7,
+      "rank": 3
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 40.7,
+      "rank": 3
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 37.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 37.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 37.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 6
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 25.9,
+      "rank": 7
+    },
+    {
+      "layout": "S No.86/1, 87, Badnera Amaravati",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 25.9,
+      "rank": 7
+    },
+    {
+      "layout": "Sheet No 50/1 V.M.V Road Amravati",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 96.7,
+      "rank": 1
+    },
+    {
+      "layout": "Sheet No 50/1 V.M.V Road Amravati",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 2
+    },
+    {
+      "layout": "Sheet No 50/1 V.M.V Road Amravati",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 2
+    },
+    {
+      "layout": "Sheet No 50/1 V.M.V Road Amravati",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 70.0,
+      "rank": 3
+    },
+    {
+      "layout": "Sheet No 50/1 V.M.V Road Amravati",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 4
+    },
+    {
+      "layout": "Sheet No 50/1 V.M.V Road Amravati",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "Low",
+      "pct": 23.3,
+      "rank": 5
+    },
+    {
+      "layout": "Sheet No 50/1 V.M.V Road Amravati",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "Low",
+      "pct": 23.3,
+      "rank": 6
+    },
+    {
+      "layout": "Sheet No 50/1 V.M.V Road Amravati",
+      "name": "Drainage Cleaning",
+      "problem": "Foul smell near drain lines",
+      "severity": "Low",
+      "pct": 23.3,
+      "rank": 7
+    },
+    {
+      "layout": "Tarfile Colony Sheet No 24C, 24D, 24A, Plot No 3/1 & 1, Akola",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 79.1,
+      "rank": 1
+    },
+    {
+      "layout": "Tarfile Colony Sheet No 24C, 24D, 24A, Plot No 3/1 & 1, Akola",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 79.1,
+      "rank": 1
+    },
+    {
+      "layout": "Tarfile Colony Sheet No 24C, 24D, 24A, Plot No 3/1 & 1, Akola",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "Medium",
+      "pct": 48.8,
+      "rank": 3
+    },
+    {
+      "layout": "Tarfile Colony Sheet No 24C, 24D, 24A, Plot No 3/1 & 1, Akola",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 39.5,
+      "rank": 4
+    },
+    {
+      "layout": "Tarfile Colony Sheet No 24C, 24D, 24A, Plot No 3/1 & 1, Akola",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 39.5,
+      "rank": 5
+    },
+    {
+      "layout": "Tarfile Colony Sheet No 24C, 24D, 24A, Plot No 3/1 & 1, Akola",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 39.5,
+      "rank": 5
+    },
+    {
+      "layout": "Tarfile Colony Sheet No 24C, 24D, 24A, Plot No 3/1 & 1, Akola",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 30.2,
+      "rank": 7
+    },
+    {
+      "layout": "Tarfile Colony Sheet No 24C, 24D, 24A, Plot No 3/1 & 1, Akola",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "Medium",
+      "pct": 30.2,
+      "rank": 7
+    },
+    {
+      "layout": "Vidarbha Housing Board Near Maltekdi, Amravati",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 91.3,
+      "rank": 1
+    },
+    {
+      "layout": "Vidarbha Housing Board Near Maltekdi, Amravati",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 87.0,
+      "rank": 2
+    },
+    {
+      "layout": "Vidarbha Housing Board Near Maltekdi, Amravati",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 87.0,
+      "rank": 2
+    },
+    {
+      "layout": "Vidarbha Housing Board Near Maltekdi, Amravati",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 69.6,
+      "rank": 4
+    },
+    {
+      "layout": "Vidarbha Housing Board Near Maltekdi, Amravati",
+      "name": "Electrical Safety",
+      "problem": "Occasional  powercuts",
+      "severity": "High",
+      "pct": 69.6,
+      "rank": 5
+    },
+    {
+      "layout": "Vidarbha Housing Board Near Maltekdi, Amravati",
+      "name": "Waste Segregation Kits",
+      "problem": "Irregular waste collection & cleaning of premises",
+      "severity": "High",
+      "pct": 69.6,
+      "rank": 7
+    }
+  ],
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Water Kiosk",
+      "kfa": "Housing Infra",
+      "impact": "Inadequate water supply and water quality"
+    },
+    {
+      "id": 2,
+      "name": "Electrical Safety",
+      "kfa": "Housing Infra",
+      "impact": "Electrical safety risks due to aging wiring, faulty systems and unsafe installations"
+    },
+    {
+      "id": 3,
+      "name": "Building Wall Upgrade",
+      "kfa": "Housing Infra",
+      "impact": "Safety concerns due to open boundaries, encroachments or unauthorized access (FGD&RVA)​"
+    },
+    {
+      "id": 4,
+      "name": "Community Gazebo",
+      "kfa": "Housing Infra",
+      "impact": "Lack of shaded spaces (FGD&RVA) ​"
+    },
+    {
+      "id": 5,
+      "name": "Open Gym",
+      "kfa": "Housing Infra",
+      "impact": "Improved access for active and healthy lifestyles (FGD&RVA)​"
+    },
+    {
+      "id": 6,
+      "name": "Lift Enhancement",
+      "kfa": "Housing Infra",
+      "impact": "Frequent lift breakdowns and inadequate lift capacity"
+    },
+    {
+      "id": 7,
+      "name": "Flood Discharge Pump",
+      "kfa": "Housing Infra",
+      "impact": "Extreme Weather Climate Resilience, Ground Infrastructure Loss Protect"
+    },
+    {
+      "id": 8,
+      "name": "Aapla Dawakhana",
+      "kfa": "Social Wellbeing",
+      "impact": "Limited access to healthcare services"
+    },
+    {
+      "id": 9,
+      "name": "Mobile Health Clinic",
+      "kfa": "Social Wellbeing",
+      "impact": "Limited access to healthcare services"
+    },
+    {
+      "id": 10,
+      "name": "Accessibility Infrastructure",
+      "kfa": "Social Wellbeing",
+      "impact": "Accessibility barriers for vulnerable groups"
+    },
+    {
+      "id": 11,
+      "name": "Senior Citizen Welfare Centre",
+      "kfa": "Social Wellbeing",
+      "impact": "Lack of senior citizen support and engagement facilities"
+    },
+    {
+      "id": 12,
+      "name": "Senior Citizen Activity Club",
+      "kfa": "Social Wellbeing",
+      "impact": "Lack of senior citizen support and engagement facilities"
+    },
+    {
+      "id": 13,
+      "name": "Child Daycare Center",
+      "kfa": "Social Wellbeing",
+      "impact": "Inadequate childcare and child development infrastructure​"
+    },
+    {
+      "id": 14,
+      "name": "After-School Learning",
+      "kfa": "Social Wellbeing",
+      "impact": "Education and Academic Achievement; Social Well Being and Child Development"
+    },
+    {
+      "id": 15,
+      "name": "CCTV Surveillance System",
+      "kfa": "Social Wellbeing",
+      "impact": "Safety & Security"
+    },
+    {
+      "id": 16,
+      "name": "LED Street Light",
+      "kfa": "Social Wellbeing",
+      "impact": "Safety & Security, Night Mobility, Urban Infrastructure"
+    },
+    {
+      "id": 17,
+      "name": "Community Library",
+      "kfa": "Social Wellbeing",
+      "impact": "Education & Digital Literacy"
+    },
+    {
+      "id": 18,
+      "name": "Community Hall",
+      "kfa": "Social Wellbeing",
+      "impact": "Community Governance & Social Cohesion"
+    },
+    {
+      "id": 19,
+      "name": "Walking/Jogging Track",
+      "kfa": "Social Wellbeing",
+      "impact": "Physical Health and Wellness"
+    },
+    {
+      "id": 20,
+      "name": "Club House",
+      "kfa": "Social Wellbeing",
+      "impact": "Recreation & Social Well-being"
+    },
+    {
+      "id": 21,
+      "name": "Beautification of Public Spaces",
+      "kfa": "Social Wellbeing",
+      "impact": "Community Cohesion and Aesthetic Quality of Life"
+    },
+    {
+      "id": 22,
+      "name": "Drainage Cleaning",
+      "kfa": "Environment and Living",
+      "impact": "Health and Hygiene (prevention of sewage backflow, waterborne disease"
+    },
+    {
+      "id": 23,
+      "name": "Community Composting Units",
+      "kfa": "Environment and Living",
+      "impact": "Environmental sustainability, hygiene, waste reduction"
+    },
+    {
+      "id": 24,
+      "name": "Rainwater Harvesting & Groundwater Recharge",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability, Water Security, Cost Savings"
+    },
+    {
+      "id": 25,
+      "name": "Solar Installation",
+      "kfa": "Environment and Living",
+      "impact": "Energy Security, Cost Savings (₹15,000-18,000 annual savings)"
+    },
+    {
+      "id": 26,
+      "name": "Solar-Powered Street Lights",
+      "kfa": "Environment and Living",
+      "impact": "Resource Conservation and Environmental Sustainability"
+    },
+    {
+      "id": 27,
+      "name": "Waterfront Recreation",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability and Groundwater Recharge"
+    },
+    {
+      "id": 28,
+      "name": "Society Vann/ Mini Forest",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability and Urban Ecology"
+    },
+    {
+      "id": 29,
+      "name": "Community Agro-Garden",
+      "kfa": "Environment and Living",
+      "impact": "Health and Hygiene (access to fresh organic produce)"
+    },
+    {
+      "id": 30,
+      "name": "Terrace Garden",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability and Urban Ecology"
+    },
+    {
+      "id": 31,
+      "name": "EV Charging Points",
+      "kfa": "Environment and Living",
+      "impact": "Economic Security and Financial Savings"
+    },
+    {
+      "id": 32,
+      "name": "Waste Segregation Kits",
+      "kfa": "Environment and Living",
+      "impact": "Health and Hygiene"
+    },
+    {
+      "id": 33,
+      "name": "Mini-Market",
+      "kfa": "Economic Security",
+      "impact": "On-Premise Essential Commodity Access"
+    },
+    {
+      "id": 34,
+      "name": "ATM Cluster",
+      "kfa": "Economic Security",
+      "impact": "Digital Inclusion, Service Accessibility, Entrepreneurship"
+    },
+    {
+      "id": 35,
+      "name": "Skill Development Workshops",
+      "kfa": "Economic Security",
+      "impact": "Economic Security"
+    },
+    {
+      "id": 36,
+      "name": "Digital Learning Centre",
+      "kfa": "Economic Security",
+      "impact": "Economic Empowerment, Employability"
+    },
+    {
+      "id": 37,
+      "name": "ATM Cluster",
+      "kfa": "Economic Security",
+      "impact": "Automated Micro-Liquidity Access, Complete Elimination of Transit Gaps"
+    },
+    {
+      "id": 38,
+      "name": "CHS Capacity Building",
+      "kfa": "Governance",
+      "impact": "Governance Audit Compliance, Complete Financial Transparency"
+    },
+    {
+      "id": 39,
+      "name": "Automated Accounting System",
+      "kfa": "Governance",
+      "impact": "Governance Audit Compliance, Complete Financial Transparency"
+    },
+    {
+      "id": 40,
+      "name": "Smart Notice Boards",
+      "kfa": "Governance",
+      "impact": "Governance and Transparency; real-time, auditable"
+    },
+    {
+      "id": 41,
+      "name": "Society Management Center",
+      "kfa": "Governance",
+      "impact": "Optimized Asset Lifecycle, Automated Access Control, Committee Managem"
+    }
+  ]
+}

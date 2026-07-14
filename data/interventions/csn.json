@@ -1,0 +1,4581 @@
+{
+  "boardId": "csn",
+  "board": "CSN Board",
+  "source": "output/board-interventions/CSNBoard_Interventions.xlsx",
+  "topIssues": [
+    {
+      "issue": "Irregular water supply / inconsistent frequency",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "No dedicated parking",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Only on-road parking",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Parking is rarely available",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Regular scheduled maintenance for amenities",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Community Town halls or event areas for festivals and gatherings",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Drain blockages",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Foul smell near drain lines",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Limited availability of pre-schools or early learning centers",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Poor water quality",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Better local job opportunities",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Better ventilation and airflow in apartments",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Limited availability of multi-specialty hospitals",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Low water pressure despite availability",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Overflow during rains",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Regular updates",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Transparent process",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Lack of nearby clinics/primary healthcare centers",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 4,
+      "count": null
+    },
+    {
+      "issue": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "pct": 81.2,
+      "severity": "High",
+      "rank": 4,
+      "count": null
+    },
+    {
+      "issue": "Poor quality of available healthcare services",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 5,
+      "count": null
+    }
+  ],
+  "interventions": [
+    {
+      "layout": "15 DRT Tenaments, Hingoli",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "15 DRT Tenaments, Hingoli",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "15 DRT Tenaments, Hingoli",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "15 DRT Tenaments, Hingoli",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "15 DRT Tenaments, Hingoli",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "15 DRT Tenaments, Hingoli",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 5
+    },
+    {
+      "layout": "15 DRT Tenaments, Hingoli",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 5
+    },
+    {
+      "layout": "15 DRT Tenaments, Hingoli",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "Low",
+      "pct": 20.0,
+      "rank": 6
+    },
+    {
+      "layout": "15 DRT Tenaments, Hingoli",
+      "name": "Water Kiosk",
+      "problem": "Frequent water cuts without prior notice",
+      "severity": "Low",
+      "pct": 0.0,
+      "rank": 7
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 94.4,
+      "rank": 3
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 94.4,
+      "rank": 3
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 94.4,
+      "rank": 3
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 83.3,
+      "rank": 5
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 83.3,
+      "rank": 5
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 5.6,
+      "rank": 6
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 5.6,
+      "rank": 6
+    },
+    {
+      "layout": "Bldg No-1 to 10, Paithan, Aurangabad",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "Low",
+      "pct": 5.6,
+      "rank": 7
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 83.3,
+      "rank": 3
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 83.3,
+      "rank": 3
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 83.3,
+      "rank": 3
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 4
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 4
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 5
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 6
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 6
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 7
+    },
+    {
+      "layout": "Durga Nagar Jalna",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 7
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 72.7,
+      "rank": 4
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 72.7,
+      "rank": 4
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 68.2,
+      "rank": 5
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "Building Wall Upgrade",
+      "problem": "No CCTV or security personnel",
+      "severity": "High",
+      "pct": 63.6,
+      "rank": 6
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "CCTV Surveillance System",
+      "problem": "No CCTV or security personnel",
+      "severity": "High",
+      "pct": 63.6,
+      "rank": 6
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "LED Street Light",
+      "problem": "No CCTV or security personnel",
+      "severity": "High",
+      "pct": 63.6,
+      "rank": 6
+    },
+    {
+      "layout": "Eknath Nagar Osmanpura",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 59.1,
+      "rank": 7
+    },
+    {
+      "layout": "G No-104/1, Tisgaon, Aurangabad",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "G No-104/1, Tisgaon, Aurangabad",
+      "name": "Drainage Cleaning",
+      "problem": "Foul smell near drain lines",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "G No-104/1, Tisgaon, Aurangabad",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-104/1, Tisgaon, Aurangabad",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-104/1, Tisgaon, Aurangabad",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "G No-104/1, Tisgaon, Aurangabad",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 96.3,
+      "rank": 6
+    },
+    {
+      "layout": "G No-104/1, Tisgaon, Aurangabad",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 96.3,
+      "rank": 7
+    },
+    {
+      "layout": "G No-113 Part, Khandeshwari Beed",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "G No-113 Part, Khandeshwari Beed",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "G No-113 Part, Khandeshwari Beed",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-113 Part, Khandeshwari Beed",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-113 Part, Khandeshwari Beed",
+      "name": "Drainage Cleaning",
+      "problem": "Foul smell near drain lines",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "G No-113 Part, Khandeshwari Beed",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "G No-113 Part, Khandeshwari Beed",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "G No-113 Part, Khandeshwari Beed",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "Aapla Dawakhana",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "Mobile Health Clinic",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "Aapla Dawakhana",
+      "problem": "Lack of nearby clinics/primary healthcare centers",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "Mobile Health Clinic",
+      "problem": "Lack of nearby clinics/primary healthcare centers",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "Aapla Dawakhana",
+      "problem": "unavailability of emergency medical services",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "Mobile Health Clinic",
+      "problem": "unavailability of emergency medical services",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "G No-145 Part, Deolai, Aurangabad",
+      "name": "Community Library",
+      "problem": "No access to libraries or computer labs",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 5
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 5
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 5
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "LED Street Light",
+      "problem": "Poor lighting in common areas",
+      "severity": "Low",
+      "pct": 20.0,
+      "rank": 6
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "Solar-Powered Street Lights",
+      "problem": "Poor lighting in common areas",
+      "severity": "Low",
+      "pct": 20.0,
+      "rank": 6
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "Building Wall Upgrade",
+      "problem": "No CCTV or security personnel",
+      "severity": "Low",
+      "pct": 20.0,
+      "rank": 7
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "CCTV Surveillance System",
+      "problem": "No CCTV or security personnel",
+      "severity": "Low",
+      "pct": 20.0,
+      "rank": 7
+    },
+    {
+      "layout": "G No-146A, Hingoli",
+      "name": "LED Street Light",
+      "problem": "No CCTV or security personnel",
+      "severity": "Low",
+      "pct": 20.0,
+      "rank": 7
+    },
+    {
+      "layout": "G No-679, Ardhapur, Nanded",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "G No-679, Ardhapur, Nanded",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "G No-679, Ardhapur, Nanded",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-679, Ardhapur, Nanded",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-679, Ardhapur, Nanded",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-679, Ardhapur, Nanded",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "G No-679, Ardhapur, Nanded",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "G No-679, Ardhapur, Nanded",
+      "name": "LED Street Light",
+      "problem": "Poor lighting in common areas",
+      "severity": "Low",
+      "pct": 10.0,
+      "rank": 7
+    },
+    {
+      "layout": "G No-679, Ardhapur, Nanded",
+      "name": "Solar-Powered Street Lights",
+      "problem": "Poor lighting in common areas",
+      "severity": "Low",
+      "pct": 10.0,
+      "rank": 7
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Aapla Dawakhana",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Mobile Health Clinic",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Aapla Dawakhana",
+      "problem": "Lack of nearby clinics/primary healthcare centers",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Mobile Health Clinic",
+      "problem": "Lack of nearby clinics/primary healthcare centers",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Aapla Dawakhana",
+      "problem": "unavailability of emergency medical services",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Mobile Health Clinic",
+      "problem": "unavailability of emergency medical services",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Aapla Dawakhana",
+      "problem": "Poor quality of available healthcare services",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Mobile Health Clinic",
+      "problem": "Poor quality of available healthcare services",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "G No-74 Part, Deolai, Aurangabad",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "Aapla Dawakhana",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "Mobile Health Clinic",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 94.7,
+      "rank": 4
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 94.7,
+      "rank": 5
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 94.7,
+      "rank": 5
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 94.7,
+      "rank": 6
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 94.7,
+      "rank": 6
+    },
+    {
+      "layout": "Gut No-09 Nakshatrawadi",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 78.9,
+      "rank": 7
+    },
+    {
+      "layout": "Kava Road, Latur",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Kava Road, Latur",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Kava Road, Latur",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Kava Road, Latur",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Kava Road, Latur",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Kava Road, Latur",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "Kava Road, Latur",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 5
+    },
+    {
+      "layout": "Kava Road, Latur",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 69.2,
+      "rank": 6
+    },
+    {
+      "layout": "Kava Road, Latur",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 30.8,
+      "rank": 7
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 95.3,
+      "rank": 2
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 93.0,
+      "rank": 3
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 93.0,
+      "rank": 3
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 93.0,
+      "rank": 3
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 79.1,
+      "rank": 4
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 79.1,
+      "rank": 4
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 65.1,
+      "rank": 5
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 39.5,
+      "rank": 6
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 27.9,
+      "rank": 7
+    },
+    {
+      "layout": "Labour Colony Nanded",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 27.9,
+      "rank": 7
+    },
+    {
+      "layout": "Labour Colony, Latur",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Labour Colony, Latur",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Labour Colony, Latur",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Labour Colony, Latur",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 4
+    },
+    {
+      "layout": "Labour Colony, Latur",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 4
+    },
+    {
+      "layout": "Labour Colony, Latur",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 4
+    },
+    {
+      "layout": "Labour Colony, Latur",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 5
+    },
+    {
+      "layout": "Labour Colony, Latur",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 76.9,
+      "rank": 6
+    },
+    {
+      "layout": "Labour Colony, Latur",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Low",
+      "pct": 23.1,
+      "rank": 7
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 90.9,
+      "rank": 3
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 90.9,
+      "rank": 3
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 90.9,
+      "rank": 3
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 63.6,
+      "rank": 4
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 63.6,
+      "rank": 4
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 54.5,
+      "rank": 5
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 54.5,
+      "rank": 5
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 54.5,
+      "rank": 6
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 18.2,
+      "rank": 7
+    },
+    {
+      "layout": "MIDC Area Osmanabad",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 18.2,
+      "rank": 7
+    },
+    {
+      "layout": "MIDC Land Latur",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "MIDC Land Latur",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "MIDC Land Latur",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 3
+    },
+    {
+      "layout": "MIDC Land Latur",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 3
+    },
+    {
+      "layout": "MIDC Land Latur",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 3
+    },
+    {
+      "layout": "MIDC Land Latur",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 4
+    },
+    {
+      "layout": "MIDC Land Latur",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 92.3,
+      "rank": 5
+    },
+    {
+      "layout": "MIDC Land Latur",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 61.5,
+      "rank": 6
+    },
+    {
+      "layout": "MIDC Land Latur",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 38.5,
+      "rank": 7
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 92.9,
+      "rank": 2
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 92.9,
+      "rank": 2
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "Building Wall Upgrade",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 4
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "CCTV Surveillance System",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 4
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "LED Street Light",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 4
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "Medium",
+      "pct": 35.7,
+      "rank": 5
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 6
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 6
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 6
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 7
+    },
+    {
+      "layout": "Maljipura Near Griha Nirman Bhavan",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 7
+    },
+    {
+      "layout": "Municipal Land, Osmanabad (50 SRT Osmanabad)",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Municipal Land, Osmanabad (50 SRT Osmanabad)",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Municipal Land, Osmanabad (50 SRT Osmanabad)",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Municipal Land, Osmanabad (50 SRT Osmanabad)",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "Municipal Land, Osmanabad (50 SRT Osmanabad)",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "Municipal Land, Osmanabad (50 SRT Osmanabad)",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "Municipal Land, Osmanabad (50 SRT Osmanabad)",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "Municipal Land, Osmanabad (50 SRT Osmanabad)",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "Municipal Land, Osmanabad (50 SRT Osmanabad)",
+      "name": "Community Composting Units",
+      "problem": "Lack of  composting or processing",
+      "severity": "Low",
+      "pct": 8.3,
+      "rank": 7
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 2
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 2
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 70.8,
+      "rank": 3
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 70.8,
+      "rank": 3
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 70.8,
+      "rank": 3
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 70.8,
+      "rank": 4
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 41.7,
+      "rank": 5
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 41.7,
+      "rank": 5
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "Medium",
+      "pct": 25.0,
+      "rank": 6
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 20.8,
+      "rank": 7
+    },
+    {
+      "layout": "N-5, CIDCO, New Aurangabad",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 20.8,
+      "rank": 7
+    },
+    {
+      "layout": "N-6-I, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "N-6-I, New Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "N-6-I, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 70.8,
+      "rank": 4
+    },
+    {
+      "layout": "N-6-I, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 5
+    },
+    {
+      "layout": "N-6-I, New Aurangabad",
+      "name": "CCTV Surveillance System",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 5
+    },
+    {
+      "layout": "N-6-I, New Aurangabad",
+      "name": "LED Street Light",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 5
+    },
+    {
+      "layout": "N-6-I, New Aurangabad",
+      "name": "ATM Cluster",
+      "problem": "Better last-mile access to jobs/work via public transport",
+      "severity": "High",
+      "pct": 54.2,
+      "rank": 6
+    },
+    {
+      "layout": "N-6-I, New Aurangabad",
+      "name": "Child Daycare Center",
+      "problem": "Child-friendly amenities (playgrounds, safe recreational spaces)",
+      "severity": "Medium",
+      "pct": 29.2,
+      "rank": 7
+    },
+    {
+      "layout": "N-6-II, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "N-6-II, New Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "N-6-II, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 68.2,
+      "rank": 4
+    },
+    {
+      "layout": "N-6-II, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 59.1,
+      "rank": 5
+    },
+    {
+      "layout": "N-6-II, New Aurangabad",
+      "name": "CCTV Surveillance System",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 59.1,
+      "rank": 5
+    },
+    {
+      "layout": "N-6-II, New Aurangabad",
+      "name": "LED Street Light",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 59.1,
+      "rank": 5
+    },
+    {
+      "layout": "N-6-II, New Aurangabad",
+      "name": "Community Library",
+      "problem": "Learning labs (library and computer facilities)",
+      "severity": "Low",
+      "pct": 22.7,
+      "rank": 6
+    },
+    {
+      "layout": "N-6-II, New Aurangabad",
+      "name": "Child Daycare Center",
+      "problem": "Child-friendly amenities (playgrounds, safe recreational spaces)",
+      "severity": "Low",
+      "pct": 18.2,
+      "rank": 7
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 86.4,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 86.4,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 86.4,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 68.2,
+      "rank": 4
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 68.2,
+      "rank": 4
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 5
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 5
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 36.4,
+      "rank": 6
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 36.4,
+      "rank": 6
+    },
+    {
+      "layout": "Plot No-R-1 Additional MIDC Area, Latur",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "Medium",
+      "pct": 31.8,
+      "rank": 7
+    },
+    {
+      "layout": "Plot No-R-7, MIDC Area, Waluj, Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Plot No-R-7, MIDC Area, Waluj, Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Plot No-R-7, MIDC Area, Waluj, Aurangabad",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No-R-7, MIDC Area, Waluj, Aurangabad",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No-R-7, MIDC Area, Waluj, Aurangabad",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Plot No-R-7, MIDC Area, Waluj, Aurangabad",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "Plot No-R-7, MIDC Area, Waluj, Aurangabad",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "Plot No-R-7, MIDC Area, Waluj, Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 6
+    },
+    {
+      "layout": "Plot No-R-7, MIDC Area, Waluj, Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "Low",
+      "pct": 7.1,
+      "rank": 7
+    },
+    {
+      "layout": "R-1, MIDC Ambad, Jalna",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "R-1, MIDC Ambad, Jalna",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "R-1, MIDC Ambad, Jalna",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "R-1, MIDC Ambad, Jalna",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "R-1, MIDC Ambad, Jalna",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 94.1,
+      "rank": 5
+    },
+    {
+      "layout": "R-1, MIDC Ambad, Jalna",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 94.1,
+      "rank": 5
+    },
+    {
+      "layout": "R-1, MIDC Ambad, Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 94.1,
+      "rank": 5
+    },
+    {
+      "layout": "R-1, MIDC Ambad, Jalna",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 94.1,
+      "rank": 6
+    },
+    {
+      "layout": "R-1, MIDC Ambad, Jalna",
+      "name": "Community Composting Units",
+      "problem": "Lack of  composting or processing",
+      "severity": "Low",
+      "pct": 11.8,
+      "rank": 7
+    },
+    {
+      "layout": "R-26, N-9, CIDCO, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "R-26, N-9, CIDCO, New Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "R-26, N-9, CIDCO, New Aurangabad",
+      "name": "Child Daycare Center",
+      "problem": "Child-friendly amenities (playgrounds, safe recreational spaces)",
+      "severity": "High",
+      "pct": 70.6,
+      "rank": 4
+    },
+    {
+      "layout": "R-26, N-9, CIDCO, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 29.4,
+      "rank": 5
+    },
+    {
+      "layout": "R-26, N-9, CIDCO, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "Low",
+      "pct": 17.6,
+      "rank": 6
+    },
+    {
+      "layout": "R-26, N-9, CIDCO, New Aurangabad",
+      "name": "CCTV Surveillance System",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "Low",
+      "pct": 17.6,
+      "rank": 6
+    },
+    {
+      "layout": "R-26, N-9, CIDCO, New Aurangabad",
+      "name": "LED Street Light",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "Low",
+      "pct": 17.6,
+      "rank": 6
+    },
+    {
+      "layout": "R-26, N-9, CIDCO, New Aurangabad",
+      "name": "ATM Cluster",
+      "problem": "Better last-mile access to jobs/work via public transport",
+      "severity": "Low",
+      "pct": 11.8,
+      "rank": 7
+    },
+    {
+      "layout": "R-27, N-9, CIDCO, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "R-27, N-9, CIDCO, New Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "R-27, N-9, CIDCO, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 81.2,
+      "rank": 4
+    },
+    {
+      "layout": "R-27, N-9, CIDCO, New Aurangabad",
+      "name": "CCTV Surveillance System",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 81.2,
+      "rank": 4
+    },
+    {
+      "layout": "R-27, N-9, CIDCO, New Aurangabad",
+      "name": "LED Street Light",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 81.2,
+      "rank": 4
+    },
+    {
+      "layout": "R-27, N-9, CIDCO, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 37.5,
+      "rank": 5
+    },
+    {
+      "layout": "R-27, N-9, CIDCO, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "Medium",
+      "pct": 31.2,
+      "rank": 6
+    },
+    {
+      "layout": "R-27, N-9, CIDCO, New Aurangabad",
+      "name": "ATM Cluster",
+      "problem": "Better last-mile access to jobs/work via public transport",
+      "severity": "Medium",
+      "pct": 25.0,
+      "rank": 7
+    },
+    {
+      "layout": "R-28, N-7, CIDCO, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "R-28, N-7, CIDCO, New Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "R-28, N-7, CIDCO, New Aurangabad",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "R-28, N-7, CIDCO, New Aurangabad",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 4
+    },
+    {
+      "layout": "R-28, N-7, CIDCO, New Aurangabad",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 4
+    },
+    {
+      "layout": "R-28, N-7, CIDCO, New Aurangabad",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 4
+    },
+    {
+      "layout": "R-28, N-7, CIDCO, New Aurangabad",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 5
+    },
+    {
+      "layout": "R-28, N-7, CIDCO, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 6
+    },
+    {
+      "layout": "R-28, N-7, CIDCO, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Low",
+      "pct": 12.5,
+      "rank": 7
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 4
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 4
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 5
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 6
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 6
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 7
+    },
+    {
+      "layout": "R-29, N-7, CIDCO, New Aurangabad",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 7
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 71.4,
+      "rank": 4
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 5
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 5
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 6
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 6
+    },
+    {
+      "layout": "R-43, N-7, CIDCO, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 7
+    },
+    {
+      "layout": "Roshan Gate A Bad (S No-59 & 60 Aurangabad)",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Roshan Gate A Bad (S No-59 & 60 Aurangabad)",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Roshan Gate A Bad (S No-59 & 60 Aurangabad)",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Roshan Gate A Bad (S No-59 & 60 Aurangabad)",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "Roshan Gate A Bad (S No-59 & 60 Aurangabad)",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 5
+    },
+    {
+      "layout": "Roshan Gate A Bad (S No-59 & 60 Aurangabad)",
+      "name": "Child Daycare Center",
+      "problem": "Child-friendly amenities (playgrounds, safe recreational spaces)",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 6
+    },
+    {
+      "layout": "Roshan Gate A Bad (S No-59 & 60 Aurangabad)",
+      "name": "ATM Cluster",
+      "problem": "Better last-mile access to jobs/work via public transport",
+      "severity": "High",
+      "pct": 60.0,
+      "rank": 7
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 94.4,
+      "rank": 1
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 88.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 88.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 88.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 72.2,
+      "rank": 4
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 72.2,
+      "rank": 4
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 5
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 5
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 22.2,
+      "rank": 7
+    },
+    {
+      "layout": "S No-117, Bhokardan Road Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 22.2,
+      "rank": 7
+    },
+    {
+      "layout": "S No-121 Part, Jalna",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-121 Part, Jalna",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-121 Part, Jalna",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-121 Part, Jalna",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-121 Part, Jalna",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-121 Part, Jalna",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-121 Part, Jalna",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "S No-121 Part, Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 93.3,
+      "rank": 2
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 93.3,
+      "rank": 2
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 93.3,
+      "rank": 3
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 93.3,
+      "rank": 3
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 86.7,
+      "rank": 5
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 86.7,
+      "rank": 5
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 86.7,
+      "rank": 5
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Low",
+      "pct": 6.7,
+      "rank": 6
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Low",
+      "pct": 6.7,
+      "rank": 6
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "LED Street Light",
+      "problem": "Poor lighting in common areas",
+      "severity": "Low",
+      "pct": 6.7,
+      "rank": 7
+    },
+    {
+      "layout": "S No-143 Part, Nanded Hingoli Road, Hingoli",
+      "name": "Solar-Powered Street Lights",
+      "problem": "Poor lighting in common areas",
+      "severity": "Low",
+      "pct": 6.7,
+      "rank": 7
+    },
+    {
+      "layout": "S No-163 Part, Bori Jintur Parbhani",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-163 Part, Bori Jintur Parbhani",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-163 Part, Bori Jintur Parbhani",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-163 Part, Bori Jintur Parbhani",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-163 Part, Bori Jintur Parbhani",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-163 Part, Bori Jintur Parbhani",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-163 Part, Bori Jintur Parbhani",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-163 Part, Bori Jintur Parbhani",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-163 Part, Bori Jintur Parbhani",
+      "name": "Water Kiosk",
+      "problem": "Frequent water cuts without prior notice",
+      "severity": "Low",
+      "pct": 0.0,
+      "rank": 7
+    },
+    {
+      "layout": "S No-217 Part, Harsool, Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-217 Part, Harsool, Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-217 Part, Harsool, Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-217 Part, Harsool, Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-217 Part, Harsool, Aurangabad",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 90.9,
+      "rank": 5
+    },
+    {
+      "layout": "S No-217 Part, Harsool, Aurangabad",
+      "name": "Child Daycare Center",
+      "problem": "Child-friendly amenities (playgrounds, safe recreational spaces)",
+      "severity": "High",
+      "pct": 54.5,
+      "rank": 6
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 96.6,
+      "rank": 2
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 89.7,
+      "rank": 3
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 89.7,
+      "rank": 3
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 89.7,
+      "rank": 3
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 82.8,
+      "rank": 4
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 4
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 4
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 82.8,
+      "rank": 4
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 69.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 44.8,
+      "rank": 6
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 6
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 6
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 7
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 34.5,
+      "rank": 7
+    },
+    {
+      "layout": "S No-262, Parbhani",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 34.5,
+      "rank": 7
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 94.4,
+      "rank": 5
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 94.4,
+      "rank": 5
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 94.4,
+      "rank": 5
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "LED Street Light",
+      "problem": "Poor lighting in common areas",
+      "severity": "Low",
+      "pct": 16.7,
+      "rank": 6
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "Solar-Powered Street Lights",
+      "problem": "Poor lighting in common areas",
+      "severity": "Low",
+      "pct": 16.7,
+      "rank": 6
+    },
+    {
+      "layout": "S No-265, Ram Nagar Sadar Bazar, Jalna",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Low",
+      "pct": 11.1,
+      "rank": 7
+    },
+    {
+      "layout": "S No-272 Part, Mantha Road Jalna",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-272 Part, Mantha Road Jalna",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-272 Part, Mantha Road Jalna",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-272 Part, Mantha Road Jalna",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-272 Part, Mantha Road Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-272 Part, Mantha Road Jalna",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-272 Part, Mantha Road Jalna",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 93.8,
+      "rank": 6
+    },
+    {
+      "layout": "S No-272 Part, Mantha Road Jalna",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 7
+    },
+    {
+      "layout": "S No-3 & 4, Mahalja, Nanded",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-3 & 4, Mahalja, Nanded",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 95.2,
+      "rank": 3
+    },
+    {
+      "layout": "S No-3 & 4, Mahalja, Nanded",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 95.2,
+      "rank": 3
+    },
+    {
+      "layout": "S No-3 & 4, Mahalja, Nanded",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 95.2,
+      "rank": 3
+    },
+    {
+      "layout": "S No-3 & 4, Mahalja, Nanded",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 76.2,
+      "rank": 4
+    },
+    {
+      "layout": "S No-3 & 4, Mahalja, Nanded",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 76.2,
+      "rank": 4
+    },
+    {
+      "layout": "S No-3 & 4, Mahalja, Nanded",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 5
+    },
+    {
+      "layout": "S No-3 & 4, Mahalja, Nanded",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "Medium",
+      "pct": 38.1,
+      "rank": 6
+    },
+    {
+      "layout": "S No-3 & 4, Mahalja, Nanded",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 7
+    },
+    {
+      "layout": "S No-32 & 33, Bhir",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-32 & 33, Bhir",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-32 & 33, Bhir",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-32 & 33, Bhir",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-32 & 33, Bhir",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-32 & 33, Bhir",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-32 & 33, Bhir",
+      "name": "Drainage Cleaning",
+      "problem": "Foul smell near drain lines",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-34 Part & 35 Part, Murtizapur, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 92.9,
+      "rank": 2
+    },
+    {
+      "layout": "S No-34 Part & 35 Part, Murtizapur, New Aurangabad",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 92.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-34 Part & 35 Part, Murtizapur, New Aurangabad",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 92.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-34 Part & 35 Part, Murtizapur, New Aurangabad",
+      "name": "Building Wall Upgrade",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 5
+    },
+    {
+      "layout": "S No-34 Part & 35 Part, Murtizapur, New Aurangabad",
+      "name": "CCTV Surveillance System",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 5
+    },
+    {
+      "layout": "S No-34 Part & 35 Part, Murtizapur, New Aurangabad",
+      "name": "LED Street Light",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 5
+    },
+    {
+      "layout": "S No-34 Part & 35 Part, Murtizapur, New Aurangabad",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 6
+    },
+    {
+      "layout": "S No-34 Part & 35 Part, Murtizapur, New Aurangabad",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 28.6,
+      "rank": 6
+    },
+    {
+      "layout": "S No-34 Part & 35 Part, Murtizapur, New Aurangabad",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "Low",
+      "pct": 21.4,
+      "rank": 7
+    },
+    {
+      "layout": "S No-441, Jalna",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-441, Jalna",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-441, Jalna",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-441, Jalna",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-441, Jalna",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-441, Jalna",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-441, Jalna",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "S No-441, Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 70.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 70.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 70.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 30.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 30.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-488 Part, Beedi Workers Jalna",
+      "name": "Water Kiosk",
+      "problem": "Frequent water cuts without prior notice",
+      "severity": "Low",
+      "pct": 0.0,
+      "rank": 7
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 93.3,
+      "rank": 3
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 93.3,
+      "rank": 3
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 93.3,
+      "rank": 3
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 73.3,
+      "rank": 4
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 73.3,
+      "rank": 4
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 46.7,
+      "rank": 5
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 46.7,
+      "rank": 5
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 46.7,
+      "rank": 6
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 46.7,
+      "rank": 6
+    },
+    {
+      "layout": "S No-527, Ganga Khed Road, Parbhani",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "Medium",
+      "pct": 46.7,
+      "rank": 7
+    },
+    {
+      "layout": "S No-53 Part, Georai, Beed",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-53 Part, Georai, Beed",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-53 Part, Georai, Beed",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-53 Part, Georai, Beed",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-53 Part, Georai, Beed",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-53 Part, Georai, Beed",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-53 Part, Georai, Beed",
+      "name": "Drainage Cleaning",
+      "problem": "Foul smell near drain lines",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-54 Part, Bhokardan, Jalna",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-54 Part, Bhokardan, Jalna",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-54 Part, Bhokardan, Jalna",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-54 Part, Bhokardan, Jalna",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-54 Part, Bhokardan, Jalna",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-54 Part, Bhokardan, Jalna",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-54 Part, Bhokardan, Jalna",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-54 Part, Bhokardan, Jalna",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 94.1,
+      "rank": 6
+    },
+    {
+      "layout": "S No-54 Part, Bhokardan, Jalna",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "Low",
+      "pct": 5.9,
+      "rank": 7
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 90.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 90.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 77.3,
+      "rank": 4
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 77.3,
+      "rank": 4
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "Building Wall Upgrade",
+      "problem": "No CCTV or security personnel",
+      "severity": "Medium",
+      "pct": 45.5,
+      "rank": 5
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "CCTV Surveillance System",
+      "problem": "No CCTV or security personnel",
+      "severity": "Medium",
+      "pct": 45.5,
+      "rank": 5
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "LED Street Light",
+      "problem": "No CCTV or security personnel",
+      "severity": "Medium",
+      "pct": 45.5,
+      "rank": 5
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "LED Street Light",
+      "problem": "Poor lighting in common areas",
+      "severity": "Medium",
+      "pct": 40.9,
+      "rank": 6
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "Solar-Powered Street Lights",
+      "problem": "Poor lighting in common areas",
+      "severity": "Medium",
+      "pct": 40.9,
+      "rank": 6
+    },
+    {
+      "layout": "S No-54, Beedi Works Garkheda",
+      "name": "Community Library",
+      "problem": "Learning labs (library and computer facilities)",
+      "severity": "Medium",
+      "pct": 36.4,
+      "rank": 7
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 95.2,
+      "rank": 3
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 95.2,
+      "rank": 3
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 4
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 4
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 4
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 5
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 85.7,
+      "rank": 5
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "Low",
+      "pct": 9.5,
+      "rank": 6
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "Low",
+      "pct": 9.5,
+      "rank": 6
+    },
+    {
+      "layout": "S No-58, Assadullabad Nanded",
+      "name": "Electrical Safety",
+      "problem": "Occasional  powercuts",
+      "severity": "Low",
+      "pct": 4.8,
+      "rank": 7
+    },
+    {
+      "layout": "S No-68, Padegaon",
+      "name": "Aapla Dawakhana",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-68, Padegaon",
+      "name": "Mobile Health Clinic",
+      "problem": "Limited availability of multi-specialty hospitals",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-68, Padegaon",
+      "name": "After-School Learning",
+      "problem": "Limited availability of pre-schools or early learning centers",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-68, Padegaon",
+      "name": "Child Daycare Center",
+      "problem": "Limited availability of pre-schools or early learning centers",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "S No-68, Padegaon",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 94.1,
+      "rank": 4
+    },
+    {
+      "layout": "S No-68, Padegaon",
+      "name": "Aapla Dawakhana",
+      "problem": "Lack of nearby clinics/primary healthcare centers",
+      "severity": "High",
+      "pct": 94.1,
+      "rank": 5
+    },
+    {
+      "layout": "S No-68, Padegaon",
+      "name": "Mobile Health Clinic",
+      "problem": "Lack of nearby clinics/primary healthcare centers",
+      "severity": "High",
+      "pct": 94.1,
+      "rank": 5
+    },
+    {
+      "layout": "S No-68, Padegaon",
+      "name": "Community Library",
+      "problem": "No access to libraries or computer labs",
+      "severity": "High",
+      "pct": 94.1,
+      "rank": 6
+    },
+    {
+      "layout": "S No-7/1 & 7/2, Mukundwadi",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-7/1 & 7/2, Mukundwadi",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-7/1 & 7/2, Mukundwadi",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 81.5,
+      "rank": 3
+    },
+    {
+      "layout": "S No-7/1 & 7/2, Mukundwadi",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 74.1,
+      "rank": 4
+    },
+    {
+      "layout": "S No-7/1 & 7/2, Mukundwadi",
+      "name": "Building Wall Upgrade",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "Medium",
+      "pct": 37.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-7/1 & 7/2, Mukundwadi",
+      "name": "CCTV Surveillance System",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "Medium",
+      "pct": 37.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-7/1 & 7/2, Mukundwadi",
+      "name": "LED Street Light",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "Medium",
+      "pct": 37.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-7/1 & 7/2, Mukundwadi",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "Medium",
+      "pct": 25.9,
+      "rank": 7
+    },
+    {
+      "layout": "S No-701/4, Murud, Latur",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-701/4, Murud, Latur",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "S No-701/4, Murud, Latur",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-701/4, Murud, Latur",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-701/4, Murud, Latur",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "S No-701/4, Murud, Latur",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-701/4, Murud, Latur",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "S No-701/4, Murud, Latur",
+      "name": "Water Kiosk",
+      "problem": "Frequent water cuts without prior notice",
+      "severity": "Low",
+      "pct": 0.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-701/4, Murud, Latur",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "Low",
+      "pct": 0.0,
+      "rank": 7
+    },
+    {
+      "layout": "S No-80, Kautha, Nanded",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 88.9,
+      "rank": 2
+    },
+    {
+      "layout": "S No-80, Kautha, Nanded",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 88.9,
+      "rank": 2
+    },
+    {
+      "layout": "S No-80, Kautha, Nanded",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 88.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-80, Kautha, Nanded",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 88.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-80, Kautha, Nanded",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 88.9,
+      "rank": 3
+    },
+    {
+      "layout": "S No-80, Kautha, Nanded",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 4
+    },
+    {
+      "layout": "S No-80, Kautha, Nanded",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "Medium",
+      "pct": 44.4,
+      "rank": 5
+    },
+    {
+      "layout": "S No-80, Kautha, Nanded",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "Medium",
+      "pct": 44.4,
+      "rank": 5
+    },
+    {
+      "layout": "S No-80, Kautha, Nanded",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "Medium",
+      "pct": 27.8,
+      "rank": 7
+    },
+    {
+      "layout": "S No-97 Part & 98 Part, Babhulgaon Road Latur",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 96.8,
+      "rank": 2
+    },
+    {
+      "layout": "S No-97 Part & 98 Part, Babhulgaon Road Latur",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 96.8,
+      "rank": 2
+    },
+    {
+      "layout": "S No-97 Part & 98 Part, Babhulgaon Road Latur",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 93.5,
+      "rank": 3
+    },
+    {
+      "layout": "S No-97 Part & 98 Part, Babhulgaon Road Latur",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 93.5,
+      "rank": 4
+    },
+    {
+      "layout": "S No-97 Part & 98 Part, Babhulgaon Road Latur",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 93.5,
+      "rank": 4
+    },
+    {
+      "layout": "S No-97 Part & 98 Part, Babhulgaon Road Latur",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 90.3,
+      "rank": 5
+    },
+    {
+      "layout": "S No-97 Part & 98 Part, Babhulgaon Road Latur",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 90.3,
+      "rank": 6
+    },
+    {
+      "layout": "S No-97 Part & 98 Part, Babhulgaon Road Latur",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 90.3,
+      "rank": 7
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 97.2,
+      "rank": 3
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 86.1,
+      "rank": 4
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 86.1,
+      "rank": 4
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 63.9,
+      "rank": 5
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 52.8,
+      "rank": 6
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 7
+    },
+    {
+      "layout": "Tuljapur",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "Medium",
+      "pct": 33.3,
+      "rank": 7
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 84.6,
+      "rank": 4
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 84.6,
+      "rank": 4
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 84.6,
+      "rank": 4
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "Automated Accounting System",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 84.6,
+      "rank": 5
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent process",
+      "severity": "High",
+      "pct": 84.6,
+      "rank": 5
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "Automated Accounting System",
+      "problem": "Transparent agreements and documentation",
+      "severity": "Low",
+      "pct": 23.1,
+      "rank": 6
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "Smart Notice Boards",
+      "problem": "Transparent agreements and documentation",
+      "severity": "Low",
+      "pct": 23.1,
+      "rank": 6
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 15.4,
+      "rank": 7
+    },
+    {
+      "layout": "Udgir, Latur",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Low",
+      "pct": 15.4,
+      "rank": 7
+    }
+  ],
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Water Kiosk",
+      "kfa": "Housing Infra",
+      "impact": "Inadequate water supply and water quality"
+    },
+    {
+      "id": 2,
+      "name": "Electrical Safety",
+      "kfa": "Housing Infra",
+      "impact": "Electrical safety risks due to aging wiring, faulty systems and unsafe installations"
+    },
+    {
+      "id": 3,
+      "name": "Building Wall Upgrade",
+      "kfa": "Housing Infra",
+      "impact": "Safety concerns due to open boundaries, encroachments or unauthorized access (FGD&RVA)​"
+    },
+    {
+      "id": 4,
+      "name": "Community Gazebo",
+      "kfa": "Housing Infra",
+      "impact": "Lack of shaded spaces (FGD&RVA) ​"
+    },
+    {
+      "id": 5,
+      "name": "Open Gym",
+      "kfa": "Housing Infra",
+      "impact": "Improved access for active and healthy lifestyles (FGD&RVA)​"
+    },
+    {
+      "id": 6,
+      "name": "Lift Enhancement",
+      "kfa": "Housing Infra",
+      "impact": "Frequent lift breakdowns and inadequate lift capacity"
+    },
+    {
+      "id": 7,
+      "name": "Flood Discharge Pump",
+      "kfa": "Housing Infra",
+      "impact": "Extreme Weather Climate Resilience, Ground Infrastructure Loss Protect"
+    },
+    {
+      "id": 8,
+      "name": "Aapla Dawakhana",
+      "kfa": "Social Wellbeing",
+      "impact": "Limited access to healthcare services"
+    },
+    {
+      "id": 9,
+      "name": "Mobile Health Clinic",
+      "kfa": "Social Wellbeing",
+      "impact": "Limited access to healthcare services"
+    },
+    {
+      "id": 10,
+      "name": "Accessibility Infrastructure",
+      "kfa": "Social Wellbeing",
+      "impact": "Accessibility barriers for vulnerable groups"
+    },
+    {
+      "id": 11,
+      "name": "Senior Citizen Welfare Centre",
+      "kfa": "Social Wellbeing",
+      "impact": "Lack of senior citizen support and engagement facilities"
+    },
+    {
+      "id": 12,
+      "name": "Senior Citizen Activity Club",
+      "kfa": "Social Wellbeing",
+      "impact": "Lack of senior citizen support and engagement facilities"
+    },
+    {
+      "id": 13,
+      "name": "Child Daycare Center",
+      "kfa": "Social Wellbeing",
+      "impact": "Inadequate childcare and child development infrastructure​"
+    },
+    {
+      "id": 14,
+      "name": "After-School Learning",
+      "kfa": "Social Wellbeing",
+      "impact": "Education and Academic Achievement; Social Well Being and Child Development"
+    },
+    {
+      "id": 15,
+      "name": "CCTV Surveillance System",
+      "kfa": "Social Wellbeing",
+      "impact": "Safety & Security"
+    },
+    {
+      "id": 16,
+      "name": "LED Street Light",
+      "kfa": "Social Wellbeing",
+      "impact": "Safety & Security, Night Mobility, Urban Infrastructure"
+    },
+    {
+      "id": 17,
+      "name": "Community Library",
+      "kfa": "Social Wellbeing",
+      "impact": "Education & Digital Literacy"
+    },
+    {
+      "id": 18,
+      "name": "Community Hall",
+      "kfa": "Social Wellbeing",
+      "impact": "Community Governance & Social Cohesion"
+    },
+    {
+      "id": 19,
+      "name": "Walking/Jogging Track",
+      "kfa": "Social Wellbeing",
+      "impact": "Physical Health and Wellness"
+    },
+    {
+      "id": 20,
+      "name": "Club House",
+      "kfa": "Social Wellbeing",
+      "impact": "Recreation & Social Well-being"
+    },
+    {
+      "id": 21,
+      "name": "Beautification of Public Spaces",
+      "kfa": "Social Wellbeing",
+      "impact": "Community Cohesion and Aesthetic Quality of Life"
+    },
+    {
+      "id": 22,
+      "name": "Drainage Cleaning",
+      "kfa": "Environment and Living",
+      "impact": "Health and Hygiene (prevention of sewage backflow, waterborne disease"
+    },
+    {
+      "id": 23,
+      "name": "Community Composting Units",
+      "kfa": "Environment and Living",
+      "impact": "Environmental sustainability, hygiene, waste reduction"
+    },
+    {
+      "id": 24,
+      "name": "Rainwater Harvesting & Groundwater Recharge",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability, Water Security, Cost Savings"
+    },
+    {
+      "id": 25,
+      "name": "Solar Installation",
+      "kfa": "Environment and Living",
+      "impact": "Energy Security, Cost Savings (₹15,000-18,000 annual savings)"
+    },
+    {
+      "id": 26,
+      "name": "Solar-Powered Street Lights",
+      "kfa": "Environment and Living",
+      "impact": "Resource Conservation and Environmental Sustainability"
+    },
+    {
+      "id": 27,
+      "name": "Waterfront Recreation",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability and Groundwater Recharge"
+    },
+    {
+      "id": 28,
+      "name": "Society Vann/ Mini Forest",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability and Urban Ecology"
+    },
+    {
+      "id": 29,
+      "name": "Community Agro-Garden",
+      "kfa": "Environment and Living",
+      "impact": "Health and Hygiene (access to fresh organic produce)"
+    },
+    {
+      "id": 30,
+      "name": "Terrace Garden",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability and Urban Ecology"
+    },
+    {
+      "id": 31,
+      "name": "EV Charging Points",
+      "kfa": "Environment and Living",
+      "impact": "Economic Security and Financial Savings"
+    },
+    {
+      "id": 32,
+      "name": "Waste Segregation Kits",
+      "kfa": "Environment and Living",
+      "impact": "Health and Hygiene"
+    },
+    {
+      "id": 33,
+      "name": "Mini-Market",
+      "kfa": "Economic Security",
+      "impact": "On-Premise Essential Commodity Access"
+    },
+    {
+      "id": 34,
+      "name": "ATM Cluster",
+      "kfa": "Economic Security",
+      "impact": "Digital Inclusion, Service Accessibility, Entrepreneurship"
+    },
+    {
+      "id": 35,
+      "name": "Skill Development Workshops",
+      "kfa": "Economic Security",
+      "impact": "Economic Security"
+    },
+    {
+      "id": 36,
+      "name": "Digital Learning Centre",
+      "kfa": "Economic Security",
+      "impact": "Economic Empowerment, Employability"
+    },
+    {
+      "id": 37,
+      "name": "ATM Cluster",
+      "kfa": "Economic Security",
+      "impact": "Automated Micro-Liquidity Access, Complete Elimination of Transit Gaps"
+    },
+    {
+      "id": 38,
+      "name": "CHS Capacity Building",
+      "kfa": "Governance",
+      "impact": "Governance Audit Compliance, Complete Financial Transparency"
+    },
+    {
+      "id": 39,
+      "name": "Automated Accounting System",
+      "kfa": "Governance",
+      "impact": "Governance Audit Compliance, Complete Financial Transparency"
+    },
+    {
+      "id": 40,
+      "name": "Smart Notice Boards",
+      "kfa": "Governance",
+      "impact": "Governance and Transparency; real-time, auditable"
+    },
+    {
+      "id": 41,
+      "name": "Society Management Center",
+      "kfa": "Governance",
+      "impact": "Optimized Asset Lifecycle, Automated Access Control, Committee Managem"
+    }
+  ]
+}

@@ -1,0 +1,3285 @@
+{
+  "boardId": "kokan",
+  "board": "Kokan Board",
+  "source": "output/board-interventions/KokanBoard_Interventions.xlsx",
+  "topIssues": [
+    {
+      "issue": "Community awareness for sustainable initiatives",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Community/ Society level sustainability guidelines",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Lift under maintenance frequently",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "No dedicated parking",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Poor water quality",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Regular updates",
+      "pct": 95.5,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Parking is rarely available",
+      "pct": 77.8,
+      "severity": "High",
+      "rank": 1,
+      "count": null
+    },
+    {
+      "issue": "Community-run daily shops & local markets",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Irregular waste collection & cleaning of premises",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Overflow during rains",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Regular scheduled maintenance for amenities",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Support formation of active maintenance committees",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Ensure timely handover of redeveloped homes",
+      "pct": 95.9,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Better ventilation and airflow in apartments",
+      "pct": 90.0,
+      "severity": "High",
+      "rank": 2,
+      "count": null
+    },
+    {
+      "issue": "Modernized interiors, lobbies, or common areas",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Offer legal guidance for dispute resolution",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Drain blockages",
+      "pct": 94.0,
+      "severity": "High",
+      "rank": 3,
+      "count": null
+    },
+    {
+      "issue": "Community Town halls or event areas for festivals and gatherings",
+      "pct": 100.0,
+      "severity": "High",
+      "rank": 4,
+      "count": null
+    },
+    {
+      "issue": "Better local job opportunities",
+      "pct": 90.0,
+      "severity": "High",
+      "rank": 4,
+      "count": null
+    },
+    {
+      "issue": "Only on-road parking",
+      "pct": 87.5,
+      "severity": "High",
+      "rank": 4,
+      "count": null
+    }
+  ],
+  "interventions": [
+    {
+      "layout": "01-Kulgaon Badalapur",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 79.2,
+      "rank": 1
+    },
+    {
+      "layout": "01-Kulgaon Badalapur",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 79.2,
+      "rank": 1
+    },
+    {
+      "layout": "01-Kulgaon Badalapur",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 66.0,
+      "rank": 3
+    },
+    {
+      "layout": "01-Kulgaon Badalapur",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 66.0,
+      "rank": 3
+    },
+    {
+      "layout": "01-Kulgaon Badalapur",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 65.1,
+      "rank": 4
+    },
+    {
+      "layout": "01-Kulgaon Badalapur",
+      "name": "Electrical Safety",
+      "problem": "Occasional  powercuts",
+      "severity": "High",
+      "pct": 61.3,
+      "rank": 5
+    },
+    {
+      "layout": "01-Kulgaon Badalapur",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 60.4,
+      "rank": 6
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 78.1,
+      "rank": 1
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 68.8,
+      "rank": 2
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 68.8,
+      "rank": 3
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 68.8,
+      "rank": 3
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 59.4,
+      "rank": 4
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 59.4,
+      "rank": 4
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 56.2,
+      "rank": 5
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "CHS Capacity Building",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 6
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "Waste Segregation Kits",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 6
+    },
+    {
+      "layout": "02-Shiv Ambe Patil Ambernath",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "Medium",
+      "pct": 46.9,
+      "rank": 7
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "CHS Capacity Building",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "Waste Segregation Kits",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 4
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "Building Wall Upgrade",
+      "problem": "Unsafe conditions for women and children",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 5
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "CCTV Surveillance System",
+      "problem": "Unsafe conditions for women and children",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 5
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "LED Street Light",
+      "problem": "Unsafe conditions for women and children",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 5
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 6
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 7
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 87.7,
+      "rank": 1
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 69.9,
+      "rank": 2
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 67.1,
+      "rank": 3
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 58.9,
+      "rank": 4
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 58.9,
+      "rank": 4
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "CHS Capacity Building",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 57.5,
+      "rank": 5
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "Waste Segregation Kits",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 57.5,
+      "rank": 5
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 57.5,
+      "rank": 6
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 57.5,
+      "rank": 6
+    },
+    {
+      "layout": "05-Shamrao Patil Nagar Ambarnath",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 54.8,
+      "rank": 7
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "Beautification of Public Spaces",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "Community Gazebo",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 5
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "06-Wadawali Ambarnath",
+      "name": "ATM Cluster",
+      "problem": "Better last-mile access to jobs/work via public transport",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 7
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "Beautification of Public Spaces",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 94.7,
+      "rank": 3
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "Community Gazebo",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 94.7,
+      "rank": 3
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 89.5,
+      "rank": 4
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 89.5,
+      "rank": 4
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "ATM Cluster",
+      "problem": "Better last-mile access to jobs/work via public transport",
+      "severity": "High",
+      "pct": 89.5,
+      "rank": 5
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 84.2,
+      "rank": 7
+    },
+    {
+      "layout": "06-Wadawali Ambernath",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 84.2,
+      "rank": 7
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "Beautification of Public Spaces",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 3
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "Community Gazebo",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 3
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 85.0,
+      "rank": 5
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 85.0,
+      "rank": 5
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 6
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 6
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 7
+    },
+    {
+      "layout": "07-Titwala Kalyan",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 7
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 84.6,
+      "rank": 1
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 84.6,
+      "rank": 1
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 78.5,
+      "rank": 2
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 78.5,
+      "rank": 2
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 78.5,
+      "rank": 3
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 67.7,
+      "rank": 5
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 67.7,
+      "rank": 5
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 67.7,
+      "rank": 5
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 67.7,
+      "rank": 6
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 67.7,
+      "rank": 6
+    },
+    {
+      "layout": "08-Morivali Ambernath",
+      "name": "ATM Cluster",
+      "problem": "Better last-mile access to jobs/work via public transport",
+      "severity": "High",
+      "pct": 63.1,
+      "rank": 7
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "Waste Segregation Kits",
+      "problem": "Irregular waste collection & cleaning of premises",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 5
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 6
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 6
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 7
+    },
+    {
+      "layout": "09-Kohoj Khunthawali Ambernath",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 7
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 91.5,
+      "rank": 1
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 91.5,
+      "rank": 1
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 83.0,
+      "rank": 2
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 83.0,
+      "rank": 2
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 76.6,
+      "rank": 3
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 76.6,
+      "rank": 3
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 68.1,
+      "rank": 5
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 68.1,
+      "rank": 5
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 68.1,
+      "rank": 6
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 68.1,
+      "rank": 6
+    },
+    {
+      "layout": "10-Nizampura Bhiwandi",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "High",
+      "pct": 53.2,
+      "rank": 7
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 95.0,
+      "rank": 1
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 2
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 2
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 82.5,
+      "rank": 3
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 82.5,
+      "rank": 3
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 4
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 75.0,
+      "rank": 4
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 57.5,
+      "rank": 6
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 57.5,
+      "rank": 6
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 57.5,
+      "rank": 6
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 7
+    },
+    {
+      "layout": "12-Swami Vivekanand Nagar Majiwade-I Thane",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 50.0,
+      "rank": 7
+    },
+    {
+      "layout": "13-Pawar Nagar Majiwade-PHII Thane",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 60.0,
+      "rank": 1
+    },
+    {
+      "layout": "13-Pawar Nagar Majiwade-PHII Thane",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 60.0,
+      "rank": 1
+    },
+    {
+      "layout": "13-Pawar Nagar Majiwade-PHII Thane",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 54.3,
+      "rank": 2
+    },
+    {
+      "layout": "13-Pawar Nagar Majiwade-PHII Thane",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 54.3,
+      "rank": 2
+    },
+    {
+      "layout": "13-Pawar Nagar Majiwade-PHII Thane",
+      "name": "Electrical Safety",
+      "problem": "Occasional  powercuts",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 4
+    },
+    {
+      "layout": "13-Pawar Nagar Majiwade-PHII Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 5
+    },
+    {
+      "layout": "13-Pawar Nagar Majiwade-PHII Thane",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 5
+    },
+    {
+      "layout": "13-Pawar Nagar Majiwade-PHII Thane",
+      "name": "Community Hall",
+      "problem": "Community Town halls or event areas for festivals and gatherings",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 6
+    },
+    {
+      "layout": "13-Pawar Nagar Majiwade-PHII Thane",
+      "name": "Water Kiosk",
+      "problem": "Irregular water supply / inconsistent frequency",
+      "severity": "Medium",
+      "pct": 40.0,
+      "rank": 7
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 73.8,
+      "rank": 1
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 73.8,
+      "rank": 1
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 67.9,
+      "rank": 2
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 67.9,
+      "rank": 2
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 3
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "Waste Segregation Kits",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 3
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 63.1,
+      "rank": 4
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 61.9,
+      "rank": 5
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 61.9,
+      "rank": 5
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 58.3,
+      "rank": 6
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 7
+    },
+    {
+      "layout": "14-Shivainagar-I Thane",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 42.9,
+      "rank": 7
+    },
+    {
+      "layout": "17-Roha Raigad",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "17-Roha Raigad",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "17-Roha Raigad",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 2
+    },
+    {
+      "layout": "17-Roha Raigad",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "17-Roha Raigad",
+      "name": "Beautification of Public Spaces",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "17-Roha Raigad",
+      "name": "Community Gazebo",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 4
+    },
+    {
+      "layout": "17-Roha Raigad",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "17-Roha Raigad",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 6
+    },
+    {
+      "layout": "17-Roha Raigad",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 95.0,
+      "rank": 7
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 95.9,
+      "rank": 2
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 95.9,
+      "rank": 2
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 87.8,
+      "rank": 3
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 87.8,
+      "rank": 3
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 73.5,
+      "rank": 4
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 73.5,
+      "rank": 4
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 69.4,
+      "rank": 5
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 69.4,
+      "rank": 5
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 69.4,
+      "rank": 5
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 67.3,
+      "rank": 6
+    },
+    {
+      "layout": "18-Alibagh Raigad",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 67.3,
+      "rank": 6
+    },
+    {
+      "layout": "19-PEN",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "19-PEN",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "19-PEN",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 3
+    },
+    {
+      "layout": "19-PEN",
+      "name": "ATM Cluster",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "19-PEN",
+      "name": "Mini-Market",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "19-PEN",
+      "name": "Skill Development Workshops",
+      "problem": "Better local job opportunities",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "19-PEN",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 5
+    },
+    {
+      "layout": "19-PEN",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 6
+    },
+    {
+      "layout": "19-PEN",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 7
+    },
+    {
+      "layout": "19-PEN",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 7
+    },
+    {
+      "layout": "19-Pen",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "19-Pen",
+      "name": "Drainage Cleaning",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 96.0,
+      "rank": 2
+    },
+    {
+      "layout": "19-Pen",
+      "name": "Flood Discharge Pump",
+      "problem": "Overflow during rains",
+      "severity": "High",
+      "pct": 96.0,
+      "rank": 2
+    },
+    {
+      "layout": "19-Pen",
+      "name": "Drainage Cleaning",
+      "problem": "Drain blockages",
+      "severity": "High",
+      "pct": 94.0,
+      "rank": 3
+    },
+    {
+      "layout": "19-Pen",
+      "name": "Beautification of Public Spaces",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 94.0,
+      "rank": 4
+    },
+    {
+      "layout": "19-Pen",
+      "name": "Community Gazebo",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 94.0,
+      "rank": 4
+    },
+    {
+      "layout": "19-Pen",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 5
+    },
+    {
+      "layout": "19-Pen",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 5
+    },
+    {
+      "layout": "19-Pen",
+      "name": "Building Wall Upgrade",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 6
+    },
+    {
+      "layout": "19-Pen",
+      "name": "CCTV Surveillance System",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 6
+    },
+    {
+      "layout": "19-Pen",
+      "name": "LED Street Light",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 6
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 80.6,
+      "rank": 1
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 65.7,
+      "rank": 2
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 65.7,
+      "rank": 2
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 64.2,
+      "rank": 3
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 64.2,
+      "rank": 3
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 59.7,
+      "rank": 4
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 50.7,
+      "rank": 5
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 50.7,
+      "rank": 5
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "Medium",
+      "pct": 49.3,
+      "rank": 6
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "Medium",
+      "pct": 49.3,
+      "rank": 6
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "Medium",
+      "pct": 49.3,
+      "rank": 6
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 46.3,
+      "rank": 7
+    },
+    {
+      "layout": "24-Vartak Nagar Thane",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "Medium",
+      "pct": 46.3,
+      "rank": 7
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 90.3,
+      "rank": 1
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 77.4,
+      "rank": 2
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 77.4,
+      "rank": 2
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 71.0,
+      "rank": 3
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 71.0,
+      "rank": 3
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 67.7,
+      "rank": 4
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "Waste Segregation Kits",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 67.7,
+      "rank": 4
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 64.5,
+      "rank": 5
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 64.5,
+      "rank": 5
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 54.8,
+      "rank": 6
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 54.8,
+      "rank": 6
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 54.8,
+      "rank": 7
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 54.8,
+      "rank": 7
+    },
+    {
+      "layout": "24.Vartak Nagar Thane",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 54.8,
+      "rank": 7
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 89.8,
+      "rank": 1
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 77.6,
+      "rank": 2
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 73.5,
+      "rank": 3
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 63.3,
+      "rank": 4
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 63.3,
+      "rank": 4
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 61.2,
+      "rank": 5
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 61.2,
+      "rank": 5
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 55.1,
+      "rank": 6
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "Waste Segregation Kits",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 55.1,
+      "rank": 6
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 53.1,
+      "rank": 7
+    },
+    {
+      "layout": "26-Balkum Thane",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 53.1,
+      "rank": 7
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 95.5,
+      "rank": 1
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 72.7,
+      "rank": 2
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 68.2,
+      "rank": 3
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 68.2,
+      "rank": 3
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 59.1,
+      "rank": 4
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 59.1,
+      "rank": 5
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 59.1,
+      "rank": 5
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 54.5,
+      "rank": 6
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 54.5,
+      "rank": 7
+    },
+    {
+      "layout": "27-Kolshet Thane",
+      "name": "Waste Segregation Kits",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 54.5,
+      "rank": 7
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 84.0,
+      "rank": 1
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 84.0,
+      "rank": 1
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 76.0,
+      "rank": 2
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 74.0,
+      "rank": 3
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 74.0,
+      "rank": 3
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 72.0,
+      "rank": 4
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 72.0,
+      "rank": 4
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 72.0,
+      "rank": 4
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 70.0,
+      "rank": 5
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 70.0,
+      "rank": 5
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "Beautification of Public Spaces",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 66.0,
+      "rank": 6
+    },
+    {
+      "layout": "32-S No-22, 41(Pt), 42(Pt), 129 Chikanghar Kalyan",
+      "name": "Community Gazebo",
+      "problem": "Modernized interiors, lobbies, or common areas",
+      "severity": "High",
+      "pct": 66.0,
+      "rank": 6
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "Building Wall Upgrade",
+      "problem": "Parking is rarely available",
+      "severity": "High",
+      "pct": 77.8,
+      "rank": 1
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 63.9,
+      "rank": 2
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 63.9,
+      "rank": 2
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 63.9,
+      "rank": 3
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 63.9,
+      "rank": 3
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 63.9,
+      "rank": 4
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 61.1,
+      "rank": 5
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 61.1,
+      "rank": 5
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 58.3,
+      "rank": 6
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 58.3,
+      "rank": 6
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "Building Wall Upgrade",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 7
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "CCTV Surveillance System",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 7
+    },
+    {
+      "layout": "33-S No-11 Chikanghar Kalyan",
+      "name": "LED Street Light",
+      "problem": "Safety and security improvements (CCTV, street lighting, security personnel)",
+      "severity": "High",
+      "pct": 55.6,
+      "rank": 7
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "Lift Enhancement",
+      "problem": "Lift under maintenance frequently",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 95.0,
+      "rank": 2
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "High",
+      "pct": 95.0,
+      "rank": 2
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 95.0,
+      "rank": 3
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 4
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 5
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 5
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 90.0,
+      "rank": 5
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 6
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 6
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 7
+    },
+    {
+      "layout": "35-Gharivali Dombivali",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 80.0,
+      "rank": 7
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "High",
+      "pct": 88.6,
+      "rank": 1
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "Smart Notice Boards",
+      "problem": "Regular updates",
+      "severity": "High",
+      "pct": 82.9,
+      "rank": 2
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "Automated Accounting System",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 61.0,
+      "rank": 3
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Offer legal guidance for dispute resolution",
+      "severity": "High",
+      "pct": 61.0,
+      "rank": 3
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 53.3,
+      "rank": 4
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 52.4,
+      "rank": 5
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 52.4,
+      "rank": 5
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "Medium",
+      "pct": 48.6,
+      "rank": 6
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "Medium",
+      "pct": 48.6,
+      "rank": 6
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "CHS Capacity Building",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 44.8,
+      "rank": 7
+    },
+    {
+      "layout": "36-Pachpakhadi Thane",
+      "name": "Society Management Center",
+      "problem": "Regular scheduled maintenance for amenities",
+      "severity": "Medium",
+      "pct": 44.8,
+      "rank": 7
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 94.2,
+      "rank": 1
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 94.2,
+      "rank": 1
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 86.4,
+      "rank": 2
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 86.4,
+      "rank": 2
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 85.4,
+      "rank": 3
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 85.4,
+      "rank": 3
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 71.8,
+      "rank": 5
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 71.8,
+      "rank": 5
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "Building Wall Upgrade",
+      "problem": "No CCTV or security personnel",
+      "severity": "High",
+      "pct": 69.9,
+      "rank": 6
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "CCTV Surveillance System",
+      "problem": "No CCTV or security personnel",
+      "severity": "High",
+      "pct": 69.9,
+      "rank": 6
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "LED Street Light",
+      "problem": "No CCTV or security personnel",
+      "severity": "High",
+      "pct": 69.9,
+      "rank": 6
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 68.9,
+      "rank": 7
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-I & IV",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 68.9,
+      "rank": 7
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 1
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 87.5,
+      "rank": 1
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 79.2,
+      "rank": 2
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 79.2,
+      "rank": 2
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 79.2,
+      "rank": 3
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 79.2,
+      "rank": 3
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 77.1,
+      "rank": 4
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 72.9,
+      "rank": 6
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 72.9,
+      "rank": 6
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "Building Wall Upgrade",
+      "problem": "No CCTV or security personnel",
+      "severity": "Medium",
+      "pct": 47.9,
+      "rank": 7
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "CCTV Surveillance System",
+      "problem": "No CCTV or security personnel",
+      "severity": "Medium",
+      "pct": 47.9,
+      "rank": 7
+    },
+    {
+      "layout": "38 Nachane Ratnagiri PH-II",
+      "name": "LED Street Light",
+      "problem": "No CCTV or security personnel",
+      "severity": "Medium",
+      "pct": 47.9,
+      "rank": 7
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 92.2,
+      "rank": 1
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 92.2,
+      "rank": 1
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 90.2,
+      "rank": 2
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 90.2,
+      "rank": 2
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 88.2,
+      "rank": 3
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 88.2,
+      "rank": 3
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 82.4,
+      "rank": 4
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 82.4,
+      "rank": 4
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "Building Wall Upgrade",
+      "problem": "Only on-road parking",
+      "severity": "High",
+      "pct": 80.4,
+      "rank": 5
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 68.6,
+      "rank": 7
+    },
+    {
+      "layout": "38-Nachane Ratnagiri PH-III",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 68.6,
+      "rank": 7
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 100.0,
+      "rank": 1
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 98.0,
+      "rank": 2
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 98.0,
+      "rank": 2
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 93.9,
+      "rank": 3
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 83.7,
+      "rank": 4
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 83.7,
+      "rank": 4
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Building Wall Upgrade",
+      "problem": "No CCTV or security personnel",
+      "severity": "High",
+      "pct": 81.6,
+      "rank": 5
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "CCTV Surveillance System",
+      "problem": "No CCTV or security personnel",
+      "severity": "High",
+      "pct": 81.6,
+      "rank": 5
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "LED Street Light",
+      "problem": "No CCTV or security personnel",
+      "severity": "High",
+      "pct": 81.6,
+      "rank": 5
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 81.6,
+      "rank": 6
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 81.6,
+      "rank": 6
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 77.6,
+      "rank": 7
+    },
+    {
+      "layout": "40-Kuwar Bao Ratnagiri",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 77.6,
+      "rank": 7
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "Community Gazebo",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 59.4,
+      "rank": 1
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "Electrical Safety",
+      "problem": "Better ventilation and airflow in apartments",
+      "severity": "High",
+      "pct": 59.4,
+      "rank": 1
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 58.7,
+      "rank": 2
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 58.7,
+      "rank": 2
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 53.6,
+      "rank": 3
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 53.6,
+      "rank": 3
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 41.3,
+      "rank": 5
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "Medium",
+      "pct": 41.3,
+      "rank": 5
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "Medium",
+      "pct": 40.6,
+      "rank": 6
+    },
+    {
+      "layout": "43-Salvad Boisar Tarapur Palghar",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "Medium",
+      "pct": 40.6,
+      "rank": 6
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 76.7,
+      "rank": 1
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 76.7,
+      "rank": 1
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 70.9,
+      "rank": 2
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 70.9,
+      "rank": 2
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 69.9,
+      "rank": 3
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 63.1,
+      "rank": 4
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 63.1,
+      "rank": 4
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 61.2,
+      "rank": 5
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 61.2,
+      "rank": 5
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Automated Accounting System",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 52.4,
+      "rank": 6
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "CHS Capacity Building",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 52.4,
+      "rank": 6
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Society Management Center",
+      "problem": "Support formation of active maintenance committees",
+      "severity": "High",
+      "pct": 52.4,
+      "rank": 6
+    },
+    {
+      "layout": "45-Vengurla Sindhudurga",
+      "name": "Water Kiosk",
+      "problem": "Low water pressure despite availability",
+      "severity": "Medium",
+      "pct": 47.6,
+      "rank": 7
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "Society Vann/ Mini Forest",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 82.9,
+      "rank": 1
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "Waste Segregation Kits",
+      "problem": "Community awareness for sustainable initiatives",
+      "severity": "High",
+      "pct": 82.9,
+      "rank": 1
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "CHS Capacity Building",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 72.4,
+      "rank": 2
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "Smart Notice Boards",
+      "problem": "Ensure timely handover of redeveloped homes",
+      "severity": "High",
+      "pct": 72.4,
+      "rank": 2
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "ATM Cluster",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 68.6,
+      "rank": 3
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "Mini-Market",
+      "problem": "Community-run daily shops & local markets",
+      "severity": "High",
+      "pct": 68.6,
+      "rank": 3
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "Building Wall Upgrade",
+      "problem": "No dedicated parking",
+      "severity": "High",
+      "pct": 66.7,
+      "rank": 4
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "Water Kiosk",
+      "problem": "Poor water quality",
+      "severity": "High",
+      "pct": 60.0,
+      "rank": 5
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "Digital Learning Centre",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 60.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "Skill Development Workshops",
+      "problem": "Skill & livelihood programs  - Training, micro-enterprises, and entrepreneurship support",
+      "severity": "High",
+      "pct": 60.0,
+      "rank": 6
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "CHS Capacity Building",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 7
+    },
+    {
+      "layout": "S No-34/12B Kumbharmath Malvan",
+      "name": "Waste Segregation Kits",
+      "problem": "Community/ Society level sustainability guidelines",
+      "severity": "High",
+      "pct": 57.1,
+      "rank": 7
+    }
+  ],
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Water Kiosk",
+      "kfa": "Housing Infra",
+      "impact": "Inadequate water supply and water quality"
+    },
+    {
+      "id": 2,
+      "name": "Electrical Safety",
+      "kfa": "Housing Infra",
+      "impact": "Electrical safety risks due to aging wiring, faulty systems and unsafe installations"
+    },
+    {
+      "id": 3,
+      "name": "Building Wall Upgrade",
+      "kfa": "Housing Infra",
+      "impact": "Safety concerns due to open boundaries, encroachments or unauthorized access (FGD&RVA)​"
+    },
+    {
+      "id": 4,
+      "name": "Community Gazebo",
+      "kfa": "Housing Infra",
+      "impact": "Lack of shaded spaces (FGD&RVA) ​"
+    },
+    {
+      "id": 5,
+      "name": "Open Gym",
+      "kfa": "Housing Infra",
+      "impact": "Improved access for active and healthy lifestyles (FGD&RVA)​"
+    },
+    {
+      "id": 6,
+      "name": "Lift Enhancement",
+      "kfa": "Housing Infra",
+      "impact": "Frequent lift breakdowns and inadequate lift capacity"
+    },
+    {
+      "id": 7,
+      "name": "Flood Discharge Pump",
+      "kfa": "Housing Infra",
+      "impact": "Extreme Weather Climate Resilience, Ground Infrastructure Loss Protect"
+    },
+    {
+      "id": 8,
+      "name": "Aapla Dawakhana",
+      "kfa": "Social Wellbeing",
+      "impact": "Limited access to healthcare services"
+    },
+    {
+      "id": 9,
+      "name": "Mobile Health Clinic",
+      "kfa": "Social Wellbeing",
+      "impact": "Limited access to healthcare services"
+    },
+    {
+      "id": 10,
+      "name": "Accessibility Infrastructure",
+      "kfa": "Social Wellbeing",
+      "impact": "Accessibility barriers for vulnerable groups"
+    },
+    {
+      "id": 11,
+      "name": "Senior Citizen Welfare Centre",
+      "kfa": "Social Wellbeing",
+      "impact": "Lack of senior citizen support and engagement facilities"
+    },
+    {
+      "id": 12,
+      "name": "Senior Citizen Activity Club",
+      "kfa": "Social Wellbeing",
+      "impact": "Lack of senior citizen support and engagement facilities"
+    },
+    {
+      "id": 13,
+      "name": "Child Daycare Center",
+      "kfa": "Social Wellbeing",
+      "impact": "Inadequate childcare and child development infrastructure​"
+    },
+    {
+      "id": 14,
+      "name": "After-School Learning",
+      "kfa": "Social Wellbeing",
+      "impact": "Education and Academic Achievement; Social Well Being and Child Development"
+    },
+    {
+      "id": 15,
+      "name": "CCTV Surveillance System",
+      "kfa": "Social Wellbeing",
+      "impact": "Safety & Security"
+    },
+    {
+      "id": 16,
+      "name": "LED Street Light",
+      "kfa": "Social Wellbeing",
+      "impact": "Safety & Security, Night Mobility, Urban Infrastructure"
+    },
+    {
+      "id": 17,
+      "name": "Community Library",
+      "kfa": "Social Wellbeing",
+      "impact": "Education & Digital Literacy"
+    },
+    {
+      "id": 18,
+      "name": "Community Hall",
+      "kfa": "Social Wellbeing",
+      "impact": "Community Governance & Social Cohesion"
+    },
+    {
+      "id": 19,
+      "name": "Walking/Jogging Track",
+      "kfa": "Social Wellbeing",
+      "impact": "Physical Health and Wellness"
+    },
+    {
+      "id": 20,
+      "name": "Club House",
+      "kfa": "Social Wellbeing",
+      "impact": "Recreation & Social Well-being"
+    },
+    {
+      "id": 21,
+      "name": "Beautification of Public Spaces",
+      "kfa": "Social Wellbeing",
+      "impact": "Community Cohesion and Aesthetic Quality of Life"
+    },
+    {
+      "id": 22,
+      "name": "Drainage Cleaning",
+      "kfa": "Environment and Living",
+      "impact": "Health and Hygiene (prevention of sewage backflow, waterborne disease"
+    },
+    {
+      "id": 23,
+      "name": "Community Composting Units",
+      "kfa": "Environment and Living",
+      "impact": "Environmental sustainability, hygiene, waste reduction"
+    },
+    {
+      "id": 24,
+      "name": "Rainwater Harvesting & Groundwater Recharge",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability, Water Security, Cost Savings"
+    },
+    {
+      "id": 25,
+      "name": "Solar Installation",
+      "kfa": "Environment and Living",
+      "impact": "Energy Security, Cost Savings (₹15,000-18,000 annual savings)"
+    },
+    {
+      "id": 26,
+      "name": "Solar-Powered Street Lights",
+      "kfa": "Environment and Living",
+      "impact": "Resource Conservation and Environmental Sustainability"
+    },
+    {
+      "id": 27,
+      "name": "Waterfront Recreation",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability and Groundwater Recharge"
+    },
+    {
+      "id": 28,
+      "name": "Society Vann/ Mini Forest",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability and Urban Ecology"
+    },
+    {
+      "id": 29,
+      "name": "Community Agro-Garden",
+      "kfa": "Environment and Living",
+      "impact": "Health and Hygiene (access to fresh organic produce)"
+    },
+    {
+      "id": 30,
+      "name": "Terrace Garden",
+      "kfa": "Environment and Living",
+      "impact": "Environmental Sustainability and Urban Ecology"
+    },
+    {
+      "id": 31,
+      "name": "EV Charging Points",
+      "kfa": "Environment and Living",
+      "impact": "Economic Security and Financial Savings"
+    },
+    {
+      "id": 32,
+      "name": "Waste Segregation Kits",
+      "kfa": "Environment and Living",
+      "impact": "Health and Hygiene"
+    },
+    {
+      "id": 33,
+      "name": "Mini-Market",
+      "kfa": "Economic Security",
+      "impact": "On-Premise Essential Commodity Access"
+    },
+    {
+      "id": 34,
+      "name": "ATM Cluster",
+      "kfa": "Economic Security",
+      "impact": "Digital Inclusion, Service Accessibility, Entrepreneurship"
+    },
+    {
+      "id": 35,
+      "name": "Skill Development Workshops",
+      "kfa": "Economic Security",
+      "impact": "Economic Security"
+    },
+    {
+      "id": 36,
+      "name": "Digital Learning Centre",
+      "kfa": "Economic Security",
+      "impact": "Economic Empowerment, Employability"
+    },
+    {
+      "id": 37,
+      "name": "ATM Cluster",
+      "kfa": "Economic Security",
+      "impact": "Automated Micro-Liquidity Access, Complete Elimination of Transit Gaps"
+    },
+    {
+      "id": 38,
+      "name": "CHS Capacity Building",
+      "kfa": "Governance",
+      "impact": "Governance Audit Compliance, Complete Financial Transparency"
+    },
+    {
+      "id": 39,
+      "name": "Automated Accounting System",
+      "kfa": "Governance",
+      "impact": "Governance Audit Compliance, Complete Financial Transparency"
+    },
+    {
+      "id": 40,
+      "name": "Smart Notice Boards",
+      "kfa": "Governance",
+      "impact": "Governance and Transparency; real-time, auditable"
+    },
+    {
+      "id": 41,
+      "name": "Society Management Center",
+      "kfa": "Governance",
+      "impact": "Optimized Asset Lifecycle, Automated Access Control, Committee Managem"
+    }
+  ]
+}

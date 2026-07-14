@@ -1,14 +1,60 @@
 (async function () {
-  const data = await fetch('data/mumbai.json').then((r) => r.json());
-  const shell = renderShell('dashboard');
+  const manifest = await HHIData.loadManifest();
+  const boardId = await HHIData.resolveBoardId();
+  const data = await HHIData.loadBoard(boardId);
+  const interventions = await HHIData.loadInterventions(boardId);
+  const boardLabel = HHIData.boardLabel(data);
+  const shell = renderShell('dashboard', {
+    location: boardLabel,
+    boardId,
+    boards: HHIData.boardOptions(manifest),
+  });
   const charts = {};
   let syncingFilters = false;
 
-  const PROBLEM_ISSUES = (data.topIssues || []).filter((i) => {
-    const n = i.issue.toLowerCase();
-    return !n.includes('always available') && !n.includes('sitting area') &&
-      !n.includes('playground') && !n.includes('community hall') && !n.includes('park');
-  }).slice(0, 6);
+  const AGE_BANDS = [
+    { key: 'New', label: '0–15 New', color: '#a60f2d' },
+    { key: 'Mid-Age', label: '15–32 Mid', color: '#85698e' },
+    { key: 'Ageing', label: '32–45 Ageing', color: '#5b8def' },
+    { key: 'Old', label: '45–57 Old', color: '#1eb5cc' },
+    { key: 'Cess', label: '57+ Legacy', color: '#e07a1e' },
+  ];
+
+  const KFA_LINES = [
+    { key: 'housing', label: 'Housing', color: '#635bff' },
+    { key: 'social', label: 'Social', color: '#3b82f6' },
+    { key: 'environment', label: 'Environment', color: '#27c281' },
+    { key: 'economic', label: 'Economic', color: '#f59e0b' },
+    { key: 'governance', label: 'Governance', color: '#ff4d4f' },
+  ];
+
+  function rowsInScope(buildings) {
+    const layouts = new Set(buildings.map((b) => b.layout).filter(Boolean));
+    return (interventions.interventions || []).filter((r) => r.layout && layouts.has(r.layout));
+  }
+
+  function issueInterventionGroups(rows, limit = 10) {
+    const byProblem = {};
+    rows.forEach((r) => {
+      if (!r.problem) return;
+      if (!byProblem[r.problem]) {
+        byProblem[r.problem] = {
+          problem: r.problem,
+          pct: r.pct,
+          severity: r.severity,
+          rank: r.rank ?? 99,
+          suggestions: [],
+        };
+      }
+      const g = byProblem[r.problem];
+      if ((r.pct || 0) > (g.pct || 0)) g.pct = r.pct;
+      if ((r.rank ?? 99) < g.rank) g.rank = r.rank ?? 99;
+      if (r.name && !g.suggestions.includes(r.name)) g.suggestions.push(r.name);
+    });
+    return Object.values(byProblem)
+      .sort((a, b) => (a.rank - b.rank) || (b.pct || 0) - (a.pct || 0))
+      .slice(0, limit);
+  }
 
   const KFA_META = {
     housing: { label: 'Housing', full: 'Housing Infrastructure' },
@@ -25,9 +71,9 @@
       <div class="content">
         <div class="page-head">
           <div>
-            <div class="crumbs">Dashboard &gt; <span id="crumbScope">Mumbai Board</span></div>
+            <div class="crumbs">Dashboard &gt; <span id="crumbScope">${boardLabel}</span></div>
             <h1>HHI Analytics Dashboard</h1>
-            <p class="sub" id="pageSub">Board-level scores from Mumbai Board working sheet</p>
+            <p class="sub" id="pageSub">Board-level scores from ${boardLabel} working sheet</p>
           </div>
           <div class="actions">
             <button type="button" class="btn btn-outline" id="btnReset">Reset Filters</button>
@@ -40,7 +86,7 @@
             <h3>Filters</h3>
             <div class="field">
               <label>Board</label>
-              <select id="fBoard" disabled><option>Mumbai Board</option></select>
+              <select id="fBoard"></select>
             </div>
             <div class="field">
               <label>Division</label>
@@ -86,6 +132,7 @@
 
             <div class="quick-actions">
               <h3>Quick Actions</h3>
+              <a class="btn-link" href="assets/HHI_Intervention_v4.pdf" download="HHI_Intervention_v4.pdf">⬇ Intervention Catalog (PDF)</a>
               <button type="button">⬇ Download Report</button>
               <button type="button">▣ Compare Selections</button>
               <button type="button">⚑ Flag for Review</button>
@@ -95,29 +142,29 @@
           <div>
             <div class="kpi-row" id="kpiRow"></div>
 
-            <div class="grid-3">
-              <div class="card">
-                <div class="card-title">KFA Score Overview</div>
-                <div class="chart-box"><canvas id="radarChart"></canvas></div>
+            <div class="grid-charts-top">
+              <div class="card chart-card">
+                <div class="card-title">KFA Scores <span class="hint">selection average</span></div>
+                <div class="chart-box stretch"><canvas id="divCountChart"></canvas></div>
               </div>
-              <div class="card">
-                <div class="card-title">KFA Scores <span class="hint">board level</span></div>
-                <div class="chart-box tall"><canvas id="divCountChart"></canvas></div>
+              <div class="card chart-card">
+                <div class="card-title">KFA vs Building Age <span class="hint">avg by age band</span></div>
+                <div class="chart-box stretch"><canvas id="kfaAgeChart"></canvas></div>
               </div>
-              <div class="card">
-                <div class="card-title">HHI by Geographic Zone</div>
-                <div class="zone-map" id="zoneMap"></div>
-                <div class="legend-bar"><span>&lt;50</span><div class="grad"></div><span>80+</span></div>
-              </div>
+            </div>
+
+            <div class="card chart-card" style="margin-bottom:14px">
+              <div class="card-title">RVA Score vs Building Age <span class="hint" id="rvaHint">line · avg by age band</span></div>
+              <div class="chart-box stretch-sm"><canvas id="rvaAgeChart"></canvas></div>
             </div>
 
             <div class="grid-3b">
               <div class="card">
                 <div class="card-title">Building Age-Wise Composition <span class="hint" id="agePieHint">board</span></div>
-                <div class="chart-box"><canvas id="agePieChart"></canvas></div>
+                <div class="chart-box fill"><canvas id="agePieChart"></canvas></div>
               </div>
               <div class="card">
-                <div class="card-title">HHI Heatmap (Divisions × KFA)</div>
+                <div class="card-title">HHI Heatmap <span class="hint" id="heatmapHint">Divisions × KFA</span></div>
                 <div id="heatmap" class="heatmap"></div>
               </div>
               <div class="card">
@@ -135,14 +182,14 @@
               </div>
             </div>
 
-            <div class="grid-3" style="margin-top:14px">
-              <div class="card" style="grid-column:span 2">
-                <div class="card-title">Top Reported Issues <span class="hint">from household surveys</span></div>
-                <div id="issuesList"></div>
+            <div class="grid-bottom">
+              <div class="card fill-card">
+                <div class="card-title">Reported Issues &amp; Suggested Interventions <span class="hint">col E problem → col B intervention</span></div>
+                <div id="issueInterventionList" class="issue-intervention-list"></div>
               </div>
-              <div class="card">
-                <div class="card-title">Suggested Improvements</div>
-                <ul class="rank-list" id="improveList"></ul>
+              <div class="card fill-card">
+                <div class="card-title">Interventions Being Offered <span class="hint">catalog · apply to enroll</span></div>
+                <ul class="offered-list" id="offeredList"></ul>
               </div>
             </div>
           </div>
@@ -302,7 +349,7 @@
   }
 
   function updateCrumb(buildings) {
-    const parts = ['Mumbai Board'];
+    const parts = [boardLabel];
     if (fDivision.value) parts.push(fDivision.value);
     if (fLayout.value) parts.push(fLayout.value);
     if (fBuilding.value) parts.push(fBuilding.value);
@@ -322,13 +369,15 @@
     if (!buildings.length) {
       document.getElementById('kpiRow').innerHTML =
         `<div class="card" style="grid-column:1/-1;text-align:center;padding:28px;color:var(--muted)">No buildings match these filters. Try resetting.</div>`;
-      destroyChart('radar');
       destroyChart('agePie');
       destroyChart('divCount');
-      document.getElementById('zoneMap').innerHTML = '';
+      destroyChart('kfaAge');
+      destroyChart('rvaAge');
       document.getElementById('heatmap').innerHTML = '';
       document.getElementById('topList').innerHTML = '<li><span class="name">No data</span></li>';
       document.getElementById('lowList').innerHTML = '<li><span class="name">No data</span></li>';
+      document.getElementById('issueInterventionList').innerHTML = '<div class="empty-hint">No data</div>';
+      document.getElementById('offeredList').innerHTML = '';
       return;
     }
 
@@ -377,51 +426,6 @@
         <div class="foot">in selection</div>
       </div>
     `;
-
-    // Radar — highlight selected KFA
-    const radarColors = {
-      housing: '#635bff',
-      social: '#3b82f6',
-      environment: '#27c281',
-      economic: '#f59e0b',
-      governance: '#ff4d4f',
-    };
-    const pointColors = ['housing', 'social', 'environment', 'economic', 'governance'].map((k) =>
-      (!fKfa.value || fKfa.value === k) ? (radarColors[k]) : 'rgba(140,148,165,0.35)'
-    );
-
-    destroyChart('radar');
-    charts.radar = new Chart(document.getElementById('radarChart'), {
-      type: 'radar',
-      data: {
-        labels: ['Housing', 'Social', 'Environment', 'Economic', 'Governance'],
-        datasets: [{
-          label: 'KFA Score',
-          data: [o.housing, o.social, o.environment, o.economic, o.governance],
-          backgroundColor: 'rgba(99,91,255,0.2)',
-          borderColor: '#635bff',
-          pointBackgroundColor: pointColors,
-          pointRadius: [o.housing, o.social, o.environment, o.economic, o.governance].map((_, i) => {
-            const keys = ['housing', 'social', 'environment', 'economic', 'governance'];
-            return fKfa.value && fKfa.value === keys[i] ? 6 : 3;
-          }),
-          borderWidth: 2,
-        }],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          r: {
-            min: 0, max: 100,
-            ticks: { stepSize: 20, backdrop: false, font: { size: 10 } },
-            pointLabels: { font: { size: 11, weight: '600' } },
-            grid: { color: '#e8ecf4' },
-          },
-        },
-        plugins: { legend: { display: false } },
-      },
-    });
 
     // Age composition pie — respects layout/division filters
     const ageBands = [
@@ -472,13 +476,16 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: { padding: 4 },
         plugins: {
           legend: {
-            position: 'bottom',
+            position: 'right',
+            align: 'center',
             labels: {
               boxWidth: 12,
+              boxHeight: 12,
               font: { size: 11, weight: '600' },
-              padding: 12,
+              padding: 14,
               generateLabels: (chart) => {
                 const ds = chart.data.datasets[0];
                 const total = ds.data.reduce((s, v) => s + (v || 0), 0) || 1;
@@ -543,33 +550,33 @@
       }],
     });
 
-    // Zone map always by division within selection
-    const byDiv = {};
+    // Heatmap grouping: boards when All Boards, else divisions
+    const geoByBoard = boardId === 'all' || boardId === HHIData.ALL_ID;
+    const byGeo = {};
     buildings.forEach((b) => {
-      if (!byDiv[b.division]) byDiv[b.division] = [];
-      byDiv[b.division].push(b);
+      const key = geoByBoard
+        ? (b.board || b.boardId || 'Board')
+        : (b._divisionRaw || b.division || 'Unknown');
+      if (!byGeo[key]) byGeo[key] = [];
+      byGeo[key].push(b);
     });
-    const divLabels = Object.keys(byDiv).sort();
-    const zoneMap = document.getElementById('zoneMap');
-    zoneMap.innerHTML = '';
-    divLabels.forEach((d) => {
-      const v = avg(byDiv[d], sk);
-      const el = document.createElement('div');
-      el.className = 'zone-tile';
-      el.style.background = scoreColor(v);
-      el.innerHTML = `<span>${d}</span><strong>${fmt(v, 1)}</strong>`;
-      zoneMap.appendChild(el);
+    const geoLabels = Object.keys(byGeo).sort((a, b) => a.localeCompare(b));
+    document.getElementById('heatmapHint').textContent = geoByBoard ? 'Boards × KFA' : 'Divisions × KFA';
+
+    const bandLabels = AGE_BANDS.map((a) => a.label);
+    const byAgeBand = Object.fromEntries(AGE_BANDS.map((a) => [a.key, []]));
+    buildings.forEach((b) => {
+      const band = resolveAgeBand(b);
+      if (band && byAgeBand[band]) byAgeBand[band].push(b);
     });
 
-    // KFA scores at board level — one bar per KFA
-    const kfaBarKeys = [
-      { key: 'housing', label: 'Housing', color: '#635bff' },
-      { key: 'social', label: 'Social', color: '#3b82f6' },
-      { key: 'environment', label: 'Environment', color: '#27c281' },
-      { key: 'economic', label: 'Economic', color: '#f59e0b' },
-      { key: 'governance', label: 'Governance', color: '#ff4d4f' },
-    ];
-    const kfaBoardScores = kfaBarKeys.map((k) => {
+    const chartScales = {
+      y: { min: 0, max: 100, grid: { color: '#eef1f8' }, ticks: { font: { size: 10 } } },
+      x: { grid: { display: false }, ticks: { font: { size: 10, weight: '600' } } },
+    };
+
+    // KFA scores bar chart
+    const kfaBoardScores = KFA_LINES.map((k) => {
       const v = avg(buildings, k.key);
       return v == null ? null : Math.round(v * 10) / 10;
     });
@@ -577,40 +584,22 @@
     charts.divCount = new Chart(document.getElementById('divCountChart'), {
       type: 'bar',
       data: {
-        labels: kfaBarKeys.map((k) => k.label),
+        labels: KFA_LINES.map((k) => k.label),
         datasets: [{
           label: 'KFA Score',
           data: kfaBoardScores,
-          backgroundColor: kfaBarKeys.map((k) => k.color),
-          borderRadius: 8,
-          barPercentage: 0.65,
+          backgroundColor: KFA_LINES.map((k) => k.color),
+          borderRadius: 6,
+          barPercentage: 0.92,
+          categoryPercentage: 0.9,
         }],
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        layout: { padding: { top: 22 } },
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: (item) => ` ${fmt(item.raw, 1)} / 100`,
-            },
-          },
-        },
-        scales: {
-          y: {
-            min: 0,
-            max: 100,
-            ticks: { font: { size: 10 } },
-            grid: { color: '#eef1f8' },
-            title: { display: true, text: 'KFA score', font: { size: 11 } },
-          },
-          x: {
-            grid: { display: false },
-            ticks: { font: { size: 11, weight: '600' } },
-          },
-        },
+        layout: { padding: { top: 18 } },
+        plugins: { legend: { display: false } },
+        scales: chartScales,
       },
       plugins: [{
         id: 'kfaBarValueLabels',
@@ -618,18 +607,102 @@
           const { ctx } = chart;
           const meta = chart.getDatasetMeta(0);
           ctx.save();
-          ctx.font = '700 12px DM Sans, sans-serif';
+          ctx.font = '700 11px DM Sans, sans-serif';
           ctx.fillStyle = '#1a1c2c';
           ctx.textAlign = 'center';
           ctx.textBaseline = 'bottom';
           meta.data.forEach((bar, i) => {
             const val = chart.data.datasets[0].data[i];
             if (val == null) return;
-            ctx.fillText(fmt(val, 1), bar.x, bar.y - 6);
+            ctx.fillText(fmt(val, 1), bar.x, bar.y - 4);
           });
           ctx.restore();
         },
       }],
+    });
+
+    // KFA vs building age — grouped bar chart
+    destroyChart('kfaAge');
+    charts.kfaAge = new Chart(document.getElementById('kfaAgeChart'), {
+      type: 'bar',
+      data: {
+        labels: bandLabels,
+        datasets: KFA_LINES.map((k) => ({
+          label: k.label,
+          data: AGE_BANDS.map((a) => {
+            const items = byAgeBand[a.key];
+            const v = avg(items, k.key);
+            return v == null ? null : Math.round(v * 10) / 10;
+          }),
+          backgroundColor: k.color,
+          borderRadius: 4,
+          barPercentage: 0.92,
+          categoryPercentage: 0.85,
+        })),
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } },
+        },
+        scales: chartScales,
+      },
+    });
+
+    // RVA vs building age — line chart
+    const rvaByBand = Object.fromEntries(AGE_BANDS.map((a) => [a.key, []]));
+    buildings.forEach((b) => {
+      const band = resolveAgeBand(b);
+      if (!band || b.rva == null || Number.isNaN(Number(b.rva))) return;
+      rvaByBand[band].push(Number(b.rva));
+    });
+    const rvaAvgs = AGE_BANDS.map((a) => {
+      const vals = rvaByBand[a.key];
+      return vals.length ? Math.round((vals.reduce((s, v) => s + v, 0) / vals.length) * 10) / 10 : null;
+    });
+    const rvaCounts = AGE_BANDS.map((a) => rvaByBand[a.key].length);
+    const rvaTotal = rvaCounts.reduce((s, n) => s + n, 0);
+    document.getElementById('rvaHint').textContent = rvaTotal
+      ? `${rvaTotal} buildings with RVA`
+      : 'No RVA data for this selection';
+    destroyChart('rvaAge');
+    charts.rvaAge = new Chart(document.getElementById('rvaAgeChart'), {
+      type: 'line',
+      data: {
+        labels: bandLabels,
+        datasets: [{
+          label: 'Avg RVA',
+          data: rvaAvgs,
+          borderColor: '#635bff',
+          backgroundColor: 'rgba(99,91,255,0.12)',
+          borderWidth: 3,
+          pointRadius: 5,
+          pointBackgroundColor: '#635bff',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          fill: true,
+          tension: 0.35,
+          spanGaps: true,
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: (item) => {
+                const n = rvaCounts[item.dataIndex] || 0;
+                const v = item.raw;
+                return v == null ? ' No RVA data' : ` ${fmt(v, 1)} avg RVA (${n} buildings)`;
+              },
+            },
+          },
+        },
+        scales: chartScales,
+      },
     });
 
     // Heatmap
@@ -644,8 +717,8 @@
     hm.innerHTML = `<div class="heatmap-head"><span></span>${kfas.map((k) =>
       `<span style="${fKfa.value === k.key ? 'color:var(--purple)' : ''}">${k.label}</span>`
     ).join('')}</div>`;
-    divLabels.forEach((d) => {
-      const items = byDiv[d];
+    geoLabels.forEach((d) => {
+      const items = byGeo[d];
       const row = document.createElement('div');
       row.className = 'heatmap-row';
       row.innerHTML = `<div class="hm-label" title="${d}">${d}</div>` +
@@ -669,20 +742,48 @@
       `<li><span class="name" title="${l.label}">${l.label}</span><span class="score-pill low">${fmt(l.score, 1)}</span></li>`
     ).join('') || '<li><span class="name">No data</span></li>';
 
-    document.getElementById('issuesList').innerHTML = PROBLEM_ISSUES.map((iss, idx) => {
-      const sev = iss.count > 1000 ? 'high' : iss.count > 500 ? 'medium' : 'low';
-      return `<div class="issue-row">
-        <span>${idx + 1}. ${iss.issue}</span>
-        <span style="display:flex;align-items:center;gap:8px">
-          <span class="hint">${fmtInt(iss.count)}</span>
-          <span class="sev ${sev}">${sev === 'high' ? 'High' : sev === 'medium' ? 'Medium' : 'Low'}</span>
-        </span>
-      </div>`;
-    }).join('');
+    const scopedRows = rowsInScope(buildings);
+    const issueGroups = issueInterventionGroups(scopedRows, 10);
 
-    document.getElementById('improveList').innerHTML = (data.improvements || []).slice(0, 5).map((imp) =>
-      `<li><span class="name" title="${imp.name}">${imp.name}</span><span class="score-pill mid">${imp.pct}%</span></li>`
-    ).join('');
+    document.getElementById('issueInterventionList').innerHTML = issueGroups.length
+      ? issueGroups.map((g, idx) => {
+        const pct = g.pct;
+        const sevRaw = (g.severity || '').toLowerCase();
+        const sev = sevRaw === 'high' || (pct != null && pct >= 60) ? 'high'
+          : sevRaw === 'medium' || (pct != null && pct >= 40) ? 'medium' : 'low';
+        const sug = (g.suggestions || []).map((s) =>
+          `<span class="suggestion-tag" title="${s}">${truncate(s, 36)}</span>`
+        ).join('');
+        return `<div class="issue-intervention-row">
+          <div class="issue-head">
+            <span class="issue-title">${idx + 1}. ${g.problem}</span>
+            <span class="issue-meta"><span class="sev ${sev}">${sev === 'high' ? 'High' : sev === 'medium' ? 'Medium' : 'Low'}</span></span>
+          </div>
+          ${sug ? `<div class="suggestion-tags">${sug}</div>` : '<div class="hint">No intervention mapped</div>'}
+        </div>`;
+      }).join('')
+      : '<div class="empty-hint">No issues for this selection.</div>';
+
+    const catalog = interventions.catalog || [];
+    document.getElementById('offeredList').innerHTML = catalog.length
+      ? catalog.map((item) => `
+        <li class="offered-item">
+          <div class="offered-meta">
+            <span class="offered-id">#${item.id}</span>
+            <span class="name" title="${item.name}">${item.name}</span>
+            ${item.kfa ? `<span class="hint">${item.kfa}</span>` : ''}
+          </div>
+          <button type="button" class="btn btn-outline btn-apply" data-intervention="${item.name.replace(/"/g, '&quot;')}">Apply</button>
+        </li>`).join('')
+      : '<li class="empty-hint">No intervention catalog for this board.</li>';
+
+    document.querySelectorAll('.btn-apply').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        btn.textContent = 'Applied';
+        btn.disabled = true;
+        btn.classList.add('applied');
+      });
+    });
   }
 
   function onFilterChange(source) {
@@ -722,4 +823,20 @@
 
   refillLayouts();
   render();
+
+  const fBoard = document.getElementById('fBoard');
+  HHIData.boardOptions(manifest).forEach((b) => {
+    const opt = document.createElement('option');
+    opt.value = b.id;
+    opt.textContent = b.label;
+    if (b.id === boardId) opt.selected = true;
+    fBoard.appendChild(opt);
+  });
+  fBoard.addEventListener('change', () => {
+    HHIData.setBoardId(fBoard.value);
+    const url = new URL(window.location.href);
+    url.searchParams.set('board', fBoard.value);
+    window.location.href = url.toString();
+  });
+  bindBoardSwitcher(boardId);
 })();
