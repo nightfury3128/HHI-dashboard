@@ -33,32 +33,72 @@
     return (interventions.interventions || []).filter((r) => r.layout && layouts.has(canonLayout(r.layout)));
   }
 
-  function fillIssuesAndImprovements() {
-    // Board-level from working sheet: Issues Reported + FrequencyQS (Q24)
-    const issueRows = (data.topIssues || []).slice(0, 10);
-    const maxIssue = Math.max(0, ...issueRows.map((i) => i.count || 0));
-    function issueSeverity(count) {
-      if (!maxIssue) return 'low';
-      const ratio = (count || 0) / maxIssue;
-      if (ratio >= 0.6) return 'high';
-      if (ratio >= 0.3) return 'medium';
+  function fillIssuesAndImprovements(buildings) {
+    // Reported Issues:
+    // - With division/layout/building filters → problems from board-interventions for layouts in scope
+    // - Otherwise → Issues Reported sheet for this board (board-specific)
+    const layoutFiltered = !!(fDivision.value || fLayout.value || fBuilding.value);
+    const scopedIv = buildings && buildings.length ? rowsInScope(buildings) : [];
+    let issueRows = [];
+
+    if (layoutFiltered && scopedIv.length) {
+      const byProblem = {};
+      scopedIv.forEach((r) => {
+        if (!r.problem) return;
+        const prev = byProblem[r.problem];
+        const rank = r.rank ?? 99;
+        const pct = r.pct || 0;
+        if (!prev || rank < prev.rank || (rank === prev.rank && pct > (prev.pct || 0))) {
+          byProblem[r.problem] = {
+            issue: r.problem,
+            count: r.count,
+            pct: r.pct,
+            severity: r.severity,
+            rank,
+          };
+        }
+      });
+      issueRows = Object.values(byProblem)
+        .sort((a, b) => (a.rank - b.rank) || (b.pct || 0) - (a.pct || 0))
+        .slice(0, 8);
+    } else {
+      issueRows = (data.topIssues || []).slice(0, 8).map((iss) => ({ ...iss }));
+    }
+
+    const surveys = Math.max(1, Number(data.overall?.surveys) || 0);
+    function issueSeverity(iss) {
+      const sevRaw = (iss.severity || '').toLowerCase();
+      if (sevRaw.includes('high')) return 'high';
+      if (sevRaw.includes('medium') || sevRaw.includes('mod')) return 'medium';
+      if (sevRaw.includes('low')) return 'low';
+      // Issues Reported sheet has counts — severity vs board survey totals
+      // so several top problems can be High (not only the single max).
+      const pct = 100 * (Number(iss.count) || 0) / surveys;
+      if (pct >= 25) return 'high';
+      if (pct >= 12) return 'medium';
       return 'low';
     }
 
     document.getElementById('reportedIssuesList').innerHTML = issueRows.length
       ? issueRows.map((iss, idx) => {
-        const sev = issueSeverity(iss.count);
+        const sev = issueSeverity(iss);
         return `<div class="issue-intervention-row">
           <div class="issue-head">
             <span class="issue-title">${idx + 1}. ${iss.issue}</span>
             <span class="issue-meta">
-              <span class="hint">${fmtInt(iss.count)}</span>
               <span class="sev ${sev}">${sev === 'high' ? 'High' : sev === 'medium' ? 'Medium' : 'Low'}</span>
             </span>
           </div>
         </div>`;
       }).join('')
-      : '<div class="empty-hint">No reported issues in this working sheet.</div>';
+      : '<div class="empty-hint">No reported issues for this board.</div>';
+
+    const issuesHint = document.getElementById('issuesHint');
+    if (issuesHint) {
+      issuesHint.textContent = layoutFiltered && scopedIv.length
+        ? 'for selected layouts'
+        : 'from Issues Reported';
+    }
 
     const improveRows = (data.improvements || []).slice(0, 8);
     document.getElementById('suggestedImprovementsList').innerHTML = improveRows.length
@@ -74,7 +114,56 @@
         ).join('')
       : '<div class="empty-hint">No suggested improvements in this working sheet.</div>';
 
+    fillPossibleInterventions(buildings);
     requestAnimationFrame(() => syncSuggestionsCardHeight());
+  }
+
+  function fillPossibleInterventions(buildings) {
+    // Keep Exact sheet pairing: Possible Intervention (B) ↔ Problem Listed (E).
+    // Never collapse by intervention name alone — same intervention can map to
+    // different problems across layouts/boards.
+    const pool = buildings && buildings.length
+      ? rowsInScope(buildings)
+      : (interventions.interventions || []);
+    const byPair = {};
+    pool.forEach((r) => {
+      if (!r.name || !r.problem) return;
+      const key = r.name + '\0' + r.problem;
+      const rank = r.rank ?? 99;
+      const pct = r.pct || 0;
+      const prev = byPair[key];
+      if (!prev || rank < prev.rank || (rank === prev.rank && pct > (prev.pct || 0))) {
+        byPair[key] = {
+          name: r.name,
+          problem: r.problem,
+          severity: r.severity,
+          pct: r.pct,
+          rank,
+          layouts: new Set(prev && prev.layouts ? [...prev.layouts] : []),
+        };
+      }
+      byPair[key].layouts.add(r.layout || '');
+    });
+    const rows = Object.values(byPair)
+      .map((x) => ({ ...x, layoutCount: [...x.layouts].filter(Boolean).length }))
+      .sort((a, b) => (a.rank - b.rank) || (b.pct || 0) - (a.pct || 0) || a.name.localeCompare(b.name) || a.problem.localeCompare(b.problem))
+      .slice(0, 10);
+
+    const el = document.getElementById('possibleInterventionsList');
+    if (!el) return;
+    el.innerHTML = rows.length
+      ? rows.map((item, idx) => {
+        const sevRaw = (item.severity || '').toLowerCase();
+        const sev = sevRaw.includes('high') ? 'high' : sevRaw.includes('medium') || sevRaw.includes('mod') ? 'medium' : 'low';
+        return `<div class="issue-intervention-row">
+          <div class="issue-head">
+            <span class="issue-title">${idx + 1}. ${item.name}</span>
+            <span class="issue-meta"><span class="sev ${sev}">${sev === 'high' ? 'High' : sev === 'medium' ? 'Medium' : 'Low'}</span></span>
+          </div>
+          <div class="hint">For: ${item.problem}</div>
+        </div>`;
+      }).join('')
+      : '<div class="empty-hint">No possible interventions for this selection.</div>';
   }
 
   function issueInterventionGroups(rows, limit = 10) {
@@ -230,12 +319,16 @@
 
             <div class="grid-bottom">
               <div class="card fill-card issues-card" id="issuesCard">
-                <div class="card-title">Reported Issues <span class="hint">from working sheet</span></div>
+                <div class="card-title">Reported Issues <span class="hint" id="issuesHint">from working sheet</span></div>
                 <div id="reportedIssuesList" class="issue-intervention-list"></div>
               </div>
               <div class="card fill-card suggestions-card" id="suggestionsCard">
                 <div class="card-title">Suggested Improvements <span class="hint">from FrequencyQS</span></div>
                 <div id="suggestedImprovementsList" class="issue-intervention-list"></div>
+              </div>
+              <div class="card fill-card interventions-card" id="interventionsCard">
+                <div class="card-title">Possible Interventions <span class="hint">from board interventions</span></div>
+                <div id="possibleInterventionsList" class="issue-intervention-list"></div>
               </div>
             </div>
           </div>
@@ -504,7 +597,7 @@
       document.getElementById('heatmap').innerHTML = '';
       document.getElementById('topList').innerHTML = '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
       document.getElementById('lowList').innerHTML = '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
-      fillIssuesAndImprovements();
+      fillIssuesAndImprovements([]);
       return;
     }
 
@@ -749,7 +842,7 @@
         ).join('')
       : '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
 
-    fillIssuesAndImprovements();
+    fillIssuesAndImprovements(buildings);
   }
 
   function onFilterChange(source) {
@@ -809,12 +902,15 @@
 
 
   function syncSuggestionsCardHeight() {
-    const issues = document.getElementById('issuesCard');
-    const suggestions = document.getElementById('suggestionsCard');
-    if (!issues || !suggestions) return;
-    suggestions.style.height = '';
-    const h = issues.getBoundingClientRect().height;
-    if (h > 0) suggestions.style.height = Math.round(h) + 'px';
+    const cards = [
+      document.getElementById('issuesCard'),
+      document.getElementById('suggestionsCard'),
+      document.getElementById('interventionsCard'),
+    ].filter(Boolean);
+    if (cards.length < 2) return;
+    cards.forEach((c) => { c.style.height = ''; });
+    const h = Math.max(...cards.map((c) => c.getBoundingClientRect().height));
+    if (h > 0) cards.forEach((c) => { c.style.height = Math.round(h) + 'px'; });
   }
   function resizeCharts() {
     Object.values(charts).forEach((c) => {

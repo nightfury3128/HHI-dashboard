@@ -216,7 +216,7 @@
         const payloads = await Promise.all(
           (manifest.boards || []).map(async (meta) => ({
             meta,
-            data: await fetch(`data/${meta.file}`).then((r) => r.json()),
+            data: await fetch(`data/${meta.file}`, { cache: 'no-store' }).then((r) => r.json()),
           }))
         );
         this._allCache = mergeBoards(payloads);
@@ -224,7 +224,7 @@
       }
 
       const meta = (manifest.boards || []).find((b) => b.id === id) || { id, file: `${id}.json`, label: id };
-      const data = await fetch(`data/${meta.file}`).then((r) => r.json());
+      const data = await fetch(`data/${meta.file}`, { cache: 'no-store' }).then((r) => r.json());
       data._meta = meta;
       return data;
     },
@@ -238,7 +238,7 @@
         const payloads = await Promise.all(
           (manifest.boards || []).map(async (meta) => {
             try {
-              return await fetch(`data/interventions/${meta.id}.json`).then((r) => (r.ok ? r.json() : null));
+              return await fetch(`data/interventions/${meta.id}.json`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null));
             } catch {
               return null;
             }
@@ -273,7 +273,7 @@
       if (!this._ivCache) this._ivCache = {};
       if (this._ivCache[id]) return this._ivCache[id];
       try {
-        const data = await fetch(`data/interventions/${id}.json`).then((r) => (r.ok ? r.json() : null));
+        const data = await fetch(`data/interventions/${id}.json`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null));
         this._ivCache[id] = data || { topIssues: [], interventions: [], catalog: [] };
       } catch {
         this._ivCache[id] = { topIssues: [], interventions: [], catalog: [] };
