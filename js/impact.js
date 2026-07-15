@@ -138,21 +138,89 @@
     </div>
   `;
 
-  const fLayout = document.getElementById('fLayout');
-  layouts
-    .slice()
-    .sort((a, b) => a.layout.localeCompare(b.layout))
-    .forEach((l) => {
-      const o = document.createElement('option');
-      o.value = l.layout;
-      o.textContent = l.layout;
-      fLayout.appendChild(o);
-    });
+  const Fuzzy = window.HHIFuzzy;
+  const layoutCluster = Fuzzy.buildClusterMap(layouts.map((l) => l.layout));
+  const canonLayout = (v) => layoutCluster.resolve(v);
 
-  if (defaultLayout) fLayout.value = defaultLayout.layout;
+  /** Merge layout rows that fuzzy-match into one view model. */
+  function mergeLayouts(parts) {
+    if (!parts.length) return null;
+    if (parts.length === 1) return parts[0];
+    const base = { ...parts[0] };
+    base.layout = canonLayout(base.layout) || base.layout;
+    // Average numeric scores across aliases
+    const nums = ['score', 'hhi', 'housing', 'social', 'environment', 'economic', 'governance'];
+    nums.forEach((k) => {
+      const vals = parts.map((p) => p[k]).filter((v) => v != null && !Number.isNaN(Number(v)));
+      if (vals.length) base[k] = vals.reduce((a, b) => a + Number(b), 0) / vals.length;
+    });
+    // Prefer richest kfas / interventions / problems
+    const withKfas = [...parts].sort((a, b) => (b.kfas?.length || 0) - (a.kfas?.length || 0))[0];
+    if (withKfas?.kfas?.length) {
+      // Average matching KFA scores across parts that have them
+      const byName = {};
+      parts.forEach((p) => {
+        (p.kfas || []).forEach((k) => {
+          if (!byName[k.kfa]) byName[k.kfa] = { ...k, _scores: [], _board: [] };
+          if (k.score != null) byName[k.kfa]._scores.push(Number(k.score));
+          if (k.boardAvg != null) byName[k.kfa]._board.push(Number(k.boardAvg));
+        });
+      });
+      base.kfas = Object.values(byName).map((k) => {
+        const score = k._scores.length
+          ? k._scores.reduce((a, b) => a + b, 0) / k._scores.length
+          : k.score;
+        const boardAvg = k._board.length
+          ? k._board.reduce((a, b) => a + b, 0) / k._board.length
+          : k.boardAvg;
+        const { _scores, _board, ...rest } = k;
+        return { ...rest, score, boardAvg };
+      });
+      const ranked = [...base.kfas].sort((a, b) => (a.score || 0) - (b.score || 0));
+      base.kfas = base.kfas.map((k) => ({
+        ...k,
+        rank: ranked.findIndex((x) => x.kfa === k.kfa) + 1,
+      }));
+    }
+    const interventions = [];
+    const seenI = new Set();
+    parts.forEach((p) => {
+      (p.interventions || []).forEach((it) => {
+        const key = JSON.stringify(it);
+        if (seenI.has(key)) return;
+        seenI.add(key);
+        interventions.push(it);
+      });
+    });
+    if (interventions.length) base.interventions = interventions;
+    const problems = [];
+    const seenP = new Set();
+    parts.forEach((p) => {
+      (p.problems || []).forEach((pr) => {
+        const key = typeof pr === 'string' ? pr : JSON.stringify(pr);
+        if (seenP.has(key)) return;
+        seenP.add(key);
+        problems.push(pr);
+      });
+    });
+    if (problems.length) base.problems = problems;
+    return base;
+  }
+
+  const fLayout = document.getElementById('fLayout');
+  layoutCluster.canonicals().forEach((name) => {
+    const o = document.createElement('option');
+    o.value = name;
+    o.textContent = name;
+    fLayout.appendChild(o);
+  });
+
+  if (defaultLayout) fLayout.value = canonLayout(defaultLayout.layout);
 
   function selectedLayout() {
-    return layouts.find((l) => l.layout === fLayout.value) || layouts[0];
+    const selected = fLayout.value;
+    const parts = layouts.filter((l) => canonLayout(l.layout) === selected);
+    return mergeLayouts(parts) || layouts[0];
   }
 
   function destroy(k) {

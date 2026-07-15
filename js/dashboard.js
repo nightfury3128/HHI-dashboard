@@ -29,8 +29,8 @@
   ];
 
   function rowsInScope(buildings) {
-    const layouts = new Set(buildings.map((b) => b.layout).filter(Boolean));
-    return (interventions.interventions || []).filter((r) => r.layout && layouts.has(r.layout));
+    const layouts = new Set(buildings.map((b) => canonLayout(b.layout)).filter(Boolean));
+    return (interventions.interventions || []).filter((r) => r.layout && layouts.has(canonLayout(r.layout)));
   }
 
   function issueInterventionGroups(rows, limit = 10) {
@@ -206,37 +206,74 @@
   const fAge = document.getElementById('fAge');
   const fKfa = document.getElementById('fKfa');
 
-  data.divisions.forEach((d) => {
+  // Fuzzy-merge near-duplicate filter labels (case/spacing/punctuation/typos)
+  const Fuzzy = window.HHIFuzzy;
+  const divisionCluster = Fuzzy.buildClusterMap([
+    ...(data.divisions || []).map((d) => d.division),
+    ...data.buildings.map((b) => b.division),
+  ]);
+  const layoutCluster = Fuzzy.buildClusterMap([
+    ...(data.layouts || []).map((l) => l.layout),
+    ...data.buildings.map((b) => b.layout),
+    ...((interventions.interventions || []).map((r) => r.layout)),
+  ]);
+  const buildingCluster = Fuzzy.buildClusterMap(data.buildings.map((b) => b.name));
+
+  function canonDivision(v) { return divisionCluster.resolve(v); }
+  function canonLayout(v) { return layoutCluster.resolve(v); }
+  function canonBuilding(v) { return buildingCluster.resolve(v); }
+
+  function matchesDivision(b, selected) {
+    if (!selected) return true;
+    return canonDivision(b.division) === selected;
+  }
+  function matchesLayout(b, selected) {
+    if (!selected) return true;
+    return canonLayout(b.layout) === selected;
+  }
+  function matchesBuilding(b, selected) {
+    if (!selected) return true;
+    return canonBuilding(b.name) === selected;
+  }
+
+  divisionCluster.canonicals().forEach((div) => {
     const opt = document.createElement('option');
-    opt.value = d.division;
-    opt.textContent = d.division;
+    opt.value = div;
+    opt.textContent = div;
     fDivision.appendChild(opt);
   });
 
   function layoutsFor(div) {
-    return data.layouts.filter((l) => !div || l.division === div);
+    const set = new Set();
+    data.buildings.forEach((b) => {
+      if (!matchesDivision(b, div)) return;
+      if (b.layout) set.add(canonLayout(b.layout));
+    });
+    return [...set].sort((a, b) => a.localeCompare(b));
   }
 
   function buildingsFor(div, layout) {
-    return data.buildings.filter((b) =>
-      (!div || b.division === div) && (!layout || b.layout === layout)
-    );
+    const set = new Set();
+    data.buildings.forEach((b) => {
+      if (!matchesDivision(b, div) || !matchesLayout(b, layout)) return;
+      if (b.name) set.add(canonBuilding(b.name));
+    });
+    return [...set].sort((a, b) => a.localeCompare(b));
   }
 
   function refillLayouts(keepValue) {
     const div = fDivision.value;
     const prev = keepValue !== undefined ? keepValue : fLayout.value;
+    const prevCanon = prev ? canonLayout(prev) : '';
     fLayout.innerHTML = '<option value="">All Layouts</option>';
-    layoutsFor(div)
-      .sort((a, b) => a.layout.localeCompare(b.layout))
-      .forEach((l) => {
-        const opt = document.createElement('option');
-        opt.value = l.layout;
-        opt.textContent = l.layout;
-        fLayout.appendChild(opt);
-      });
-    if (prev && [...fLayout.options].some((o) => o.value === prev)) {
-      fLayout.value = prev;
+    layoutsFor(div).forEach((layout) => {
+      const opt = document.createElement('option');
+      opt.value = layout;
+      opt.textContent = layout;
+      fLayout.appendChild(opt);
+    });
+    if (prevCanon && [...fLayout.options].some((o) => o.value === prevCanon)) {
+      fLayout.value = prevCanon;
     }
     refillBuildings();
   }
@@ -245,17 +282,16 @@
     const div = fDivision.value;
     const layout = fLayout.value;
     const prev = keepValue !== undefined ? keepValue : fBuilding.value;
+    const prevCanon = prev ? canonBuilding(prev) : '';
     fBuilding.innerHTML = '<option value="">All Buildings</option>';
-    buildingsFor(div, layout)
-      .sort((a, b) => (a.name || '').localeCompare(b.name || ''))
-      .forEach((b) => {
-        const opt = document.createElement('option');
-        opt.value = b.name;
-        opt.textContent = b.name;
-        fBuilding.appendChild(opt);
-      });
-    if (prev && [...fBuilding.options].some((o) => o.value === prev)) {
-      fBuilding.value = prev;
+    buildingsFor(div, layout).forEach((name) => {
+      const opt = document.createElement('option');
+      opt.value = name;
+      opt.textContent = name;
+      fBuilding.appendChild(opt);
+    });
+    if (prevCanon && [...fBuilding.options].some((o) => o.value === prevCanon)) {
+      fBuilding.value = prevCanon;
     }
   }
 
@@ -294,9 +330,9 @@
     const building = fBuilding.value;
     const age = fAge.value;
     return data.buildings.filter((b) =>
-      (!div || b.division === div) &&
-      (!layout || b.layout === layout) &&
-      (!building || b.name === building) &&
+      matchesDivision(b, div) &&
+      matchesLayout(b, layout) &&
+      matchesBuilding(b, building) &&
       (!age || b.ageBand === age || resolveAgeBandFilter(b) === age)
     );
   }
@@ -363,17 +399,20 @@
     buildings.forEach((b) => {
       let key;
       let label;
+      const div = canonDivision(b.division);
+      const layout = canonLayout(b.layout);
+      const name = canonBuilding(b.name);
       if (mode === 'building') {
-        key = b.division + '|' + b.layout + '|' + b.name;
-        label = b.name;
+        key = div + '|' + layout + '|' + name;
+        label = name;
       } else if (mode === 'layout') {
-        key = b.division + '|' + b.layout;
-        label = b.layout;
+        key = div + '|' + layout;
+        label = layout;
       } else {
-        key = b.division;
-        label = b.division;
+        key = div;
+        label = div;
       }
-      if (!map[key]) map[key] = { key, label, division: b.division, items: [] };
+      if (!map[key]) map[key] = { key, label, division: div, items: [] };
       map[key].items.push(b);
     });
     return Object.values(map)
@@ -433,7 +472,7 @@
       economic: avg(buildings, 'economic'),
       governance: avg(buildings, 'governance'),
       composite: avg(buildings, 'composite'),
-      layouts: new Set(buildings.map((b) => b.layout)).size,
+      layouts: new Set(buildings.map((b) => canonLayout(b.layout)).filter(Boolean)).size,
       buildings: buildings.length,
       surveys: buildings.reduce((s, b) => s + (b.surveys || 0), 0),
     };
@@ -484,12 +523,12 @@
     buildings.forEach((b) => {
       const key = geoByBoard
         ? (b.board || b.boardId || 'Board')
-        : (b._divisionRaw || b.division || 'Unknown');
+        : (canonDivision(b._divisionRaw || b.division) || 'Unknown');
       if (!byGeo[key]) byGeo[key] = [];
       byGeo[key].push(b);
     });
     const geoLabels = Object.keys(byGeo).sort((a, b) => a.localeCompare(b));
-    document.getElementById('heatmapHint').textContent = geoByBoard ? 'Boards × KFA' : 'Divisions × KFA';
+    document.getElementById('heatmapHint').textContent = geoByBoard ? 'Boards × KFA + Index' : 'Divisions × KFA + Index';
 
     const bandLabels = AGE_BANDS.map((a) => a.label);
     const byAgeBand = Object.fromEntries(AGE_BANDS.map((a) => [a.key, []]));
@@ -630,14 +669,16 @@
       { key: 'governance', label: 'Gov.' },
     ];
     const hm = document.getElementById('heatmap');
-    hm.innerHTML = `<div class="heatmap-head"><span></span>${kfas.map((k) =>
+    hm.innerHTML = `<div class="heatmap-head"><span></span><span>Index</span>${kfas.map((k) =>
       `<span style="${fKfa.value === k.key ? 'color:var(--purple)' : ''}">${k.label}</span>`
     ).join('')}</div>`;
     geoLabels.forEach((d) => {
       const items = byGeo[d];
       const row = document.createElement('div');
       row.className = 'heatmap-row';
+      const indexVal = avg(items, 'index') ?? avg(items, 'composite');
       row.innerHTML = `<div class="hm-label" title="${d}">${d}</div>` +
+        `<div class="hm-cell" style="background:${scoreColor(indexVal)}" title="Index: ${fmt(indexVal)}">${fmt(indexVal, 0)}</div>` +
         kfas.map((k) => {
           const v = avg(items, k.key);
           const dim = fKfa.value && fKfa.value !== k.key ? 'opacity:0.35;' : '';

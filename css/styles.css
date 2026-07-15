@@ -332,6 +332,7 @@ img { max-width: 100%; display: block; }
 .heatmap-card .heatmap { flex: 1; min-height: var(--chart-h-lg); }
 .rank-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 0.82rem;
 }
@@ -351,18 +352,31 @@ img { max-width: 100%; display: block; }
   vertical-align: middle;
 }
 .rank-table tr:last-child td { border-bottom: none; }
+.rank-table th:nth-child(1),
 .rank-table .rank-num-cell {
   width: 2rem;
   color: var(--muted);
   font-weight: 700;
   font-size: 0.75rem;
 }
+.rank-table th:nth-child(1) {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
 .rank-table td.name {
   min-width: 0;
-  max-width: 14rem;
+  width: auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+/* Keep Index pills vertically aligned across Top & Lowest tables */
+.rank-table th:nth-child(3),
+.rank-table td:nth-child(3) {
+  width: 4.5rem;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 10px;
 }
 .grid-charts-top { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); margin-bottom: var(--grid-gap); align-items: stretch; }
 .grid-bottom { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); margin-top: var(--grid-gap); align-items: start; }
@@ -469,7 +483,7 @@ img { max-width: 100%; display: block; }
 }
 .heatmap-row, .heatmap-head {
   display: grid;
-  grid-template-columns: minmax(4.5rem, 7.5rem) repeat(5, minmax(0, 1fr));
+  grid-template-columns: minmax(4.5rem, 7.5rem) repeat(6, minmax(0, 1fr));
   gap: 4px;
   align-items: stretch;
   width: 100%;
@@ -1014,7 +1028,7 @@ img { max-width: 100%; display: block; }
   .offered-item, .intervention-item { flex-direction: column; align-items: stretch; }
   .offered-item .btn, .intervention-item .btn { width: 100%; justify-content: center; }
   .heatmap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .heatmap-row, .heatmap-head { min-width: 28rem; }
+  .heatmap-row, .heatmap-head { min-width: 32rem; }
 }
 
 @media (max-width: 480px) {
