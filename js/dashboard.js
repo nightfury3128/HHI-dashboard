@@ -14,10 +14,10 @@
 
   const AGE_BANDS = [
     { key: 'New', label: '0–15 New', color: '#a60f2d' },
-    { key: 'Mid-Age', label: '15–32 Mid', color: '#85698e' },
-    { key: 'Ageing', label: '32–45 Ageing', color: '#5b8def' },
+    { key: 'Mid-Age', label: '15–30 Mid', color: '#85698e' },
+    { key: 'Ageing', label: '30–45 Ageing', color: '#5b8def' },
     { key: 'Old', label: '45–57 Old', color: '#1eb5cc' },
-    { key: 'Cess', label: '57+ Legacy', color: '#e07a1e' },
+    { key: 'Cess', label: '57+ Cess', color: '#e07a1e' },
   ];
 
   const KFA_LINES = [
@@ -105,8 +105,8 @@
               <select id="fAge">
                 <option value="">All Ages</option>
                 <option value="New">0–15 New</option>
-                <option value="Mid-Age">15–32 Mid-Age</option>
-                <option value="Ageing">32–45 Ageing</option>
+                <option value="Mid-Age">15–30 Mid-Age</option>
+                <option value="Ageing">30–45 Ageing</option>
                 <option value="Old">45–57 Old</option>
                 <option value="Cess">57+ Cess</option>
               </select>
@@ -310,15 +310,16 @@
   }
 
   function resolveAgeBandFilter(b) {
-    if (b.ageBand) return b.ageBand;
     const age = b.buildingAge != null ? Number(b.buildingAge)
       : (b.year ? 2026 - Number(b.year) : null);
-    if (age == null || Number.isNaN(age)) return null;
-    if (age < 15) return 'New';
-    if (age < 32) return 'Mid-Age';
-    if (age < 45) return 'Ageing';
-    if (age < 57) return 'Old';
-    return 'Cess';
+    if (age != null && !Number.isNaN(age)) {
+      if (age <= 15) return 'New';
+      if (age < 30) return 'Mid-Age';
+      if (age < 45) return 'Ageing';
+      if (age <= 57) return 'Old';
+      return 'Cess';
+    }
+    return b.ageBand || null;
   }
   function resolveAgeBand(b) {
     return resolveAgeBandFilter(b);
