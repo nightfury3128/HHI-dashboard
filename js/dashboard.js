@@ -186,11 +186,11 @@
 
             <div class="grid-bottom">
               <div class="card fill-card issues-card" id="issuesCard">
-                <div class="card-title">Reported Issues <span class="hint">problems in selection</span></div>
+                <div class="card-title">Suggested Improvement <span class="hint">problems in selection</span></div>
                 <div id="reportedIssuesList" class="issue-intervention-list"></div>
               </div>
               <div class="card fill-card suggestions-card" id="suggestionsCard">
-                <div class="card-title">Suggested Improvements <span class="hint">mapped interventions</span></div>
+                <div class="card-title">Interventions <span class="hint">mapped interventions</span></div>
                 <div id="suggestedImprovementsList" class="issue-intervention-list"></div>
               </div>
             </div>
