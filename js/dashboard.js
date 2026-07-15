@@ -33,6 +33,50 @@
     return (interventions.interventions || []).filter((r) => r.layout && layouts.has(canonLayout(r.layout)));
   }
 
+  function fillIssuesAndImprovements() {
+    // Board-level from working sheet: Issues Reported + FrequencyQS (Q24)
+    const issueRows = (data.topIssues || []).slice(0, 10);
+    const maxIssue = Math.max(0, ...issueRows.map((i) => i.count || 0));
+    function issueSeverity(count) {
+      if (!maxIssue) return 'low';
+      const ratio = (count || 0) / maxIssue;
+      if (ratio >= 0.6) return 'high';
+      if (ratio >= 0.3) return 'medium';
+      return 'low';
+    }
+
+    document.getElementById('reportedIssuesList').innerHTML = issueRows.length
+      ? issueRows.map((iss, idx) => {
+        const sev = issueSeverity(iss.count);
+        return `<div class="issue-intervention-row">
+          <div class="issue-head">
+            <span class="issue-title">${idx + 1}. ${iss.issue}</span>
+            <span class="issue-meta">
+              <span class="hint">${fmtInt(iss.count)}</span>
+              <span class="sev ${sev}">${sev === 'high' ? 'High' : sev === 'medium' ? 'Medium' : 'Low'}</span>
+            </span>
+          </div>
+        </div>`;
+      }).join('')
+      : '<div class="empty-hint">No reported issues in this working sheet.</div>';
+
+    const improveRows = (data.improvements || []).slice(0, 8);
+    document.getElementById('suggestedImprovementsList').innerHTML = improveRows.length
+      ? improveRows.map((imp, idx) =>
+          `<div class="issue-intervention-row">
+            <div class="issue-head">
+              <span class="issue-title">${idx + 1}. ${imp.name}</span>
+              <span class="issue-meta">
+                ${imp.pct != null ? `<span class="score-pill mid">${fmt(imp.pct, 1)}%</span>` : `<span class="hint">${fmtInt(imp.count)}</span>`}
+              </span>
+            </div>
+          </div>`
+        ).join('')
+      : '<div class="empty-hint">No suggested improvements in this working sheet.</div>';
+
+    requestAnimationFrame(() => syncSuggestionsCardHeight());
+  }
+
   function issueInterventionGroups(rows, limit = 10) {
     const byProblem = {};
     rows.forEach((r) => {
@@ -186,11 +230,11 @@
 
             <div class="grid-bottom">
               <div class="card fill-card issues-card" id="issuesCard">
-                <div class="card-title">Suggested Improvement <span class="hint">problems in selection</span></div>
+                <div class="card-title">Reported Issues <span class="hint">from working sheet</span></div>
                 <div id="reportedIssuesList" class="issue-intervention-list"></div>
               </div>
               <div class="card fill-card suggestions-card" id="suggestionsCard">
-                <div class="card-title">Interventions <span class="hint">mapped interventions</span></div>
+                <div class="card-title">Suggested Improvements <span class="hint">from FrequencyQS</span></div>
                 <div id="suggestedImprovementsList" class="issue-intervention-list"></div>
               </div>
             </div>
@@ -460,8 +504,7 @@
       document.getElementById('heatmap').innerHTML = '';
       document.getElementById('topList').innerHTML = '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
       document.getElementById('lowList').innerHTML = '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
-      document.getElementById('reportedIssuesList').innerHTML = '<div class="empty-hint">No data</div>';
-      document.getElementById('suggestedImprovementsList').innerHTML = '<div class="empty-hint">No data</div>';
+      fillIssuesAndImprovements();
       return;
     }
 
@@ -706,56 +749,7 @@
         ).join('')
       : '<tr><td colspan="3" class="empty-hint">No data</td></tr>';
 
-    const scopedRows = rowsInScope(buildings);
-    const issueGroups = issueInterventionGroups(scopedRows, 10);
-
-    function severityOf(g) {
-      const pct = g.pct;
-      const sevRaw = (g.severity || '').toLowerCase();
-      if (sevRaw === 'high' || (pct != null && pct >= 60)) return 'high';
-      if (sevRaw === 'medium' || (pct != null && pct >= 40)) return 'medium';
-      return 'low';
-    }
-
-    document.getElementById('reportedIssuesList').innerHTML = issueGroups.length
-      ? issueGroups.map((g, idx) => {
-        const sev = severityOf(g);
-        return `<div class="issue-intervention-row">
-          <div class="issue-head">
-            <span class="issue-title">${idx + 1}. ${g.problem}</span>
-            <span class="issue-meta"><span class="sev ${sev}">${sev === 'high' ? 'High' : sev === 'medium' ? 'Medium' : 'Low'}</span></span>
-          </div>
-        </div>`;
-      }).join('')
-      : '<div class="empty-hint">No issues for this selection.</div>';
-
-    const suggestionItems = [];
-    issueGroups.forEach((g) => {
-      (g.suggestions || []).forEach((s) => {
-        suggestionItems.push({ suggestion: s, problem: g.problem, severity: severityOf(g) });
-      });
-    });
-    // Deduplicate suggestions keeping first problem link
-    const seen = new Set();
-    const uniqueSuggestions = [];
-    suggestionItems.forEach((item) => {
-      if (seen.has(item.suggestion)) return;
-      seen.add(item.suggestion);
-      uniqueSuggestions.push(item);
-    });
-
-    document.getElementById('suggestedImprovementsList').innerHTML = uniqueSuggestions.length
-      ? uniqueSuggestions.map((item, idx) =>
-          `<div class="issue-intervention-row">
-            <div class="issue-head">
-              <span class="issue-title">${idx + 1}. ${item.suggestion}</span>
-            </div>
-            <div class="hint">For: ${item.problem}</div>
-          </div>`
-        ).join('')
-      : '<div class="empty-hint">No suggested improvements for this selection.</div>';
-
-    requestAnimationFrame(() => syncSuggestionsCardHeight());
+    fillIssuesAndImprovements();
   }
 
   function onFilterChange(source) {

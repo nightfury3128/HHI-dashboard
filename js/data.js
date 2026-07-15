@@ -12,6 +12,7 @@
   function mergeBoards(boardPayloads) {
     const buildings = [];
     const topIssuesMap = {};
+    const improvementsMap = {};
     const demAge = {};
     const demGender = {};
     const demMonth = {};
@@ -41,6 +42,20 @@
           topIssuesMap[key] = { ...it, count: it.count || 0 };
         } else {
           topIssuesMap[key].count = (topIssuesMap[key].count || 0) + (it.count || 0);
+        }
+      });
+
+      (data.improvements || []).forEach((it) => {
+        const key = it.name;
+        if (!key) return;
+        if (!improvementsMap[key]) {
+          improvementsMap[key] = { ...it, count: it.count || 0 };
+        } else {
+          improvementsMap[key].count = (improvementsMap[key].count || 0) + (it.count || 0);
+          if (it.pct != null) {
+            const prev = improvementsMap[key].pct;
+            improvementsMap[key].pct = prev == null ? it.pct : Math.round(((prev + it.pct) / 2) * 10) / 10;
+          }
         }
       });
 
@@ -100,6 +115,7 @@
     });
 
     const topIssues = Object.values(topIssuesMap).sort((a, b) => (b.count || 0) - (a.count || 0)).slice(0, 20);
+    const improvements = Object.values(improvementsMap).sort((a, b) => (b.count || 0) - (a.count || 0)).slice(0, 8);
 
     return {
       overall: {
@@ -127,7 +143,7 @@
       buildingsByAgeBand: byBand,
       source: 'all boards � merged working sheets',
       topIssues,
-      improvements: [],
+      improvements,
       demographics: {
         age: demAge,
         gender: demGender,
