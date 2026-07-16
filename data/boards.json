@@ -5,11 +5,11 @@
       "id": "amravati",
       "label": "Amravati Board",
       "file": "amravati.json",
-      "buildings": 59,
-      "layouts": 29,
-      "divisions": 5,
-      "surveys": 885,
-      "hhi": 61.94
+      "buildings": 58,
+      "layouts": 58,
+      "divisions": 29,
+      "surveys": 868,
+      "hhi": 62.19
     },
     {
       "id": "csn",
@@ -25,11 +25,11 @@
       "id": "kokan",
       "label": "Kokan Board",
       "file": "kokan.json",
-      "buildings": 146,
-      "layouts": 32,
+      "buildings": 157,
+      "layouts": 37,
       "divisions": 5,
-      "surveys": 1683,
-      "hhi": 65.21
+      "surveys": 1990,
+      "hhi": 65.61
     },
     {
       "id": "mumbai",
@@ -45,11 +45,11 @@
       "id": "nagpur",
       "label": "Nagpur Board",
       "file": "nagpur.json",
-      "buildings": 56,
+      "buildings": 57,
       "layouts": 53,
       "divisions": 5,
       "surveys": 964,
-      "hhi": 68.7
+      "hhi": 68.63
     },
     {
       "id": "nashik",
