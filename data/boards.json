@@ -9,7 +9,7 @@
       "layouts": 58,
       "divisions": 29,
       "surveys": 867,
-      "hhi": 62.2
+      "hhi": 62.74
     },
     {
       "id": "csn",
@@ -19,7 +19,7 @@
       "layouts": 55,
       "divisions": 8,
       "surveys": 904,
-      "hhi": 67.4
+      "hhi": 66.78
     },
     {
       "id": "kokan",
@@ -29,17 +29,17 @@
       "layouts": 37,
       "divisions": 5,
       "surveys": 1990,
-      "hhi": 65.61
+      "hhi": 65.28
     },
     {
       "id": "mumbai",
       "label": "Mumbai Board",
       "file": "mumbai.json",
-      "buildings": 562,
-      "layouts": 82,
+      "buildings": 611,
+      "layouts": 91,
       "divisions": 5,
       "surveys": 4161,
-      "hhi": 65.33
+      "hhi": 65.13
     },
     {
       "id": "nagpur",
@@ -49,7 +49,7 @@
       "layouts": 53,
       "divisions": 5,
       "surveys": 964,
-      "hhi": 68.63
+      "hhi": 68.92
     },
     {
       "id": "nashik",
@@ -59,7 +59,7 @@
       "layouts": 30,
       "divisions": 5,
       "surveys": 814,
-      "hhi": 68.96
+      "hhi": 67.67
     },
     {
       "id": "pune",
@@ -69,7 +69,7 @@
       "layouts": 67,
       "divisions": 5,
       "surveys": 841,
-      "hhi": 65.0
+      "hhi": 61.4
     }
   ]
 }

@@ -9,6 +9,20 @@
     return Math.round((nums.reduce((s, n) => s + n, 0) / nums.length) * 100) / 100;
   }
 
+  function weightedAvg(items, key) {
+    let nume = 0;
+    let den = 0;
+    items.forEach((x) => {
+      const v = x[key];
+      const w = Number(x.surveys) || 0;
+      if (v == null || Number.isNaN(Number(v)) || w <= 0) return;
+      nume += Number(v) * w;
+      den += w;
+    });
+    if (den > 0) return Math.round((nume / den) * 100) / 100;
+    return avg(items.map((x) => x[key]));
+  }
+
   function mergeBoards(boardPayloads) {
     const buildings = [];
     const topIssuesMap = {};
@@ -87,15 +101,15 @@
             };
         return {
           ...row,
-          hhi: avg(items.map((x) => x.hhi)),
-          housing: avg(items.map((x) => x.housing)),
-          social: avg(items.map((x) => x.social)),
-          environment: avg(items.map((x) => x.environment)),
-          economic: avg(items.map((x) => x.economic)),
-          governance: avg(items.map((x) => x.governance)),
-          composite: avg(items.map((x) => x.composite)),
-          index: avg(items.map((x) => x.index)),
-          rva: avg(items.map((x) => x.rva)),
+          hhi: weightedAvg(items, 'hhi'),
+          housing: weightedAvg(items, 'housing'),
+          social: weightedAvg(items, 'social'),
+          environment: weightedAvg(items, 'environment'),
+          economic: weightedAvg(items, 'economic'),
+          governance: weightedAvg(items, 'governance'),
+          composite: weightedAvg(items, 'composite'),
+          index: weightedAvg(items, 'index'),
+          rva: weightedAvg(items, 'rva'),
         };
       }).sort((a, b) => (b.index || b.hhi || 0) - (a.index || a.hhi || 0));
     }
@@ -125,14 +139,14 @@
         layouts: layouts.length,
         divisions: divisions.length,
         surveys,
-        hhi: avg(buildings.map((b) => b.hhi)),
-        housing: avg(buildings.map((b) => b.housing)),
-        social: avg(buildings.map((b) => b.social)),
-        environment: avg(buildings.map((b) => b.environment)),
-        economic: avg(buildings.map((b) => b.economic)),
-        governance: avg(buildings.map((b) => b.governance)),
-        composite: avg(buildings.map((b) => b.composite)),
-        index: avg(buildings.map((b) => b.index)),
+        hhi: weightedAvg(buildings, 'hhi'),
+        housing: weightedAvg(buildings, 'housing'),
+        social: weightedAvg(buildings, 'social'),
+        environment: weightedAvg(buildings, 'environment'),
+        economic: weightedAvg(buildings, 'economic'),
+        governance: weightedAvg(buildings, 'governance'),
+        composite: weightedAvg(buildings, 'composite'),
+        index: weightedAvg(buildings, 'index'),
       },
       divisions,
       layouts,

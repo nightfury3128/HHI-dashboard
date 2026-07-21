@@ -476,9 +476,26 @@
   }
 
   function avg(arr, key) {
-    const vals = arr.map((x) => x[key]).filter((v) => v != null && !Number.isNaN(v));
-    if (!vals.length) return null;
-    return vals.reduce((a, b) => a + b, 0) / vals.length;
+    // Survey-weighted mean so filtered KPIs match PDF Grand Total / division totals
+    let nume = 0;
+    let den = 0;
+    let plain = 0;
+    let plainN = 0;
+    arr.forEach((x) => {
+      const v = x[key];
+      if (v == null || Number.isNaN(Number(v))) return;
+      const w = Number(x.surveys) || 0;
+      if (w > 0) {
+        nume += Number(v) * w;
+        den += w;
+      } else {
+        plain += Number(v);
+        plainN += 1;
+      }
+    });
+    if (den > 0) return nume / den;
+    if (!plainN) return null;
+    return plain / plainN;
   }
 
 
