@@ -6,70 +6,70 @@
       "label": "Amravati Board",
       "file": "amravati.json",
       "buildings": 58,
-      "layouts": 58,
-      "divisions": 29,
+      "layouts": 26,
+      "divisions": 5,
       "surveys": 867,
-      "hhi": 62.74
+      "hhi": 59.5
     },
     {
       "id": "csn",
       "label": "CSN Board",
       "file": "csn.json",
-      "buildings": 65,
-      "layouts": 55,
+      "buildings": 62,
+      "layouts": 54,
       "divisions": 8,
       "surveys": 904,
-      "hhi": 66.78
+      "hhi": 64.9
     },
     {
       "id": "kokan",
       "label": "Kokan Board",
       "file": "kokan.json",
-      "buildings": 157,
-      "layouts": 37,
+      "buildings": 151,
+      "layouts": 35,
       "divisions": 5,
       "surveys": 1990,
-      "hhi": 65.28
+      "hhi": 63.6
     },
     {
       "id": "mumbai",
       "label": "Mumbai Board",
       "file": "mumbai.json",
-      "buildings": 611,
-      "layouts": 91,
+      "buildings": 562,
+      "layouts": 82,
       "divisions": 5,
       "surveys": 4161,
-      "hhi": 65.13
+      "hhi": 65.58
     },
     {
       "id": "nagpur",
       "label": "Nagpur Board",
       "file": "nagpur.json",
-      "buildings": 57,
-      "layouts": 53,
-      "divisions": 5,
+      "buildings": 55,
+      "layouts": 43,
+      "divisions": 6,
       "surveys": 964,
-      "hhi": 68.92
+      "hhi": 68.19
     },
     {
       "id": "nashik",
       "label": "Nashik Board",
       "file": "nashik.json",
       "buildings": 36,
-      "layouts": 30,
+      "layouts": 25,
       "divisions": 5,
       "surveys": 814,
-      "hhi": 67.67
+      "hhi": 66.33
     },
     {
       "id": "pune",
       "label": "Pune Board",
       "file": "pune.json",
-      "buildings": 84,
-      "layouts": 67,
+      "buildings": 72,
+      "layouts": 59,
       "divisions": 5,
       "surveys": 841,
-      "hhi": 61.4
+      "hhi": 59.18
     }
   ]
 }
