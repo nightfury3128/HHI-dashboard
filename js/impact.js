@@ -73,7 +73,7 @@
         <div class="impact-mid">
           <div class="card">
             <div class="card-title">KFA Score Profile <span class="hint">Layout vs Board Avg</span></div>
-            <div class="chart-box tall"><canvas id="kfaChart"></canvas></div>
+            <div class="chart-box"><canvas id="kfaChart"></canvas></div>
           </div>
           <div class="card">
             <div class="card-title">KFA Ranking <span class="hint">Worst → Best</span></div>

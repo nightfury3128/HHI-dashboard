@@ -1165,7 +1165,7 @@ img { max-width: 100%; display: block; }
 }
 .impact-filters .score-box .l { font-size: 0.7rem; color: var(--muted); font-weight: 600; }
 .impact-filters .score-box .v { font-size: 1.2rem; font-weight: 700; color: var(--orange); }
-.impact-mid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr) minmax(0, 0.9fr); gap: var(--grid-gap); margin-bottom: var(--grid-gap); }
+.impact-mid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr) minmax(0, 1.15fr); gap: var(--grid-gap); margin-bottom: var(--grid-gap); }
 .gauge-row {
   display: flex; align-items: center; justify-content: space-around; gap: 8px; padding: 8px 0;
 }
