@@ -476,26 +476,17 @@
   }
 
   function avg(arr, key) {
-    // Survey-weighted mean so filtered KPIs match PDF Grand Total / division totals
-    let nume = 0;
-    let den = 0;
-    let plain = 0;
-    let plainN = 0;
+    // Equal building weight — matches Overall Score Excel pivot / PDF layout Grand Total
+    let sum = 0;
+    let n = 0;
     arr.forEach((x) => {
       const v = x[key];
       if (v == null || Number.isNaN(Number(v))) return;
-      const w = Number(x.surveys) || 0;
-      if (w > 0) {
-        nume += Number(v) * w;
-        den += w;
-      } else {
-        plain += Number(v);
-        plainN += 1;
-      }
+      sum += Number(v);
+      n += 1;
     });
-    if (den > 0) return nume / den;
-    if (!plainN) return null;
-    return plain / plainN;
+    if (!n) return null;
+    return sum / n;
   }
 
 
