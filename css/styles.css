@@ -1165,7 +1165,9 @@ img { max-width: 100%; display: block; }
 }
 .impact-filters .score-box .l { font-size: 0.7rem; color: var(--muted); font-weight: 600; }
 .impact-filters .score-box .v { font-size: 1.2rem; font-weight: 700; color: var(--orange); }
-.impact-mid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr) minmax(0, 1.15fr); gap: var(--grid-gap); margin-bottom: var(--grid-gap); }
+.impact-mid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: var(--grid-gap); margin-bottom: var(--grid-gap); align-items: stretch; }
+.impact-mid > .card { display: flex; flex-direction: column; max-height: 420px; min-height: 0; }
+.impact-mid .rank-list, .impact-mid .interv-list { flex: 1; min-height: 0; overflow-y: auto; }
 .gauge-row {
   display: flex; align-items: center; justify-content: space-around; gap: 8px; padding: 8px 0;
 }

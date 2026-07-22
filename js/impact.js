@@ -3,33 +3,16 @@
   const boardId = await HHIData.resolveBoardId();
   const boardData = await HHIData.loadBoard(boardId);
   const boardLabel = HHIData.boardLabel(boardData);
-  const interventions = await fetch('data/interventions.json').then((r) => r.json());
+  const interventions = await fetch(`data/interventions/${boardId}-nested.json`)
+    .then((r) => (r.ok ? r.json() : fetch('data/interventions.json').then((r2) => r2.json())))
+    .catch(() => fetch('data/interventions.json').then((r) => r.json()));
   const shell = renderShell('impact', {
     location: boardLabel,
     boardId,
     boards: HHIData.boardOptions(manifest),
   });
   const charts = {};
-  // Interventions workbook is Mumbai-focused today; other boards use board layout KFA profiles.
-  const layouts = boardId === 'mumbai'
-    ? (interventions.layouts || [])
-    : (boardData.layouts || []).map((l) => ({
-        layout: l.layout,
-        division: l.division,
-        score: l.hhi,
-        kfas: [
-          { kfa: 'Housing Infrastructure', score: l.housing, boardAvg: boardData.overall.housing, rank: 0 },
-          { kfa: 'Social Well-being', score: l.social, boardAvg: boardData.overall.social, rank: 0 },
-          { kfa: 'Environment', score: l.environment, boardAvg: boardData.overall.environment, rank: 0 },
-          { kfa: 'Economic Security', score: l.economic, boardAvg: boardData.overall.economic, rank: 0 },
-          { kfa: 'Governance', score: l.governance, boardAvg: boardData.overall.governance, rank: 0 },
-        ].map((k, i, arr) => {
-          const ranked = [...arr].sort((a, b) => (a.score || 0) - (b.score || 0));
-          return { ...k, rank: ranked.findIndex((x) => x.kfa === k.kfa) + 1 };
-        }),
-        interventions: [],
-        problems: [],
-      }));
+  const layouts = interventions.layouts || [];
 
   // Prefer a layout that has both KFAs and interventions
   const defaultLayout =
@@ -45,9 +28,7 @@
           <div>
             <div class="crumbs">Dashboard &gt; <span>Impact Assessment</span></div>
             <h1>Impact Assessment</h1>
-            <p class="sub">${boardId === 'mumbai'
-              ? 'Layout-level intervention recommendations from the Mumbai Board interventions workbook.'
-              : `${boardLabel} layout KFA profiles. Detailed intervention lists are currently available for Mumbai Board.`}</p>
+            <p class="sub">Layout-level intervention recommendations from the ${boardLabel} interventions workbook.</p>
           </div>
           <div class="actions">
             <button type="button" class="btn btn-outline">Share</button>
